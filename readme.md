@@ -1,0 +1,10 @@
+# PancakeSwap Team Project
+
+<hr>
+## <a style="color:black; text-decoration:underline;" href="https://trello.com/b/jawsCD8u/pancakeswap-develhope"> Trello Board Link</a>
+<br>
+
+<a style="color:black; text-decoration:underline;" href="https://github.com/KaramGuliyev/">Karam Guliyev <b style="font-size:12px">(Team Leader)</b></a>
+<a style="color:black; text-decoration:underline;" href="https://github.com/AdilSadigov/">Adil Sadigov</a>
+<a style="color:black; text-decoration:underline;" href="https://github.com/kry23">Koray KORKMAZ</a>
+<a style="color:black; text-decoration:underline;" href="">Hakan TUNCER</a>

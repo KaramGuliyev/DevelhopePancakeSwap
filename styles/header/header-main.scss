@@ -1,0 +1,273 @@
+.nav {
+  nav {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    background-color: $colors-backgroundAlt;
+    border-bottom: 1px solid $colors-cardBorder;
+    transform: translate3d(0px, 0px, 0px);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    &__logo {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 160px;
+        }
+      }
+    }
+    &__links {
+      display: flex;
+      margin-left: 24px;
+      .link-head {
+        position: relative;
+        a {
+          position: relative;
+          display: flex;
+          -webkit-box-align: center;
+          align-items: center;
+          color: $colors-textSubtle;
+          font-size: 16px;
+          font-weight: 400;
+          opacity: 1;
+          pointer-events: inherit;
+          padding: 0px 16px;
+          height: 48px;
+          &:hover {
+            background: $colors-tertiary;
+            border-radius: 16px;
+          }
+        }
+      }
+      .link-content {
+        display: none;
+        position: absolute;
+      }
+      .link-1:hover .link-content {
+        display: block;
+      }
+      .link-2:hover .link-content {
+        display: block;
+      }
+      .link-3:hover .link-content {
+        display: block;
+      }
+      .link-4:hover .link-content {
+        display: block;
+      }
+      .link-5:hover .link-content {
+        display: block;
+      }
+    }
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .currency-price {
+      display: block;
+      margin-right: 12px;
+      a {
+        display: flex;
+        align-items: center;
+        img {
+          transition: transform 0.3s ease 0s;
+          flex-shrink: 0;
+          margin-right: 8px;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+        .text-currency {
+          color: $colors-textSubtle;
+          font-weight: 600;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+      }
+    }
+    .lang-select-container {
+      margin-top: 4px;
+
+      .lang-select {
+        position: relative;
+        button {
+          background: transparent;
+          border: none;
+          position: relative;
+          -webkit-box-align: center;
+          align-items: center;
+          border: 0px;
+          border-radius: 16px;
+          cursor: pointer;
+          display: inline-flex;
+          font-family: inherit;
+          font-weight: 600;
+          -webkit-box-pack: center;
+          justify-content: center;
+          letter-spacing: 0.03em;
+          line-height: 1;
+          opacity: 1;
+          outline: 0px;
+          transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+          height: 20px;
+          font-size: 12px;
+          padding: 0px 8px;
+          background-color: transparent;
+          color: $colors-primary;
+          vertical-align: sub;
+          box-shadow: none;
+          img {
+            margin-right: 0.5rem;
+          }
+          &:hover {
+            opacity: 0.65;
+          }
+        }
+        &-content {
+          display: none;
+          position: absolute;
+        }
+        &:hover {
+          .lang-select-content {
+            display: block;
+          }
+        }
+      }
+    }
+    .settings {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      button {
+        background: transparent;
+        border: none;
+        padding: 0px;
+        width: 32px;
+        position: relative;
+        -webkit-box-align: center;
+        align-items: center;
+        border: 0px;
+        border-radius: 16px;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 600;
+        -webkit-box-pack: center;
+        justify-content: center;
+        letter-spacing: 0.03em;
+        line-height: 1;
+        opacity: 1;
+        outline: 0px;
+        transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+        height: 32px;
+        padding: 0px 16px;
+        background-color: transparent;
+        color: $colors-primary;
+        box-shadow: none;
+        margin-right: 8px;
+        &:hover {
+          opacity: 0.65;
+        }
+      }
+    }
+    .network-select {
+      height: 100%;
+      margin-right: 8px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      &-link {
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: $colors-tertiary;
+        border-radius: 16px;
+        box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
+        cursor: pointer;
+        display: inline-flex;
+        height: 32px;
+        padding-left: 32px;
+        padding-right: 8px;
+        position: relative;
+        .link-img {
+          left: 0px;
+          position: absolute;
+          top: 0px;
+          z-index: 102;
+          img {
+            max-height: 32px;
+            max-width: 32px;
+            width: 100%;
+          }
+        }
+        .link-text {
+          color: $colors-text;
+          font-weight: 600;
+          display: none;
+          @media screen and (min-width: 576px) {
+            display: block;
+            margin-left: 8px;
+            margin-right: 4px;
+          }
+        }
+      }
+      .network-select-content {
+        background-color: $colors-backgroundAlt;
+        border: 1px solid $colors-cardBorder;
+        border-radius: 16px;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        width: 280px;
+        z-index: 1001;
+        pointer-events: none;
+        visibility: hidden;
+        position: fixed;
+        inset: 0px auto auto 0px;
+        transform: translate(1507px, 55px);
+      }
+      &:hover {
+        .network-select-content {
+          visibility: visible;
+        }
+      }
+    }
+    .connect-wallet-btn {
+      position: relative;
+      -webkit-box-align: center;
+      align-items: center;
+      border: 0px;
+      border-radius: 16px;
+      box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      -webkit-box-pack: center;
+      justify-content: center;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      opacity: 1;
+      outline: 0px;
+      transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+      height: 32px;
+      padding: 0px 16px;
+      background-color: $colors-primary;
+      color: $colors-invertedContrast;
+      &:hover {
+        opacity: 0.65;
+      }
+    }
+  }
+}

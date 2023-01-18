@@ -1,16 +1,23 @@
 @import './variables.scss';
 @import './header';
+@import './footer';
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Kanit', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    height: 100vh;
 }
 a {
-  text-decoration: none;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
 }
 // THIS IS NOT FUNCTIONAL THIS DOC IS ONLY FOR EXAMPLE

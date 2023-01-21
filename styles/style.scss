@@ -1,6 +1,8 @@
 @import './variables.scss';
 @import './header';
 @import './footer';
+@import './atomic/scrollbar/scrollbar.scss';
+
 
 * {
     margin: 0;
@@ -10,7 +12,11 @@
 
 body {
     font-family: 'Kanit', sans-serif;
-    height: 100vh;
+    width: calc(100vw - 0.5rem);
+    .sectionsContainer {
+        height: 200vh; // WARNING YOU HAVE TO DELETE TO START THIS IS JUST FOR TESTING !!!
+        background-color: black;
+    }
 }
 a {
     text-decoration: none;

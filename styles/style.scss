@@ -2,6 +2,7 @@
 @import './header';
 @import './footer';
 @import './atomic/scrollbar/scrollbar.scss';
+@import './secondSection/secondSection.scss';
 
 
 * {
@@ -13,10 +14,6 @@
 body {
     font-family: 'Kanit', sans-serif;
     width: calc(100vw - 0.5rem);
-    .sectionsContainer {
-        height: 200vh; // WARNING YOU HAVE TO DELETE TO START THIS IS JUST FOR TESTING !!!
-        background-color: black;
-    }
 }
 a {
     text-decoration: none;

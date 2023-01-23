@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Dark thme colors */
+.secondSection {
+  background: linear-gradient(180deg, #09070c 22%, #201335 100%);
+  padding: 96px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f4eeff;
+}
+.secondSection .logo {
+  margin-bottom: 24px;
+}
+.secondSection .title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+.secondSection .boxes {
+  display: flex;
+}
+.secondSection .text1 {
+  color: #b8add2;
+}
+.secondSection .text2 {
+  color: #b8add2;
+  margin-bottom: 20px;
+}
+.secondSection .question {
+  color: #b8add2;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.secondSection .firstBox, .secondSection .secondBox, .secondSection .thirdBox {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  background-color: #27262c;
+  margin: 8px;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.secondSection .firstBox .img, .secondSection .secondBox .img, .secondSection .thirdBox .img {
+  position: absolute;
+  right: 22px;
+  top: 20px;
+}
+.secondSection .firstBox .title, .secondSection .secondBox .title, .secondSection .thirdBox .title {
+  margin-top: 64px;
+  margin-bottom: 20px;
+  text-align: start;
+}
+.secondSection .firstBox .users, .secondSection .secondBox .users, .secondSection .thirdBox .users {
+  color: #9a6aff;
+}
+.secondSection .firstBox .text, .secondSection .secondBox .text, .secondSection .thirdBox .text {
+  color: #b8add2;
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=secondSection.css.map */

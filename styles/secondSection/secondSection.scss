@@ -1,0 +1,128 @@
+@import '../variables.scss';
+
+.secondSection {
+    background: linear-gradient(180deg,#09070c 22%,#201335 100%);
+    padding: 96px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $colors-text;
+    text-align: center;
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.1;
+        margin-bottom: 32px;
+    }
+
+    .boxes {
+        display: flex;
+        max-width: 100%;
+    }
+
+    .text1 {
+        color: $colors-textSubtle;
+    }
+
+    .text2 {
+        color: $colors-textSubtle;
+        margin-bottom: 20px;
+    }
+
+    .question {
+        color: $colors-textSubtle;
+        font-weight: bold;
+        margin-bottom: 32px;
+    }
+
+    .box {
+        background-color: $colors-cardBorder;
+        width: 280px;
+        height: 285px;
+        border-radius: 24px;
+        padding: 1px 1px 4px 1px;
+    }
+
+    .box1 {
+        margin-right: 16px;
+    }
+
+    .box2 {
+        margin-right: 16px;
+    }
+
+    .firstBox, .secondBox, .thirdBox {
+        position: relative;      
+        background-color: $colors-backgroundAlt ;
+        border-radius: 24px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+
+        .img {
+            position: absolute;
+            right: 22px;
+            top: 22px;
+        }
+
+        .title {
+            text-align: start;
+            margin-bottom: 24px;
+        }
+
+        .users {
+            color: $colors-secondary;
+        }
+        
+        .trades {
+            color: $colors-primary;
+        }
+
+        .staked {
+            color: $colors-failure;
+        }
+        
+        .text {
+            color: $colors-textSubtle;
+            text-align: start;
+        }
+    }
+}
+
+@media (max-width: 970px) {
+    .secondSection {
+        .title {
+            font-size: 32px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .secondSection {
+        padding: 64px 16px;
+
+        .boxes {
+            flex-direction: column;
+        }
+
+        .box {
+            height: 170px;
+        }
+
+        .box1 {
+            margin-bottom: 16px;
+        }
+
+        .box2 {
+            margin-bottom: 16px;
+        }
+    }
+}

@@ -1,8 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-/* Dark thme colors */
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-/* Dark thme colors */
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  width: calc(100vw - 0.5rem);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* Dark thme colors */
+/* Dark thme colors */
 .nav nav {
   display: flex;
   -webkit-box-pack: justify;
@@ -835,28 +856,165 @@
   background: #b8add2;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Dark thme colors */
+.carousel {
+  background-image: radial-gradient(103.12% 50%, rgb(33, 25, 58) 0%, rgb(25, 19, 38) 100%);
+  width: 100%;
+  display: flex;
+  padding-top: 5.3125rem;
+  justify-content: center;
+  z-index: -1;
+}
+.carousel .carouselWrapper {
+  width: 100%;
+  display: flex;
+  fill: black;
+  justify-content: center;
+}
+.carousel .carouselWrapper .firstSlider {
+  display: flex;
+  width: 95%;
+  max-width: 1112px;
+  height: 12rem;
+  border-radius: 2rem;
+  background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
+  position: relative;
+  justify-content: space-between;
+}
+.carousel .carouselWrapper .firstSlider .contents {
+  margin: 24px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.carousel .carouselWrapper .firstSlider .contents h2 {
+  position: relative;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
+  background-clip: text;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+.carousel .carouselWrapper .firstSlider .contents .carouselTitle {
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 2px 2px;
+  font-family: Kanit;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.3125rem;
+}
+.carousel .carouselWrapper .firstSlider .contents a button {
+  align-items: center;
+  border-width: 0;
+  border-radius: 1rem;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  transition-duration: 0.2s, 0.2s;
+  height: 48px;
+  padding: 0 1.5rem;
+  background-color: #1fc7d4;
+  color: #191326;
+  letter-spacing: 0.48px;
+}
+.carousel .carouselWrapper .firstSlider .contents a button .buttonDesc {
+  margin-right: 4px;
+}
+.carousel .carouselWrapper .firstSlider .contents a button:hover {
+  opacity: 0.65;
+}
+.carousel .carouselWrapper .firstSlider .upperRings,
+.carousel .carouselWrapper .firstSlider .lowerRings {
+  width: 294px;
+  height: 70px;
+}
+.carousel .carouselWrapper .firstSlider .rabbit {
+  position: absolute;
+  right: 4%;
+  bottom: -8%;
+  width: 180px;
+  height: 280px;
+}
+.carousel .carouselWrapper .firstSlider .upperRings {
+  position: absolute;
+  top: 0;
+  left: 42%;
+}
+.carousel .carouselWrapper .firstSlider .lowerRings {
+  position: absolute;
+  bottom: 0;
+  right: 18%;
 }
 
-body {
-  font-family: "Kanit", sans-serif;
-  width: calc(100vw - 0.5rem);
+@media screen and (max-width: 852px) {
+  .carousel {
+    padding: 0;
+    margin: 0;
+    padding: 40px 0 48px 0;
+  }
+  .carousel .carouselWrapper {
+    padding: 32px 24px 0 24px;
+  }
+  .carousel .carouselWrapper .firstSlider {
+    margin: -36px 0 30px 0;
+    height: 11.8125rem;
+  }
+  .carousel .carouselWrapper .firstSlider .contents h2 {
+    font-size: 24px;
+  }
+  .carousel .carouselWrapper .firstSlider .contents .carouselTitle {
+    font-size: 35px;
+  }
+  .carousel .carouselWrapper .firstSlider .upperRings,
+  .carousel .carouselWrapper .firstSlider .lowerRings {
+    display: none;
+  }
+  .carousel .carouselWrapper .firstSlider .rabbit {
+    width: 8.125rem;
+    height: 11.8125rem;
+    bottom: 0;
+  }
 }
-body .sectionsContainer {
-  height: 200vh;
-  background-color: black;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul,
-li {
-  list-style: none;
+@media screen and (max-width: 852px) and (max-width: 575px) {
+  .carousel {
+    padding: 0;
+    margin: 0;
+  }
+  .carousel .carouselWrapper .firstSlider {
+    padding: 0;
+    margin: 0;
+    width: 33.0625rem;
+    height: 11rem;
+  }
+  .carousel .carouselWrapper .firstSlider .contents h2 {
+    -webkit-background-clip: text;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 1px;
+  }
+  .carousel .carouselWrapper .firstSlider .contents .carouselTitle {
+    font-size: 23px;
+  }
+  .carousel .carouselWrapper .firstSlider .upperRings,
+  .carousel .carouselWrapper .firstSlider .lowerRings {
+    display: none;
+  }
+  .carousel .carouselWrapper .firstSlider .rabbit {
+    width: 8.125rem;
+    height: 11.84rem;
+    bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

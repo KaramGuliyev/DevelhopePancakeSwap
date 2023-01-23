@@ -1,12 +1,26 @@
 $breakpoints: (
-  mobile: 768px,
+  mobile: 575px,
   tablet: 852px,
   laptop: 1240px,
   desktop-lg: 1800px,
 );
 
-@mixin media($screenSize) {
-  @media (max-width: map-get($breakpoints, $screenSize)) {
-    @content;
+@mixin media($breakpoint) {
+  @each $breakpoints, $size in $breakpoints {
+      @if $breakpoint==$breakpoints {
+          @media screen and (max-width: $size) {
+              @content;
+          }
+      }
   }
+}
+
+@function toRem($size) {
+  @return calc($size / 16) + rem;
+}
+
+@mixin clear() {
+  padding: 0;
+  margin: 0;
+  @content;
 }

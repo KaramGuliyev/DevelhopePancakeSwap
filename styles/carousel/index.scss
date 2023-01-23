@@ -1,0 +1,170 @@
+@use '../atomic/root/root.scss';
+@import '../variables.scss';
+
+.carousel {
+  background-image: radial-gradient(103.12% 50%, rgb(33, 25, 58) 0%, rgb(25, 19, 38) 100%);
+  width: 100%;
+  display: flex;
+  padding-top: root.toRem(85);
+  justify-content: center;
+  z-index: -1;
+
+  .carouselWrapper {
+    width: 100%;
+    display: flex;
+    fill: black;
+    justify-content: center;
+    .firstSlider {
+      display: flex;
+      width: 95%;
+      max-width: 1112px;
+      height: root.toRem(192);
+      border-radius: root.toRem(32);
+      background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
+      position: relative;
+      justify-content: space-between;
+      .contents {
+        margin: 24px;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h2 {
+          position: relative;
+          -webkit-text-fill-color: transparent;
+          background-image: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
+          background-clip: text;
+          font-size: root.toRem(24);
+          font-weight: 600;
+          margin-bottom: 8px;
+          line-height: 1;
+        }
+        .carouselTitle {
+          font-size: root.toRem(40);
+          color: rgb(255, 255, 255);
+          text-shadow: rgba(0, 0, 0, 0.25) 0px 2px 2px;
+          font-family: Kanit;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 110%;
+          color: rgb(255, 255, 255);
+          margin-bottom: root.toRem(21);
+        }
+        a {
+          button {
+            align-items: center;
+            border-width: 0;
+            border-radius: root.toRem(16);
+            box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 600;
+            transition-duration: 0.2s, 0.2s;
+            height: 48px;
+            padding: 0 root.toRem(24);
+            background-color: $colors-primary;
+            color: $colors-invertedContrast;
+            letter-spacing: 0.48px;
+            .buttonDesc {
+              margin-right: 4px;
+            }
+            &:hover {
+              opacity: 0.65;
+            }
+          }
+        }
+      }
+
+      .upperRings,
+      .lowerRings {
+        width: 294px;
+        height: 70px;
+      }
+      .rabbit {
+        position: absolute;
+        right: 4%;
+        bottom: -8%;
+        width: 180px;
+        height: 280px;
+      }
+      .upperRings {
+        position: absolute;
+        top: 0;
+        left: 42%;
+      }
+      .lowerRings {
+        position: absolute;
+        bottom: 0;
+        right: 18%;
+      }
+    }
+  }
+}
+@include root.media('tablet') {
+  .carousel {
+    @include root.clear();
+    padding: 40px 0 48px 0;
+    .carouselWrapper {
+      padding: 32px 24px 0 24px;
+      .firstSlider {
+        margin: -36px 0 30px 0;
+        height: root.toRem(189);
+        .contents {
+          h2 {
+            font-size: 24px;
+          }
+          .carouselTitle {
+            font-size: 35px;
+          }
+        }
+
+        .upperRings,
+        .lowerRings {
+          display: none;
+        }
+        .rabbit {
+          width: root.toRem(130);
+          height: root.toRem(189);
+          bottom: 0;
+        }
+      }
+    }
+  }
+  @include root.media('mobile') {
+    .carousel {
+      @include root.clear();
+      .carouselWrapper {
+        .firstSlider {
+          @include root.clear();
+          width: root.toRem(529);
+          height: root.toRem(176);
+          .contents {
+            h2 {
+              -webkit-background-clip: text;
+              -webkit-font-smoothing: antialiased;
+              -webkit-text-fill-color: rgba(0, 0, 0, 0);
+              -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
+              -webkit-text-stroke-width: 1px;
+            }
+            .carouselTitle {
+              font-size: 23px;
+            }
+          }
+
+          .upperRings,
+          .lowerRings {
+            display: none;
+          }
+          .rabbit {
+            width: root.toRem(130);
+            height: root.toRem(189.44);
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

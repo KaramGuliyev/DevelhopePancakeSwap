@@ -17,27 +17,29 @@
     .firstSlider {
       display: flex;
       width: 95%;
-      max-width: 1112px;
+      max-width: root.toRem(1112);
       height: root.toRem(192);
       border-radius: root.toRem(32);
       background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
       position: relative;
       justify-content: space-between;
       .contents {
-        margin: 24px;
-        padding: 40px 0;
+        margin: root.toRem(24);
+        padding: root.toRem(40) 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         h2 {
-          position: relative;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-font-smoothing: antialiased;
           -webkit-text-fill-color: transparent;
           background-image: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
-          background-clip: text;
+          position: relative;
           font-size: root.toRem(24);
           font-weight: 600;
-          margin-bottom: 8px;
+          margin-bottom: root.toRem(8);
           line-height: 1;
         }
         .carouselTitle {
@@ -60,16 +62,16 @@
             cursor: pointer;
             display: inline-flex;
             font-family: inherit;
-            font-size: 16px;
+            font-size: root.toRem(16);
             font-weight: 600;
             transition-duration: 0.2s, 0.2s;
-            height: 48px;
+            height: root.toRem(48);
             padding: 0 root.toRem(24);
             background-color: $colors-primary;
             color: $colors-invertedContrast;
-            letter-spacing: 0.48px;
+            letter-spacing: root.toRem(0.48);
             .buttonDesc {
-              margin-right: 4px;
+              margin-right: root.toRem(4);
             }
             &:hover {
               opacity: 0.65;
@@ -80,15 +82,15 @@
 
       .upperRings,
       .lowerRings {
-        width: 294px;
-        height: 70px;
+        width: root.toRem(294);
+        height: root.toRem(70);
       }
       .rabbit {
         position: absolute;
         right: 4%;
         bottom: -8%;
-        width: 180px;
-        height: 280px;
+        width: root.toRem(180);
+        height: root.toRem(280);
       }
       .upperRings {
         position: absolute;
@@ -103,21 +105,22 @@
     }
   }
 }
+
 @include root.media('tablet') {
   .carousel {
     @include root.clear();
-    padding: 40px 0 48px 0;
+    padding: root.toRem(40) 0 root.toRem(48) 0;
     .carouselWrapper {
-      padding: 32px 24px 0 24px;
+      padding: root.toRem(32) root.toRem(24) 0 root.toRem(24);
       .firstSlider {
-        margin: -36px 0 30px 0;
+        margin: root.toRem(-36) 0 root.toRem(30) 0;
         height: root.toRem(189);
         .contents {
           h2 {
-            font-size: 24px;
+            font-size: root.toRem(24);
           }
           .carouselTitle {
-            font-size: 35px;
+            font-size: root.toRem(35);
           }
         }
 
@@ -133,6 +136,7 @@
       }
     }
   }
+
   @include root.media('mobile') {
     .carousel {
       @include root.clear();
@@ -148,10 +152,10 @@
               -webkit-font-smoothing: antialiased;
               -webkit-text-fill-color: rgba(0, 0, 0, 0);
               -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
-              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-width: root.toRem(1);
             }
             .carouselTitle {
-              font-size: 23px;
+              font-size: root.toRem(23);
             }
           }
 

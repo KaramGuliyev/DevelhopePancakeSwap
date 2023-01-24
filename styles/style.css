@@ -2065,7 +2065,7 @@ li {
 .carousel .carouselWrapper .firstSlider {
   display: flex;
   width: 95%;
-  max-width: 1112px;
+  max-width: 69.5rem;
   height: 12rem;
   border-radius: 2rem;
   background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
@@ -2073,21 +2073,23 @@ li {
   justify-content: space-between;
 }
 .carousel .carouselWrapper .firstSlider .contents {
-  margin: 24px;
-  padding: 40px 0;
+  margin: 1.5rem;
+  padding: 2.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 .carousel .carouselWrapper .firstSlider .contents h2 {
-  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-font-smoothing: antialiased;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
-  background-clip: text;
+  position: relative;
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   line-height: 1;
 }
 .carousel .carouselWrapper .firstSlider .contents .carouselTitle {
@@ -2109,32 +2111,32 @@ li {
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   transition-duration: 0.2s, 0.2s;
-  height: 48px;
+  height: 3rem;
   padding: 0 1.5rem;
   background-color: #1fc7d4;
   color: #191326;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.03rem;
 }
 .carousel .carouselWrapper .firstSlider .contents a button .buttonDesc {
-  margin-right: 4px;
+  margin-right: 0.25rem;
 }
 .carousel .carouselWrapper .firstSlider .contents a button:hover {
   opacity: 0.65;
 }
 .carousel .carouselWrapper .firstSlider .upperRings,
 .carousel .carouselWrapper .firstSlider .lowerRings {
-  width: 294px;
-  height: 70px;
+  width: 18.375rem;
+  height: 4.375rem;
 }
 .carousel .carouselWrapper .firstSlider .rabbit {
   position: absolute;
   right: 4%;
   bottom: -8%;
-  width: 180px;
-  height: 280px;
+  width: 11.25rem;
+  height: 17.5rem;
 }
 .carousel .carouselWrapper .firstSlider .upperRings {
   position: absolute;
@@ -2151,20 +2153,20 @@ li {
   .carousel {
     padding: 0;
     margin: 0;
-    padding: 40px 0 48px 0;
+    padding: 2.5rem 0 3rem 0;
   }
   .carousel .carouselWrapper {
-    padding: 32px 24px 0 24px;
+    padding: 2rem 1.5rem 0 1.5rem;
   }
   .carousel .carouselWrapper .firstSlider {
-    margin: -36px 0 30px 0;
+    margin: -2.25rem 0 1.875rem 0;
     height: 11.8125rem;
   }
   .carousel .carouselWrapper .firstSlider .contents h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .carousel .carouselWrapper .firstSlider .contents .carouselTitle {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
   .carousel .carouselWrapper .firstSlider .upperRings,
   .carousel .carouselWrapper .firstSlider .lowerRings {
@@ -2193,10 +2195,10 @@ li {
     -webkit-font-smoothing: antialiased;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
     -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.0625rem;
   }
   .carousel .carouselWrapper .firstSlider .contents .carouselTitle {
-    font-size: 23px;
+    font-size: 1.4375rem;
   }
   .carousel .carouselWrapper .firstSlider .upperRings,
   .carousel .carouselWrapper .firstSlider .lowerRings {

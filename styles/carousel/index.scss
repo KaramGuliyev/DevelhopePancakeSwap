@@ -91,6 +91,7 @@
         bottom: -8%;
         width: root.toRem(180);
         height: root.toRem(280);
+        z-index: 1;
       }
       .upperRings {
         position: absolute;
@@ -132,6 +133,7 @@
           width: root.toRem(130);
           height: root.toRem(189);
           bottom: 0;
+          z-index: 1;
         }
       }
     }
@@ -167,6 +169,7 @@
             width: root.toRem(130);
             height: root.toRem(189.44);
             bottom: 0;
+            z-index: 1;
           }
         }
       }

@@ -1,0 +1,249 @@
+@use '../atomic/root/root.scss';
+
+.firstSection {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  align-items: center;
+  background-image: radial-gradient(103.12% 50%, rgb(33, 25, 58) 0%, rgb(25, 19, 38) 100%);
+  position: relative;
+  .firstSectionWrapper {
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    margin: root.toRem(50);
+    div {
+      width: 100%;
+    }
+    display: flex;
+    flex-direction: row;
+    .contents {
+      max-width: 576px;
+      justify-content: center;
+      align-items: center;
+      .firstH2 {
+        font-size: root.toRem(64);
+        color: rgb(154, 106, 255);
+        font-weight: 600;
+        line-height: 70px;
+        margin-bottom: 24px;
+      }
+      .secondH2 {
+        color: rgb(244, 238, 255);
+        font-size: root.toRem(20);
+        font-weight: 600;
+        line-height: 22px;
+        margin-bottom: 24px;
+      }
+      .firstSectionButtons {
+        .button1 {
+          border-width: 0;
+          border-radius: root.toRem(16);
+          box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+          cursor: pointer;
+          font-family: inherit;
+          font-size: root.toRem(16);
+          font-weight: 600;
+          transition-duration: 0.2s, 0.2s;
+          height: root.toRem(48);
+          padding: 0 root.toRem(24);
+          background-color: $colors-primary;
+          color: $colors-invertedContrast;
+          letter-spacing: root.toRem(0.48);
+          margin-right: root.toRem(4);
+          &:hover {
+            opacity: 0.65;
+          }
+        }
+        .button2 {
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0);
+          border: root.toRem(2) solid rgb(31, 199, 212);
+          border-radius: root.toRem(16);
+          color: rgb(31, 199, 212);
+          cursor: pointer;
+          font: 600 root.toRem(16) Kanit, sans-serif;
+          height: root.toRem(48);
+          opacity: 0.9;
+          padding: 0 root.toRem(24px);
+          width: root.toRem(132);
+          -webkit-box-align: center;
+          -webkit-box-pack: center;
+          -webkit-font-smoothing: antialiased;
+        }
+      }
+    }
+
+    .animations {
+      max-width: 576px;
+      max-height: 576px;
+      position: relative;
+      .astronaut-rabbit {
+        img {
+          animation: 5s ease-in-out infinite astronaut;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .stars {
+        max-width: 576px;
+        max-height: 576px;
+          .starLeft {
+            max-width: 100%;
+            top: 0;
+            opacity: 0;
+            animation: 3s ease-in-out infinite stars;
+            position: absolute;
+          }
+          .starRight {
+            max-width: 100%;
+            top: 0;
+            opacity: 0;
+            animation: 2s 2s ease-in-out infinite stars;
+            position: absolute;
+          }
+          .starTopRight {
+            max-width: 100%;
+            top: 0;
+            opacity: 0;
+            animation: 3s 1s ease-in-out infinite stars;
+            position: absolute;
+          }
+        }
+    }
+  }
+  svg {
+    position: absolute;
+    bottom: -1px;
+  }
+}
+
+@include root.media('laptop') {
+  .firstSection {
+    .firstSectionWrapper {
+      @include root.clear();
+      margin: 24px;
+      .contents {
+        .firstH2 {
+          font-size: 48px;
+          font-weight: 600;
+          line-height: 1.1;
+        }
+      }
+
+      .animations {
+        .astronaut-rabbit {
+          img {
+          }
+        }
+      }
+    }
+  }
+}
+
+@include root.media('tablet') {
+  .firstSection {
+    position: relative;
+    .firstSectionWrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      -webkit-box-pack: center;
+      justify-content: center;
+      margin: -3rem;
+      .contents {
+        max-width: 890px;
+        width: 100%;
+        margin-top: 208px;
+        .firstH2 {
+          font-size: 48px;
+          font-weight: 600;
+          line-height: 1.1;
+        }
+      }
+
+      .animations {
+        .astro {
+          position: relative;
+          .astronaut-rabbit {
+            max-width: 192px;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .stars {
+          max-width: 192px;
+          max-height: 192px;
+          width: 100%;
+          height: 100px;
+          position: relative;
+          .starLeftDiv {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+          }
+          .starRight {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+          }
+          .starTopRight {
+            top: 0px;
+            left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include root.media('mobile') {
+  .firstSection {
+    .firstSectionWrapper {
+      margin: 1rem;
+      padding: 0;
+      .contents {
+        max-width: 500px;
+      }
+
+      .animations {
+        margin: 2rem 0 2rem 0;
+        .astronaut-rabbit {
+          img {
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes stars {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes astronaut {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  33% {
+    transform: translate(5px, 5px);
+  }
+
+  66% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

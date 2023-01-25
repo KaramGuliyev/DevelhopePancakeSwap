@@ -127,6 +127,11 @@
                     &:hover {
                         background-color: #2496a5;
                     }
+
+                    &:active {
+                        transform: translate(0px, 1px);
+                        transition: inherit;
+                    }
                 }
 
                 a {

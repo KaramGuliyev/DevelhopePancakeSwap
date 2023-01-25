@@ -1,0 +1,455 @@
+@use '../atomic/root/root.scss';
+@import '../variables.scss';
+
+@keyframes ball1_card1 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(3px, 15px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes ball2_card2 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(5px, 10px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes ball3_card3 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(6px, 5px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes ball4_card4 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(4px, 12px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.sixthSection {
+    position: relative;
+    padding: 96px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,#0b4576 0%,#091115 100%);
+
+    .images {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .ab1 {
+            position: absolute;
+            right: 0px;
+            top: -60px;
+
+            .topImages {
+                position: relative;
+                width: 512px;
+                height: 512px;
+    
+                .ball {
+                    position: absolute;
+                    animation-duration: 3s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate-reverse;
+    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .ball1 {
+                    animation-name: ball1_card1;
+                    animation-delay: 1s;
+                }
+
+                .ball2 {
+                    animation-name: ball2_card2;
+                    animation-delay: 650ms;
+                }
+
+                .ball3 {
+                    animation-name: ball3_card3;
+                    animation-delay: 350ms;
+                }
+                
+                .ball4 {
+                    animation-name: ball4_card4;
+                }
+            }
+        }
+
+        .ab2 {
+            position: absolute;
+            left: 0px;
+            bottom: -65px;
+
+            .buttomImages {
+                position: relative;
+                width: 512px;
+                height: 512px;
+    
+                .card {
+                    position: absolute;
+                    animation-duration: 3s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate-reverse;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .card1 {
+                    animation-name: ball1_card1;
+                    animation-delay: 1s;
+                }
+
+                .card2 {
+                    animation-name: ball2_card2;
+                    animation-delay: 650ms;
+                }
+
+                .card3 {
+                    animation-name: ball3_card3;
+                    animation-delay: 350ms;
+                }
+                
+                .card4 {
+                    animation-name: ball4_card4;
+                }
+            }
+        }  
+    }
+
+    .contentBox {
+        width: 100%;
+        height: auto;
+        max-width: 920px;
+        max-height: 606px;
+        padding: 40px;
+        background-color: #08060b99;
+        border: 1px solid $colors-cardBorder;
+        border-radius: 72px;
+        backdrop-filter: blur(12px);
+
+        .mainContent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .title {
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 1.1;
+                color: $colors-text;
+                margin-bottom: 24px;
+                text-align: center;
+
+                span {
+                    color: $colors-secondary;
+                }
+            }
+
+            .textMain {
+                color: $colors-textSubtle;
+                font-weight: 400;
+                line-height: 1.5;
+                font-size: 16px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .cards {
+                display: flex;
+                justify-content: center;
+
+                .card {
+                    width: 286px;
+                    height: 361px;
+                    padding: 24px;
+                    border-radius: 24px;
+
+                    .button {
+                        width: auto;
+                        height: 48px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: $colors-primary;
+                            color: $colors-invertedContrast;
+                            font: 600 16px Kanit, sans-serif;
+                            line-height: 1.5;
+                            letter-spacing: 0.03em;
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            border-radius: 16px;
+                            box-shadow: #0e0e2c66 0px -1px 0px 0px inset;
+                            cursor: pointer;
+                            transition: 0.2s;
+
+                            svg {
+                                margin-left: 4px;
+                            }
+                        }
+                    }
+                }
+
+                .predictionBG {
+                    width: 288px;
+                    height: 366px;
+                    padding: 1px 1px 4px 1px;
+                    background-color: #ffb334;
+                    transform: rotate(-2.36deg);
+                    margin-right: 24px;
+                    border-radius: 24px;
+
+                    .prediction {
+                        position: relative;
+                        color: #280d5f;                       
+                        background: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 205, 81) 51.17%, rgb(255, 231, 106) 100%);
+                         
+                        .icon {
+                            display: flex;
+                            justify-content: flex-end;
+                            transform: rotate(-2.36deg);
+                            margin-top: 4px;
+                        }
+    
+                        p {
+                            &:nth-child(1){
+                                font-weight: 600;
+                                line-height: 1.5;
+                                font-size: 16px;
+                                margin-top: 8px;
+                            }
+    
+                            &:nth-child(2){
+                                font-size: 40px;
+                                font-weight: 600;
+                                line-height: 1.1;
+                                margin-top: 8px;
+                                margin-bottom: 8px;
+                            }
+    
+                            &:nth-child(3){
+                                color: #280d5f;
+                                font-weight: 600;
+                                line-height: 1.5;
+                                margin-bottom: 24px;
+                                font-size: 16px;
+                            }
+    
+                            &:nth-child(4) {
+                                margin-bottom: 40px;
+                            }
+                        }
+
+                        .button {
+                            button {
+                                &:hover {
+                                    background: #6ed0ae;
+                                }
+
+                                &:active {
+                                    transform: translate(0px, 1px);
+                                    transition: inherit;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .lotteryBG {
+                    width: 288px;
+                    height: 366px;
+                    padding: 1px 1px 4px 1px;
+                    background-color: #391087;
+                    transform: rotate(1.43deg);
+                    border-radius: 24px;
+
+                    .lottery {
+                        position: relative;
+                        color: $colors-text;
+                        background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+    
+                        .icon {
+                            display: flex;
+                            justify-content: flex-end;
+                            margin-bottom: 12px;
+                        }
+    
+                        p {
+                            &:nth-child(1){
+                                font-weight: 600;
+                                line-height: 1.5;
+                                font-size: 16px;
+                                margin-top: 6px;
+                            }
+    
+                            &:nth-child(2){
+                                font-size: 40px;
+                                font-weight: 600;
+                                line-height: 1.1;
+                                margin-top: 8px;
+                                margin-bottom: 8px;
+                                color: transparent;    
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                background-image: $colors-gradientGold;
+                            }
+    
+                            &:nth-child(3){
+                                font-weight: 600;
+                                line-height: 1.5;
+                                margin-bottom: 24px;
+                                font-size: 16px;
+                            }
+    
+                            &:nth-child(4) {
+                                margin-bottom: 40px;
+                            }
+                        }
+
+                        .button {
+                            button {
+                                &:hover {
+                                    background: #2e8fca;
+                                }
+                                
+                                &:active {
+                                    transform: translate(0px, 1px);
+                                    transition: inherit;
+                                }
+                            }
+                        }
+                    }
+                }             
+            }
+        }
+    }
+}
+
+@include root.media('laptop') {
+    .sixthSection {
+        padding: 80px 24px;
+
+        .contentBox {
+            .mainContent {
+                .title {
+                    font-size: 32px;
+                }
+
+                .predictionBG {
+                    .prediction {
+                        .text {
+                            p {
+                                &:nth-child(2) {
+                                    font-size: 32px;
+                                }
+                            }
+                        }            
+                    }
+                }          
+            }
+        }
+    }
+}
+
+@include root.media('tablet') {
+    .sixthSection {
+        padding: 64px 24px;
+        .contentBox {
+            height: auto;
+            max-height: none;
+            .mainContent {
+                .cards {
+                    flex-direction: column;
+                    align-items: center;
+
+                    .predictionBG {
+                        transform: rotate(0deg);
+                        margin: 0;
+                        margin-bottom: 32px;
+                        max-width: 275px;
+                        max-height: 360px;
+
+                        .prediction {
+                            max-width: 273px;
+                            max-height: 355px;
+                        }
+                    }
+
+                    .lotteryBG {
+                        transform: rotate(0deg);
+                        max-width: 275px;
+                        max-height: 360px;
+
+                        .lottery {
+                            max-width: 273px;
+                            max-height: 355px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .images {
+            .ab1 {
+                .topImages {
+                    width: 192px;
+                    height: 192px;
+                }
+            }
+
+            .ab2 {
+                .buttomImages {
+                    width: 192px;
+                    height: 192px;
+                }
+            }
+        }   
+    }
+}

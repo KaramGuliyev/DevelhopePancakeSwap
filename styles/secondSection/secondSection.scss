@@ -1,3 +1,4 @@
+@use '../atomic/root/root.scss';
 @import '../variables.scss';
 
 .secondSection {
@@ -97,7 +98,7 @@
     }
 }
 
-@media (max-width: 970px) {
+@include root.media('laptop') {
     .secondSection {
         .title {
             font-size: 32px;
@@ -105,7 +106,7 @@
     }
 }
 
-@media (max-width: 850px) {
+@include root.media('tablet') {
     .secondSection {
         padding: 64px 16px;
 

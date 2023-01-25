@@ -216,7 +216,7 @@
         &-content {
           position: absolute;
           width: max-content;
-          display: flex;
+
           flex-direction: column;
           position: absolute;
           transform: translate(-50%, 0px);
@@ -232,6 +232,7 @@
           opacity: 0;
           transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
           will-change: opacity;
+          display: none;
           button {
             position: relative;
             -webkit-box-align: center;
@@ -275,6 +276,7 @@
             visibility: visible;
             opacity: 1;
             max-height: 200px;
+            display: flex;
           }
         }
       }

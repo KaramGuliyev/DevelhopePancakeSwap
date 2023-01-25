@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <title>PancakeSwap-clone</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
   </head>
   <body>
     <!--Header navigation menu start-->
@@ -123,7 +125,7 @@
             </div>
           </div>
           <div class="settings">
-            <button class="settings-btn">
+            <button id="modal-button" class="settings-btn">
               <img src="./assets/navGear.svg" alt="" />
             </button>
           </div>
@@ -164,6 +166,97 @@
         </div>
       </nav>
     </div>
+    <!--Settings modal content start-->
+    <div id="modal">
+      <div class="modal-content">
+        <div class="modal-content-header">
+          <span>Settings</span>
+          <button class="close"><img src="./assets/times.svg" alt="" /></button>
+        </div>
+        <div class="modal-content-middle">
+          <ul>
+            <li>GLOBAL</li>
+            <li>
+              <span>Dark mode</span>
+              <div class="theme-select">
+                <div class="theme-select-outer appear">
+                  <div class="theme-select-inner">
+                    <input type="checkbox" />
+                    <div class="selected-theme">
+                      <div>
+                        <div>
+                          <img src="./assets/dark-theme.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="theme-selection-options">
+                      <img src="./assets/light-theme.svg" alt="" />
+                      <img src="./assets/dark-theme.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>Subgraph Health Indicator</span>
+              <div class="theme-select on-off-btn">
+                <div class="theme-select-outer appear">
+                  <div class="theme-select-inner">
+                    <input class="on-off-btn" type="checkbox" />
+                    <div class="selected-theme">
+                      <div>
+                        <div></div>
+                      </div>
+                    </div>
+                    <div class="theme-selection-options"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>Show username</span>
+              <div class="theme-select">
+                <div class="theme-select-outer appear">
+                  <div class="theme-select-inner">
+                    <input type="checkbox" />
+                    <div class="selected-theme">
+                      <div>
+                        <div></div>
+                      </div>
+                    </div>
+                    <div class="theme-selection-options"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>Token Risk Scanning</span>
+              <div class="theme-select">
+                <div class="theme-select-outer appear">
+                  <div class="theme-select-inner">
+                    <input type="checkbox" />
+                    <div class="selected-theme">
+                      <div>
+                        <div></div>
+                      </div>
+                    </div>
+                    <div class="theme-selection-options"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>Default Transaction Speed (GWEI)</span>
+              <div class="li-btns">
+                <button>RPC Default</button> <button>Standard (5)</button> <button>Fast (6)</button>
+                <button>Instant (7)</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--Settings modal content end-->
     <!--Header navigation menu end-->
     <!-- MOBILE NAV START-->
     <div class="mobile-nav">

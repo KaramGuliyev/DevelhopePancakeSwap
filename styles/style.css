@@ -1,13 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /* Dark thme colors */
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-/* Dark thme colors */
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .nav {
   position: fixed;
@@ -2094,6 +2085,14 @@ li {
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
+.fifthSection .top .content .btn_link button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.fifthSection .top .content .btn_link a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #1fc7d4;
   font-weight: 600;
   -webkit-box-pack: center;
   justify-content: center;
@@ -2211,6 +2210,451 @@ li {
   color: #1fc7d4;
   box-shadow: none;
   margin-right: 8px;
+  line-height: 1.1;
+  color: #f4eeff;
+}
+.fifthSection .bottom .columns .column p:nth-child(3) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #b8add2;
+}
+
+@media screen and (max-width: 970px) {
+  .fifthSection .top .content .title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .fifthSection {
+    padding: 80px 24px;
+    position: relative;
+  }
+  .fifthSection .top {
+    flex-direction: column;
+    justify-content: flex-end;
+    height: auto;
+  }
+  .fifthSection .top .content {
+    margin: 0;
+  }
+  .fifthSection .top .content .title {
+    max-width: none;
+  }
+  .fifthSection .top .content .text {
+    max-width: none;
+  }
+  .fifthSection .top .images {
+    width: 192px;
+    height: 192px;
+    margin-left: auto;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .fifthSection {
+    padding: 64px 16px;
+  }
+  .fifthSection .bottom .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "arena squad" "krs 0" "mgp wmx";
+  }
+  .fifthSection .bottom .columns .column {
+    border: none;
+    padding: 0;
+  }
+  .fifthSection .bottom .columns .arena {
+    grid-area: arena;
+  }
+  .fifthSection .bottom .columns .squad {
+    grid-area: squad;
+  }
+  .fifthSection .bottom .columns .krs {
+    grid-area: krs;
+  }
+  .fifthSection .bottom .columns .wmx {
+    grid-area: wmx;
+  }
+  .fifthSection .bottom .columns .mgp {
+    grid-area: mgp;
+  }
+}
+/* Dark thme colors */
+@keyframes ball1_card1 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(3px, 15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes ball2_card2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes ball3_card3 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(6px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes ball4_card4 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(4px, 12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.sixthSection {
+  position: relative;
+  padding: 96px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #0b4576 0%, #091115 100%);
+}
+.sixthSection .images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.sixthSection .images img {
+  width: 100%;
+  height: 100%;
+}
+.sixthSection .images .ab1 {
+  position: absolute;
+  right: 0px;
+  top: -60px;
+}
+.sixthSection .images .ab1 .topImages {
+  position: relative;
+  width: 512px;
+  height: 512px;
+}
+.sixthSection .images .ab1 .topImages .ball {
+  position: absolute;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+.sixthSection .images .ab1 .topImages .ball img {
+  width: 100%;
+  height: 100%;
+}
+.sixthSection .images .ab1 .topImages .ball1 {
+  animation-name: ball1_card1;
+  animation-delay: 1s;
+}
+.sixthSection .images .ab1 .topImages .ball2 {
+  animation-name: ball2_card2;
+  animation-delay: 650ms;
+}
+.sixthSection .images .ab1 .topImages .ball3 {
+  animation-name: ball3_card3;
+  animation-delay: 350ms;
+}
+.sixthSection .images .ab1 .topImages .ball4 {
+  animation-name: ball4_card4;
+}
+.sixthSection .images .ab2 {
+  position: absolute;
+  left: 0px;
+  bottom: -65px;
+}
+.sixthSection .images .ab2 .buttomImages {
+  position: relative;
+  width: 512px;
+  height: 512px;
+}
+.sixthSection .images .ab2 .buttomImages .card {
+  position: absolute;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+.sixthSection .images .ab2 .buttomImages .card img {
+  width: 100%;
+  height: 100%;
+}
+.sixthSection .images .ab2 .buttomImages .card1 {
+  animation-name: ball1_card1;
+  animation-delay: 1s;
+}
+.sixthSection .images .ab2 .buttomImages .card2 {
+  animation-name: ball2_card2;
+  animation-delay: 650ms;
+}
+.sixthSection .images .ab2 .buttomImages .card3 {
+  animation-name: ball3_card3;
+  animation-delay: 350ms;
+}
+.sixthSection .images .ab2 .buttomImages .card4 {
+  animation-name: ball4_card4;
+}
+.sixthSection .contentBox {
+  width: 100%;
+  height: auto;
+  max-width: 920px;
+  max-height: 606px;
+  padding: 40px;
+  background-color: rgba(8, 6, 11, 0.6);
+  border: 1px solid #383241;
+  border-radius: 72px;
+  backdrop-filter: blur(12px);
+}
+.sixthSection .contentBox .mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sixthSection .contentBox .mainContent .title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #f4eeff;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.sixthSection .contentBox .mainContent .title span {
+  color: #9a6aff;
+}
+.sixthSection .contentBox .mainContent .textMain {
+  color: #b8add2;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.sixthSection .contentBox .mainContent .cards {
+  display: flex;
+  justify-content: center;
+}
+.sixthSection .contentBox .mainContent .cards .card {
+  width: 286px;
+  height: 361px;
+  padding: 24px;
+  border-radius: 24px;
+}
+.sixthSection .contentBox .mainContent .cards .card .button {
+  width: auto;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sixthSection .contentBox .mainContent .cards .card .button button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1fc7d4;
+  color: #191326;
+  font: 600 16px Kanit, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.sixthSection .contentBox .mainContent .cards .card .button button svg {
+  margin-left: 4px;
+}
+.sixthSection .contentBox .mainContent .cards .predictionBG {
+  width: 288px;
+  height: 366px;
+  padding: 1px 1px 4px 1px;
+  background-color: #ffb334;
+  transform: rotate(-2.36deg);
+  margin-right: 24px;
+  border-radius: 24px;
+}
+.sixthSection .contentBox .mainContent .cards .predictionBG .prediction {
+  position: relative;
+  color: #280d5f;
+  background: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 205, 81) 51.17%, rgb(255, 231, 106) 100%);
+}
+.sixthSection .contentBox .mainContent .cards .predictionBG .prediction .icon {
+  display: flex;
+  justify-content: flex-end;
+  transform: rotate(-2.36deg);
+  margin-top: 4px;
+}
+.sixthSection .contentBox .mainContent .cards .predictionBG .prediction p:nth-child(1) {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.sixthSection .contentBox .mainContent .cards .predictionBG .prediction p:nth-child(2) {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.sixthSection .contentBox .mainContent .cards .predictionBG .prediction p:nth-child(3) {
+  color: #280d5f;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+.sixthSection .contentBox .mainContent .cards .predictionBG .prediction p:nth-child(4) {
+  margin-bottom: 40px;
+}
+.sixthSection .contentBox .mainContent .cards .predictionBG .prediction .button button:hover {
+  background: #6ed0ae;
+}
+.sixthSection .contentBox .mainContent .cards .predictionBG .prediction .button button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+  box-shadow: none;
+}
+.sixthSection .contentBox .mainContent .cards .lotteryBG {
+  width: 288px;
+  height: 366px;
+  padding: 1px 1px 4px 1px;
+  background-color: #391087;
+  transform: rotate(1.43deg);
+  border-radius: 24px;
+}
+.sixthSection .contentBox .mainContent .cards .lotteryBG .lottery {
+  position: relative;
+  color: #f4eeff;
+  background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+}
+.sixthSection .contentBox .mainContent .cards .lotteryBG .lottery .icon {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+.sixthSection .contentBox .mainContent .cards .lotteryBG .lottery p:nth-child(1) {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-top: 6px;
+}
+.sixthSection .contentBox .mainContent .cards .lotteryBG .lottery p:nth-child(2) {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(180deg, #ffd800, #fdab32);
+}
+.sixthSection .contentBox .mainContent .cards .lotteryBG .lottery p:nth-child(3) {
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+.sixthSection .contentBox .mainContent .cards .lotteryBG .lottery p:nth-child(4) {
+  margin-bottom: 40px;
+}
+.sixthSection .contentBox .mainContent .cards .lotteryBG .lottery .button button:hover {
+  background: #2e8fca;
+}
+.sixthSection .contentBox .mainContent .cards .lotteryBG .lottery .button button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+
+@media screen and (max-width: 970px) {
+  .sixthSection {
+    padding: 80px 24px;
+  }
+  .sixthSection .contentBox .mainContent .title {
+    font-size: 32px;
+  }
+  .sixthSection .contentBox .mainContent .predictionBG .prediction .text p:nth-child(2) {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .sixthSection {
+    padding: 64px 24px;
+  }
+  .sixthSection .contentBox {
+    height: auto;
+    max-height: none;
+  }
+  .sixthSection .contentBox .mainContent .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sixthSection .contentBox .mainContent .cards .predictionBG {
+    transform: rotate(0deg);
+    margin: 0;
+    margin-bottom: 32px;
+    max-width: 275px;
+    max-height: 360px;
+  }
+  .sixthSection .contentBox .mainContent .cards .predictionBG .prediction {
+    max-width: 273px;
+    max-height: 355px;
+  }
+  .sixthSection .contentBox .mainContent .cards .lotteryBG {
+    transform: rotate(0deg);
+    max-width: 275px;
+    max-height: 360px;
+  }
+  .sixthSection .contentBox .mainContent .cards .lotteryBG .lottery {
+    max-width: 273px;
+    max-height: 355px;
+  }
+  .sixthSection .images .ab1 .topImages {
+    width: 192px;
+    height: 192px;
+  }
+  .sixthSection .images .ab2 .buttomImages {
+    width: 192px;
+    height: 192px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  width: calc(100vw - 0.5rem);
+}
+
+a {
+  text-decoration: none;
 }
 .nav .header-right .settings button:hover {
   opacity: 0.65;

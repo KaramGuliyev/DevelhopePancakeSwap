@@ -1,0 +1,325 @@
+@use '../atomic/root/root.scss';
+@import '../variables.scss';
+
+@keyframes first {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(3px, 15px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes second {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(5px, 10px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes third {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(6px, 5px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes fourth {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(4px, 12px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.seventhSection {
+    background: $colors-background;
+    padding: 96px 24px;
+
+    .top {
+        display: flex;
+        justify-content: center;
+        height: 400px;
+        width: 100%;
+
+        .images {
+            position: relative;
+            height: 100%;
+            width: 430px;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+
+            .first, .second, .third, .fourth {
+                position: absolute;
+                animation-duration: 3s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
+            }
+
+            .first {
+                animation-name: first;
+                animation-delay: 1s;
+                right: -10px;
+            }
+
+            .second {
+                animation-name: second;
+                animation-delay: 650ms;
+            }
+
+            .third {
+                animation-name: third;
+                animation-delay: 350ms;
+            }
+
+            .fourth {
+                animation-name: fourth;
+            }
+        }
+
+        .content {
+            margin-right: 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .title {
+                max-width: 430px;
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 1.1;
+                color: $colors-text;
+
+                span {
+                    color: $colors-secondary;
+                }
+            }
+
+            .text {
+                max-width: 430px;
+                margin: 24px 0;
+                color: $colors-textSubtle;
+            }
+
+            .btn_link {
+                display: flex;
+                align-items: center;
+
+                button {
+                    width: 124px;
+                    height: 48px;
+                    background-color: $colors-primary;
+                    border: none;
+                    border-radius: 16px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    font-family: inherit;
+                    letter-spacing: 0.5px;
+                    color: #120b21;
+                    box-shadow: #0e0e2c66 0px -1px 0px 0px inset;
+                    transition: 0.2s;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #2496a5;
+                    }
+
+                    &:active {
+                        transform: translate(0px, 1px);
+                        transition: inherit;
+                    }
+                }
+
+                a {
+                    margin-left: 16px;
+                    text-decoration: none;
+                    color: $colors-primary;
+                    font-weight: 600;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        max-width: 920px;
+        margin: auto;
+
+        .columns {
+            display: grid;
+            grid-template-areas: 
+            "circulating total max"
+            "market burned current";
+            margin-top: 24px;
+
+            .circulating {
+                grid-area: circulating;
+                margin-bottom: 36px;
+            }
+
+            .total {
+                grid-area: total;
+                margin-bottom: 36px;
+            }
+
+            .max {
+                grid-area: max;
+                margin-bottom: 36px;
+            }
+
+            .market {
+                grid-area: market;
+            }
+
+            .burned {
+                grid-area: burned;
+            }
+
+            .current {
+                grid-area: current;
+            }
+
+            .column {
+                border-left: 1px solid #211b2c;
+                padding-left: 16px;
+
+                &:nth-child(1) {
+                    border: none;
+                    padding: 0;
+                }
+
+                &:nth-child(4) {
+                    border: none;
+                    padding: 0;
+                }
+
+                p {
+                    &:nth-child(1) {
+                        font-weight: 400;
+                        line-height: 1.5;
+                        font-size: 16px;
+                        color: $colors-textSubtle;           
+                    }
+
+                    &:nth-child(2) {
+                        font-weight: 600;
+                        line-height: 1.1;
+                        font-size: 24px;
+                        color: $colors-text;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include root.media('laptop') {
+    .seventhSection {
+        padding: 80px 24px;
+        .top {
+            .content {
+                .title {
+                    font-size: 32px;
+                }
+            }
+        }  
+    }
+}
+
+@include root.media('tablet') {
+    .seventhSection {
+        padding: 80px 24px;
+        position: relative;
+        .top {
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            height: auto;
+
+            .content {
+                margin: 0;
+                
+                .title {
+                    max-width: none;
+                }
+
+                .text {
+                    max-width: none;
+                }
+            }
+            .images {
+                width: 192px;
+                height: 192px;
+                margin-left: auto;
+                margin-bottom: 10px;
+                
+                .first {
+                    right: 0;
+                }
+            }
+        }
+
+        .bottom {
+            .columns{
+                grid-template-areas: 
+                "circulating market"
+                "total burned"
+                "max current";
+
+                .column {
+                    margin-bottom: 16px;
+                    &:nth-child(2) {
+                        border: none;
+                        padding: 0;
+                    }
+
+                    &:nth-child(3) {
+                        border: none;
+                        padding: 0;
+                        margin-bottom: 0;
+                    }
+
+                    &:nth-child(4) {
+                        border-left: 1px solid #211b2c;
+                        padding-left: 16px;
+                    }
+
+                    &:nth-child(6) {
+                        border-left: 1px solid #211b2c;
+                        padding-left: 16px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include root.media('mobile') {
+    .seventhSection {
+        padding: 64px 24px;
+    }
+}

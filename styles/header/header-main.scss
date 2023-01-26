@@ -662,23 +662,28 @@
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-
-  width: 27%;
-  overflow: hidden;
+  box-shadow: rgba(14, 14, 44, 0.1) 0px 20px 36px -8px, rgba(0, 0, 0, 0.05) 0px 1px 1px;
+  width: 100%;
   background: $colors-backgroundAlt;
-  box-shadow: rgb(14 14 44 / 10%) 0px 20px 36px -8px, rgb(0 0 0 / 5%) 0px 1px 1px;
-  border: 1px solid $colors-cardBorder;
-  border-radius: 32px;
-  left: calc(50% - 13.5%);
+  max-height: calc(var(9.5px, 1vh) * 100);
   z-index: 100;
   position: absolute;
   min-width: 320px;
   bottom: 0px;
   min-height: 300px;
   max-width: none !important;
-
+  overflow: hidden;
+  border-radius: 32px 32px 0px 0px;
+  animation: 0.3s ease-in-out 0s 1 normal forwards running gSuUIu;
+  @media screen and (min-width: 852px) {
+    width: auto;
+    bottom: auto;
+    max-height: 100vh;
+    border-radius: 32px;
+    animation: 0s ease 0s 1 normal none running none;
+    left: calc(50% - 258px);
+    top: calc(50% - 239px);
+  }
   .theme-select {
     position: relative;
     width: 56px;
@@ -838,7 +843,9 @@
         }
         .li-btns {
           display: flex;
-
+          @media screen and (max-width: 480px) {
+            flex-wrap: wrap;
+          }
           button {
             position: relative;
             -webkit-box-align: center;

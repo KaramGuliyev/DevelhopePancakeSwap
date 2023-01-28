@@ -2031,6 +2031,7 @@
   animation-name: ball4_card4;
 }
 .sixthSection .contentBox {
+  z-index: 1;
   width: 100%;
   height: auto;
   max-width: 920px;
@@ -2040,6 +2041,7 @@
   border: 1px solid #383241;
   border-radius: 72px;
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .sixthSection .contentBox .mainContent {
   display: flex;

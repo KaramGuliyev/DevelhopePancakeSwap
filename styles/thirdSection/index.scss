@@ -151,7 +151,7 @@
 }
 
 @include root.media("laptop") {
-  .third-section {
+  .sectionThirdg {
     .main {
       .content {
         .title {
@@ -163,7 +163,7 @@
 }
 
 @include root.media("tablet") {
-  .third-section {
+  .sectionThird {
     padding: 80px 24px;
     .main {
       width: 100%;

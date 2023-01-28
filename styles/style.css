@@ -1970,32 +1970,32 @@ li {
 }
 
 @media screen and (max-width: 970px) {
-  .third-section .main .content .title {
+  .sectionThirdg .main .content .title {
     font-size: 32px;
   }
 }
 @media screen and (max-width: 850px) {
-  .third-section {
+  .sectionThird {
     padding: 80px 24px;
   }
-  .third-section .main {
+  .sectionThird .main {
     width: 100%;
     flex-direction: column-reverse;
   }
-  .third-section .main .content {
+  .sectionThird .main .content {
     margin-top: 20px;
   }
-  .third-section .main .content .title {
+  .sectionThird .main .content .title {
     max-width: none;
   }
-  .third-section .main .content .text {
+  .sectionThird .main .content .text {
     max-width: none;
   }
-  .third-section .main .main-images {
+  .sectionThird .main .main-images {
     display: flex;
     justify-content: flex-end;
   }
-  .third-section .main .main-images .images {
+  .sectionThird .main .main-images .images {
     width: 192px;
     height: 192px;
   }

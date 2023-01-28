@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>PancakeSwap-clone</title>
-    <link rel="shortcut icon" href="./assets/favicon.ico" />
   </head>
   <body>
     <!--Header navigation menu start-->
-    <div class="nav top">
+    <div class="nav">
       <nav>
         <div class="header-left">
           <div class="header-left__logo">
             <a href="/">
-              <img class="logo-desktop" src="./assets/logo.svg" alt="" />
-              <img class="logo-mobile" src="./assets/logo-mobile.svg" alt="" />
+              <img src="./assets/logo.svg" alt="" />
             </a>
           </div>
           <div class="header-left__links">
@@ -125,7 +119,7 @@
             </div>
           </div>
           <div class="settings">
-            <button id="modal-button" class="settings-btn">
+            <button class="settings-btn">
               <img src="./assets/navGear.svg" alt="" />
             </button>
           </div>
@@ -136,7 +130,7 @@
               </div>
               <div class="link-text">
                 <div class="link-text-desktop">BNB Smart Chain</div>
-                <div class="link-text-mobile">BNB</div>
+                <div class="link-text-mobile" style="display: none">BNB</div>
               </div>
               <img src="./assets/caret-down.svg" alt="" />
             </div>
@@ -161,187 +155,19 @@
           </div>
           <button class="connect-wallet-btn">
             <div class="connect-wallet-btn-desktop">Connect Wallet</div>
-            <div class="connect-wallet-btn-mobile">Connect</div>
+            <div class="connect-wallet-btn-mobile" style="display: none">Connect</div>
           </button>
         </div>
       </nav>
     </div>
-    <!--Settings modal content start-->
-    <div id="modal">
-      <div class="modal-content">
-        <div class="modal-content-header">
-          <span>Settings</span>
-          <button class="close"><img src="./assets/times.svg" alt="" /></button>
-        </div>
-        <div class="modal-content-middle">
-          <ul>
-            <li>GLOBAL</li>
-            <li>
-              <span>Dark mode</span>
-              <div class="theme-select">
-                <div class="theme-select-outer appear">
-                  <div class="theme-select-inner">
-                    <input type="checkbox" />
-                    <div class="selected-theme">
-                      <div>
-                        <div>
-                          <img src="./assets/dark-theme.svg" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="theme-selection-options">
-                      <img src="./assets/light-theme.svg" alt="" />
-                      <img src="./assets/dark-theme.svg" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span>Subgraph Health Indicator</span>
-              <div class="theme-select on-off-btn">
-                <div class="theme-select-outer appear">
-                  <div class="theme-select-inner">
-                    <input class="on-off-btn" type="checkbox" />
-                    <div class="selected-theme">
-                      <div>
-                        <div></div>
-                      </div>
-                    </div>
-                    <div class="theme-selection-options"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span>Show username</span>
-              <div class="theme-select">
-                <div class="theme-select-outer appear">
-                  <div class="theme-select-inner">
-                    <input type="checkbox" />
-                    <div class="selected-theme">
-                      <div>
-                        <div></div>
-                      </div>
-                    </div>
-                    <div class="theme-selection-options"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span>Token Risk Scanning</span>
-              <div class="theme-select">
-                <div class="theme-select-outer appear">
-                  <div class="theme-select-inner">
-                    <input type="checkbox" />
-                    <div class="selected-theme">
-                      <div>
-                        <div></div>
-                      </div>
-                    </div>
-                    <div class="theme-selection-options"></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span>Default Transaction Speed (GWEI)</span>
-              <div class="li-btns">
-                <button>RPC Default</button> <button>Standard (5)</button> <button>Fast (6)</button>
-                <button>Instant (7)</button>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!--Settings modal content end-->
     <!--Header navigation menu end-->
-    <!-- MOBILE NAV START-->
-    <div class="mobile-nav">
-      <div class="mobile-nav-link">
-        <span
-          ><a href="#">
-            <div class="container">
-              <img class="mobile-nav-link-img" src="./assets/trade.svg" alt="" />
-              <span class="mobile-nav-link-text">Trade</span>
-            </div>
-          </a></span
-        >
-      </div>
-      <div class="mobile-nav-btn">
-        <span
-          ><div class="container">
-            <button id="btn-1" type="button">
-              <div class="container">
-                <img class="mobile-nav-link-img" src="./assets/earn.svg" alt="" />
-                <span class="mobile-nav-link-text">Earn</span>
-              </div>
-            </button>
-          </div></span
-        >
-        <div class="mobile-nav-menu">
-          <a href="#">Farms</a>
-          <a href="#">Pools</a>
-        </div>
-      </div>
-      <div class="mobile-nav-btn">
-        <span
-          ><button id="btn-2">
-            <div class="container">
-              <img class="mobile-nav-link-img" src="./assets/win.svg" alt="" /> <span class="mobile-nav-link-text">Win</span>
-            </div>
-          </button></span
-        >
-        <div class="mobile-nav-menu">
-          <a href="#">Trading Competition</a>
-          <a href="#">Prediction (BETA)</a>
-          <a href="#">Lottery</a>
-          <a href="#">Pottery (BETA)</a>
-        </div>
-      </div>
-      <div class="mobile-nav-btn">
-        <span
-          ><button href="#">
-            <div class="container">
-              <img class="mobile-nav-link-img" src="./assets/nft.svg" alt="" /> <span class="mobile-nav-link-text">NFT</span>
-            </div>
-          </button></span
-        >
-        <div class="mobile-nav-menu">
-          <a href="#">Overview</a>
-          <a href="#">Collections</a>
-          <a href="#">Activity</a>
-        </div>
-      </div>
-      <div class="mobile-nav-btn">
-        <span
-          ><button><img src="./assets/3dot.svg" alt="" /></button
-        ></span>
-        <div class="mobile-nav-menu">
-          <a href="#">IFO</a>
-          <a href="#">Voting</a>
-          <hr />
-          <a href="#">Leaderboard</a>
-          <hr />
-          <a href="#">
-            <div>Blog <img src="./assets/enter.svg" alt="" /></div>
-          </a>
-          <a href="#">
-            <div>Docs <img src="./assets/enter.svg" alt="" /></div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- MOBILE NAV END-->
     <!-- SECTIONS START HERE -->
     <section class="sectionsContainer">
       <div class="carousel">
         <div class="carouselWrapper">
           <div class="firstSlider">
             <div class="contents">
-              <h2>CNY Lottery Draw</h2>
+              <p>CNY Lottery Draw</p>
               <div class="carouselTitle">Up to $96K in Prizes</div>
               <a href="#">
                 <button>
@@ -351,19 +177,21 @@
               </a>
             </div>
             <div class="imageContainer">
-              <img src="./assets/carousel/upperRings.png" class="upperRings" alt="" />
-              <img src="./assets/carousel/lowerRings.png" class="lowerRings" alt="" />
-              <img src="./assets/carousel/rabbit.png" class="rabbit" alt="" />
+              <img src="/assets/carousel/upperRings.png" class="upperRings" alt="" />
+              <img src="/assets/carousel/lowerRings.png" class="lowerRings" alt="" />
+              <img src="/assets/carousel/rabbit.png" class="rabbit" alt="" />
             </div>
           </div>
         </div>
       </div>
-      <!--  -->
+
       <div class="firstSection">
         <div class="firstSectionWrapper">
           <div class="contents">
             <h2 class="firstH2">The moon is made of pancakes.</h2>
-            <h2 class="secondH2">Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.</h2>
+            <h2 class="secondH2">
+              Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.
+            </h2>
             <div class="firstSectionButtons">
               <button class="button1">Connect Wallet</button>
               <button class="button2">Trade Now</button>
@@ -390,7 +218,14 @@
             fill="url(#paint0_linear_dark)"
           ></path>
           <defs>
-            <linearGradient id="paint0_linear_dark" x1="830" y1="83.5" x2="830" y2="338.5" gradientUnits="userSpaceOnUse">
+            <linearGradient
+              id="paint0_linear_dark"
+              x1="830"
+              y1="83.5"
+              x2="830"
+              y2="338.5"
+              gradientUnits="userSpaceOnUse"
+            >
               <stop stop-color="#08060B" stop-opacity="0.2"></stop>
               <stop offset="0.545554" stop-color="#08060B" stop-opacity="0.5"></stop>
               <stop offset="1" stop-color="#08060B"></stop>
@@ -398,7 +233,7 @@
           </defs>
         </svg>
       </div>
-      <!--  -->
+
       <section class="secondSection">
         <div class="logo">
           <img src="./assets/3logo1.svg" alt="" />
@@ -461,52 +296,18 @@
           </div>
         </div>
       </section>
-      <!--  -->
-      <section class="sectionThird">
-        <div class="main">
-          <div class="content">
-            <div class="title">
-              <p><span>Trade</span> anything. No registration, no hassle.</p>
-            </div>
-            <div class="text-content">
-              <p>Trade any token on BNB Smart Chain in seconds, just by connecting your wallet.</p>
-            </div>
-            <div class="button-link">
-              <div class="button">
-                <button>Trade Now</button>
-              </div>
-              <div class="link">
-                <a href="#">Learn</a>
-              </div>
-            </div>
-          </div>
-          <div class="main-images">
-            <div class="images">
-              <div class="first">
-                <img src="/assets/BNB@2x.webp" alt="" />
-              </div>
-              <div class="second">
-                <img src="/assets/BTC@2x.webp" alt="" />
-              </div>
-              <div class="third">
-                <img src="/assets/CAKE@2x.webp" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--  -->
+      
       <section class="fifthSection">
         <div class="top">
           <div class="images">
             <div class="first">
-              <img src="./assets/stonks.webp" alt="" />
+              <img src="/assets/stonks.webp" alt="" />
             </div>
             <div class="second">
-              <img src="./assets/pie.webp" alt="" />
+              <img src="/assets/pie.webp" alt="" />
             </div>
             <div class="third">
-              <img src="./assets/folder.webp" alt="" />
+              <img src="/assets/folder.webp" alt="" />
             </div>
           </div>
           <div class="content">
@@ -575,189 +376,11 @@
           </div>
         </div>
       </section>
-      <!--  -->
-      <section class="sixthSection">
-        <div class="images">
-          <div class="ab1">
-            <div class="topImages">
-              <div class="ball1 ball">
-                <img src="./assets/ball1.webp" alt="" />
-              </div>
-              <div class="ball2 ball">
-                <img src="./assets/ball2.webp" alt="" />
-              </div>
-              <div class="ball3 ball">
-                <img src="./assets/ball3.webp" alt="" />
-              </div>
-              <div class="ball4 ball">
-                <img src="./assets/ball4.webp" alt="" />
-              </div>
-              <div class="ball5 ball">
-                <img src="./assets/ball5.webp" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="ab2">
-            <div class="buttomImages">
-              <div class="card1 card">
-                <img src="./assets/card1.webp" alt="" />
-              </div>
-              <div class="card2 card">
-                <img src="./assets/card2.webp" alt="" />
-              </div>
-              <div class="card3 card">
-                <img src="./assets/card3.webp" alt="" />
-              </div>
-              <div class="card4 card">
-                <img src="./assets/card4.webp" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="contentBox">
-          <div class="mainContent">
-            <div class="title">
-              <p><span>Win</span> millions in prizes</p>
-            </div>
-            <div class="textMain">
-              <p>Provably fair, on-chain games.</p>
-              <p>Win big with PancakeSwap.</p>
-            </div>
-            <div class="cards">
-              <div class="predictionBG">
-                <div class="prediction card">
-                  <div class="icon">
-                    <img src="./assets/6icon1.svg" alt="" />
-                  </div>
-                  <div class="text">
-                    <p>Prediction</p>
-                    <p>$1 billion</p>
-                    <p>in BNB + CAKE won so far</p>
-                    <p>Predict the price trend of BNB or CAKE to win</p>
-                  </div>
-                  <div class="button">
-                    <button>
-                      Play
-                      <svg
-                        viewBox="0 0 24 24"
-                        color="invertedContrast"
-                        width="20px"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="sc-4ba21b47-0 cmKcxf"
-                      >
-                        <path
-                          d="M5 13H16.17L11.29 17.88C10.9 18.27 10.9 18.91 11.29 19.3C11.68 19.69 12.31 19.69 12.7 19.3L19.29 12.71C19.68 12.32 19.68 11.69 19.29 11.3L12.71 4.7C12.32 4.31 11.69 4.31 11.3 4.7C10.91 5.09 10.91 5.72 11.3 6.11L16.17 11H5C4.45 11 4 11.45 4 12C4 12.55 4.45 13 5 13Z"
-                        ></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="lotteryBG">
-                <div class="lottery card">
-                  <div class="icon">
-                    <img src="./assets/6icon2.svg" alt="" />
-                  </div>
-                  <div class="text">
-                    <p>Lottery</p>
-                    <p>$88,653</p>
-                    <p>in CAKE prizes this round</p>
-                    <p>Buy tickets with CAKE, win CAKE if your numbers match</p>
-                  </div>
-                  <div class="button">
-                    <button>
-                      Buy Tickets
-                      <svg
-                        viewBox="0 0 24 24"
-                        color="invertedContrast"
-                        width="20px"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="sc-4ba21b47-0 cmKcxf"
-                      >
-                        <path
-                          d="M5 13H16.17L11.29 17.88C10.9 18.27 10.9 18.91 11.29 19.3C11.68 19.69 12.31 19.69 12.7 19.3L19.29 12.71C19.68 12.32 19.68 11.69 19.29 11.3L12.71 4.7C12.32 4.31 11.69 4.31 11.3 4.7C10.91 5.09 10.91 5.72 11.3 6.11L16.17 11H5C4.45 11 4 11.45 4 12C4 12.55 4.45 13 5 13Z"
-                        ></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--  -->
-      <section class="seventhSection">
-        <div class="top">
-          <div class="content">
-            <div class="title">
-              <p><span>CAKE</span> makes our world go round.</p>
-            </div>
-            <div class="text">
-              <p>CAKE token is at the heart of the PancakeSwap ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!</p>
-            </div>
-            <div class="btn_link">
-              <div class="button">
-                <button>Buy CAKE</button>
-              </div>
-              <div class="link">
-                <a href="#">Learn</a>
-              </div>
-            </div>
-          </div>
-          <div class="images">
-            <div class="first">
-              <img src="./assets/bottom-right@2x.webp" alt="" />
-            </div>
-            <div class="second">
-              <img src="./assets/top-right@2x.webp" alt="" />
-            </div>
-            <div class="third">
-              <img src="./assets/coin@2x.webp" alt="" />
-            </div>
-            <div class="fourth">
-              <img src="./assets/top-left@2x.webp" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="bottom">
-          <div class="columns">
-            <div class="circulating column">
-              <p>Circulating Supply</p>
-              <p>164,771,362</p>
-            </div>
-            <div class="total column">
-              <p>Total supply</p>
-              <p>361,826,029</p>
-            </div>
-            <div class="max column">
-              <p>Max Supply</p>
-              <p>750,000,000</p>
-            </div>
-            <div class="market column">
-              <p>Market cap</p>
-              <p>$660 million</p>
-            </div>
-            <div class="burned column">
-              <p>Burned to date</p>
-              <p>708,987,787</p>
-            </div>
-            <div class="current column">
-              <p>Current emissions</p>
-              <p>9.9/block</p>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- SECTIONS ENDS HERE -->
     </section>
-    <div class="overlay"></div>
     <!--Footer start-->
     <footer class="footer">
       <div class="footer-main">
-        <div class="footer-logo-mobile">
-          <img src="./assets//pancake-swap-footer.svg" alt="" />
-        </div>
         <div class="footer-top">
           <ul class="footer-top-links">
             <li>About</li>
@@ -781,20 +404,30 @@
             <li><a href="#">Auidts</a></li>
             <li><a href="#">Careers</a></li>
           </ul>
-          <div class="footer-top-logo-desktop">
+          <div>
             <img src="./assets//pancake-swap-footer.svg" alt="" />
           </div>
         </div>
 
         <div class="footer-middle">
-          <a href="#" class="footer-middle-link"><img src="./assets/twitter.svg" alt="Twitter" /></a>
-          <a href="#" class="footer-middle-link"><img src="./assets/telegram.svg" alt="Telegram" /></a>
+          <a href="#" class="footer-middle-link"
+            ><img src="./assets/twitter.svg" alt="Twitter"
+          /></a>
+          <a href="#" class="footer-middle-link"
+            ><img src="./assets/telegram.svg" alt="Telegram"
+          /></a>
           <a href="#" class="footer-middle-link"><img src="./assets/reddit.svg" alt="Reddit" /></a>
-          <a href="#" class="footer-middle-link"><img src="./assets/instagram.svg" alt="Instagram" /></a>
+          <a href="#" class="footer-middle-link"
+            ><img src="./assets/instagram.svg" alt="Instagram"
+          /></a>
           <a href="#" class="footer-middle-link"><img src="./assets/github.svg" alt="Github" /></a>
-          <a href="#" class="footer-middle-link"><img src="./assets/discord.svg" alt="Discord" /></a>
+          <a href="#" class="footer-middle-link"
+            ><img src="./assets/discord.svg" alt="Discord"
+          /></a>
           <a href="#" class="footer-middle-link"><img src="./assets/medium.svg" alt="Medium" /></a>
-          <a href="#" class="footer-middle-link"><img src="./assets/youtube.svg" alt="Youtube" /></a>
+          <a href="#" class="footer-middle-link"
+            ><img src="./assets/youtube.svg" alt="Youtube"
+          /></a>
         </div>
 
         <div class="footer-bottom">
@@ -847,6 +480,5 @@
       </div>
     </footer>
     <!--Footer finish-->
-    <script src="./scripts/header-footer.js"></script>
   </body>
 </html>

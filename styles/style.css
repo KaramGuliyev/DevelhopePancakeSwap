@@ -11,6 +11,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .nav {
   position: fixed;
   top: -56px;
@@ -2521,6 +2522,178 @@
 @media screen and (max-width: 575px) {
   .seventhSection {
     padding: 64px 24px;
+  }
+}
+/* Dark thme colors */
+@keyframes first {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(3px, 15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes second {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes third {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(6px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.sectionThird {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 96px 24px;
+  background: #08060b;
+}
+.sectionThird .main {
+  display: flex;
+  max-width: 920px;
+}
+.sectionThird .main .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 64px;
+}
+.sectionThird .main .content .title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #f4eeff;
+  max-width: 428px;
+  margin-bottom: 24px;
+}
+.sectionThird .main .content .title span {
+  color: #9a6aff;
+}
+.sectionThird .main .content .text-content {
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-size: 16px;
+  max-width: 428px;
+  color: #b8add2;
+}
+.sectionThird .main .main-images .images {
+  position: relative;
+  width: 428px;
+  height: 428px;
+}
+.sectionThird .main .main-images .images img {
+  width: 100%;
+  height: 100%;
+}
+.sectionThird .main .main-images .images .first {
+  position: absolute;
+  animation-name: first;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+.sectionThird .main .main-images .images .second {
+  position: absolute;
+  animation-name: second;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 660ms;
+  animation-iteration-count: infinite;
+}
+.sectionThird .main .main-images .images .third {
+  position: absolute;
+  animation-name: third;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 330ms;
+  animation-iteration-count: infinite;
+}
+.sectionThird .main .button-link {
+  display: flex;
+}
+.sectionThird .main .button-link .button {
+  width: 128px;
+  height: 48px;
+}
+.sectionThird .main .button-link .button button {
+  background-color: #1fc7d4;
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  letter-spacing: 0.03rem;
+  border: none;
+  transition: 0.2s;
+}
+.sectionThird .main .button-link .button button:hover {
+  background-color: #10848e;
+}
+.sectionThird .main .button-link .button button:active {
+  transform: translate(0px, 1px);
+}
+.sectionThird .main .button-link .link {
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+}
+.sectionThird .main .button-link .link a {
+  color: #1fc7d4;
+}
+.sectionThird .main .button-link .link a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 970px) {
+  .third-section .main .content .title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .third-section {
+    padding: 80px 24px;
+  }
+  .third-section .main {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .third-section .main .content {
+    margin-top: 20px;
+  }
+  .third-section .main .content .title {
+    max-width: none;
+  }
+  .third-section .main .content .text {
+    max-width: none;
+  }
+  .third-section .main .main-images {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .third-section .main .main-images .images {
+    width: 192px;
+    height: 192px;
   }
 }
 * {

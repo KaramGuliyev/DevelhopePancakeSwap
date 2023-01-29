@@ -2949,11 +2949,13 @@ li {
   }
 }
 .eighthSection {
+  max-width: 1152px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 64px;
+  padding: 64px 0 64px 0;
+  box-sizing: border-box;
   background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
   overflow: hidden;
 }
@@ -2968,9 +2970,9 @@ li {
 }
 .eighthSection .main-animations {
   position: absolute;
-  width: 70%;
+  width: 100%;
   height: 100%;
-  padding: 0px 64px;
+  justify-content: center;
 }
 .eighthSection .main-animations .left-right {
   position: relative;

@@ -1,0 +1,17 @@
+.scrollToTop {
+  position: fixed;
+  right: 5%;
+  bottom: calc(110px);
+  width: 48px;
+  height: 48px;
+  .scrollButton {
+    background-color: rgb(31, 199, 212);
+    border-radius: 16px;
+    border-width: 0px;
+    width: 48px;
+    height: 48px;
+    .scrollButtonImg {
+      width: 20px;
+    }
+  }
+}

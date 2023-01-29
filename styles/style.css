@@ -2880,5 +2880,22 @@ li {
     padding: 64px 24px;
   }
 }
+.scrollToTop {
+  position: fixed;
+  right: 5%;
+  bottom: 110px;
+  width: 48px;
+  height: 48px;
+}
+.scrollToTop .scrollButton {
+  background-color: rgb(31, 199, 212);
+  border-radius: 16px;
+  border-width: 0px;
+  width: 48px;
+  height: 48px;
+}
+.scrollToTop .scrollButton .scrollButtonImg {
+  width: 20px;
+}
 
 /*# sourceMappingURL=style.css.map */

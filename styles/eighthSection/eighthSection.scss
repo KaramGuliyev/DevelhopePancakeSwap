@@ -72,7 +72,7 @@
   }
 }
 .eighthSection {
-  max-width: 1152px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,6 +95,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    max-width: 1152px;
     justify-content: center;
     .left-right {
       position: relative;
@@ -177,7 +178,6 @@
   .conteiner {
     z-index: 1;
     width: 100%;
-    max-width: 920px;
     text-align: center;
     display: flex;
     align-items: center;

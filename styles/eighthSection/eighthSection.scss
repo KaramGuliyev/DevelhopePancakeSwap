@@ -1,0 +1,267 @@
+@use "../atomic/root/root.scss";
+@import "../variables.scss";
+
+@keyframes leftFirst {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(3px, 15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes leftSecond {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes leftThird {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(6px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes rightFirst {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(3px, 15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes rightSecond {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes rightThird {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(6px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.eighthSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 64px;
+  background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .bg-svg {
+    width: 400%;
+    height: 400%;
+    position: absolute;
+  }
+
+  .main-animations {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    padding: 0px 64px;
+    .left-right {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      .left-animation {
+        position: absolute;
+        width: 256px;
+        height: 256px;
+        top: 15px;
+        left: 0;
+        .left-animation2 {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          .left-first {
+            position: absolute;
+            animation-name: leftFirst;
+            animation-timing-function: ease-in-out;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+          }
+          .left-second {
+            position: absolute;
+            animation-name: leftSecond;
+            animation-timing-function: ease-in-out;
+            animation-duration: 3s;
+            animation-delay: 660ms;
+            animation-iteration-count: infinite;
+          }
+          .left-third {
+            position: absolute;
+            animation-name: leftThird;
+            animation-timing-function: ease-in-out;
+            animation-duration: 3s;
+            animation-delay: 330ms;
+            animation-iteration-count: infinite;
+          }
+        }
+      }
+      .right-animation {
+        position: absolute;
+        width: 256px;
+        height: 256px;
+        right: 0;
+        bottom: 15px;
+        .right-animation2 {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          .right-first {
+            position: absolute;
+            animation-name: rightFirst;
+            animation-timing-function: ease-in-out;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+          }
+          .right-second {
+            position: absolute;
+            animation-name: rightSecond;
+            animation-timing-function: ease-in-out;
+            animation-duration: 3s;
+            animation-delay: 660ms;
+            animation-iteration-count: infinite;
+          }
+          .right-third {
+            position: absolute;
+            animation-name: rightThird;
+            animation-timing-function: ease-in-out;
+            animation-duration: 3s;
+            animation-delay: 330ms;
+            animation-iteration-count: infinite;
+          }
+        }
+      }
+    }
+  }
+  .conteiner {
+    z-index: 1;
+    width: 100%;
+    max-width: 920px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 48px 24px;
+    .title {
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: white;
+      font-size: 40px;
+    }
+    .first-text {
+      color: $colors-white;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      font-size: 16px;
+    }
+    .second-text {
+      color: $colors-white;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+    a {
+      color: $colors-primary;
+      font-weight: 600;
+      line-height: 1.5;
+      font-size: 16px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .button {
+      width: 165px;
+      height: 48px;
+      margin-top: 24px;
+      button {
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        border-radius: 16px;
+        border: none;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: $colors-primary;
+        color: $colors-invertedContrast;
+        &:hover {
+          background-color: #10848e;
+        }
+        &:active {
+          transform: translate(0px, 1px);
+        }
+      }
+    }
+  }
+}
+
+@include root.media("laptop") {
+  .eighthSection {
+    .conteiner {
+      .title {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@include root.media("tablet") {
+  .eighthSection {
+    .main-animations {
+      .left-right {
+        .left-animation {
+          height: 0px;
+          width: 0px;
+        }
+        .right-animation {
+          height: 0px;
+          width: 0px;
+        }
+      }
+    }
+  }
+}

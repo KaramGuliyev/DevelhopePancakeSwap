@@ -7,6 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -2878,6 +2879,254 @@ li {
 @media screen and (max-width: 575px) {
   .seventhSection {
     padding: 64px 24px;
+  }
+}
+/* Dark thme colors */
+@keyframes leftFirst {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(3px, 15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes leftSecond {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes leftThird {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(6px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes rightFirst {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(3px, 15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes rightSecond {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes rightThird {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(6px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.eighthSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 64px;
+  background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+  overflow: hidden;
+}
+.eighthSection img {
+  width: 100%;
+  height: 100%;
+}
+.eighthSection .bg-svg {
+  width: 400%;
+  height: 400%;
+  position: absolute;
+}
+.eighthSection .main-animations {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  padding: 0px 64px;
+}
+.eighthSection .main-animations .left-right {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.eighthSection .main-animations .left-right .left-animation {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  top: 15px;
+  left: 0;
+}
+.eighthSection .main-animations .left-right .left-animation .left-animation2 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.eighthSection .main-animations .left-right .left-animation .left-animation2 .left-first {
+  position: absolute;
+  animation-name: leftFirst;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+.eighthSection .main-animations .left-right .left-animation .left-animation2 .left-second {
+  position: absolute;
+  animation-name: leftSecond;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 660ms;
+  animation-iteration-count: infinite;
+}
+.eighthSection .main-animations .left-right .left-animation .left-animation2 .left-third {
+  position: absolute;
+  animation-name: leftThird;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 330ms;
+  animation-iteration-count: infinite;
+}
+.eighthSection .main-animations .left-right .right-animation {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  right: 0;
+  bottom: 15px;
+}
+.eighthSection .main-animations .left-right .right-animation .right-animation2 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.eighthSection .main-animations .left-right .right-animation .right-animation2 .right-first {
+  position: absolute;
+  animation-name: rightFirst;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+.eighthSection .main-animations .left-right .right-animation .right-animation2 .right-second {
+  position: absolute;
+  animation-name: rightSecond;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 660ms;
+  animation-iteration-count: infinite;
+}
+.eighthSection .main-animations .left-right .right-animation .right-animation2 .right-third {
+  position: absolute;
+  animation-name: rightThird;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-delay: 330ms;
+  animation-iteration-count: infinite;
+}
+.eighthSection .conteiner {
+  z-index: 1;
+  width: 100%;
+  max-width: 920px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 48px 24px;
+}
+.eighthSection .conteiner .title {
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: white;
+  font-size: 40px;
+}
+.eighthSection .conteiner .first-text {
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 16px;
+}
+.eighthSection .conteiner .second-text {
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+.eighthSection .conteiner a {
+  color: #1fc7d4;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.eighthSection .conteiner a:hover {
+  text-decoration: underline;
+}
+.eighthSection .conteiner .button {
+  width: 165px;
+  height: 48px;
+  margin-top: 24px;
+}
+.eighthSection .conteiner .button button {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  border-radius: 16px;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #1fc7d4;
+  color: #191326;
+}
+.eighthSection .conteiner .button button:hover {
+  background-color: #10848e;
+}
+.eighthSection .conteiner .button button:active {
+  transform: translate(0px, 1px);
+}
+
+@media screen and (max-width: 970px) {
+  .eighthSection .conteiner .title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .eighthSection .main-animations .left-right .left-animation {
+    height: 0px;
+    width: 0px;
+  }
+  .eighthSection .main-animations .left-right .right-animation {
+    height: 0px;
+    width: 0px;
   }
 }
 

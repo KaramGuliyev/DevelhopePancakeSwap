@@ -2886,6 +2886,7 @@ li {
   bottom: 110px;
   width: 48px;
   height: 48px;
+  z-index: 5;
 }
 .scrollToTop .scrollButton {
   background-color: rgb(31, 199, 212);
@@ -2896,6 +2897,23 @@ li {
 }
 .scrollToTop .scrollButton .scrollButtonImg {
   width: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

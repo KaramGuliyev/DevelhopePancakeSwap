@@ -1,7 +1,6 @@
 /* Sticky header start */
 let headerMenu = document.querySelector(".nav");
 let lastScroll = 0;
-
 let scrollUp = "scroll-up";
 let scrollDown = "scroll-down";
 let body = document.body;

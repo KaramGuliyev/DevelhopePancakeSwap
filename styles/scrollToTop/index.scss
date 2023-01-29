@@ -4,6 +4,8 @@
   bottom: calc(110px);
   width: 48px;
   height: 48px;
+  z-index: 5;
+  
   .scrollButton {
     background-color: rgb(31, 199, 212);
     border-radius: 16px;
@@ -13,5 +15,22 @@
     .scrollButtonImg {
       width: 20px;
     }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

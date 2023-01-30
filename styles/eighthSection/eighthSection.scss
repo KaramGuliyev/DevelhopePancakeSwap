@@ -1,7 +1,7 @@
 @use "../atomic/root/root.scss";
 @import "../variables.scss";
 
-@keyframes leftFirst {
+@keyframes left-right-first {
   0% {
     transform: translate(0px, 0px);
   }
@@ -13,7 +13,7 @@
   }
 }
 
-@keyframes leftSecond {
+@keyframes left-right-second {
   0% {
     transform: translate(0px, 0px);
   }
@@ -25,7 +25,7 @@
   }
 }
 
-@keyframes leftThird {
+@keyframes left-right-third {
   0% {
     transform: translate(0px, 0px);
   }
@@ -36,41 +36,7 @@
     transform: translate(0px, 0px);
   }
 }
-@keyframes rightFirst {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(3px, 15px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
 
-@keyframes rightSecond {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(5px, 10px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes rightThird {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(6px, 5px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
 .eighthSection {
   width: 100%;
   display: flex;
@@ -113,7 +79,7 @@
           position: relative;
           .left-first {
             position: absolute;
-            animation-name: leftFirst;
+            animation-name: left-right-first;
             animation-timing-function: ease-in-out;
             animation-duration: 3s;
             animation-delay: 1s;
@@ -121,7 +87,7 @@
           }
           .left-second {
             position: absolute;
-            animation-name: leftSecond;
+            animation-name: left-right-second;
             animation-timing-function: ease-in-out;
             animation-duration: 3s;
             animation-delay: 660ms;
@@ -129,7 +95,7 @@
           }
           .left-third {
             position: absolute;
-            animation-name: leftThird;
+            animation-name: left-right-third;
             animation-timing-function: ease-in-out;
             animation-duration: 3s;
             animation-delay: 330ms;
@@ -149,7 +115,7 @@
           position: relative;
           .right-first {
             position: absolute;
-            animation-name: rightFirst;
+            animation-name: left-right-first;
             animation-timing-function: ease-in-out;
             animation-duration: 3s;
             animation-delay: 1s;
@@ -157,7 +123,7 @@
           }
           .right-second {
             position: absolute;
-            animation-name: rightSecond;
+            animation-name: left-right-second;
             animation-timing-function: ease-in-out;
             animation-duration: 3s;
             animation-delay: 660ms;
@@ -165,7 +131,7 @@
           }
           .right-third {
             position: absolute;
-            animation-name: rightThird;
+            animation-name: left-right-third;
             animation-timing-function: ease-in-out;
             animation-duration: 3s;
             animation-delay: 330ms;
@@ -230,6 +196,8 @@
         font-weight: 600;
         background-color: $colors-primary;
         color: $colors-invertedContrast;
+        transition: 0.2s;
+        cursor: pointer;
         &:hover {
           background-color: #10848e;
         }

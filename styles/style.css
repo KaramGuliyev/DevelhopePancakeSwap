@@ -1971,7 +1971,7 @@ li {
 }
 
 @media screen and (max-width: 970px) {
-  .sectionThirdg .main .content .title {
+  .sectionThird .main .content .title {
     font-size: 32px;
   }
 }
@@ -2882,7 +2882,7 @@ li {
   }
 }
 /* Dark thme colors */
-@keyframes leftFirst {
+@keyframes left-right-first {
   0% {
     transform: translate(0px, 0px);
   }
@@ -2893,7 +2893,7 @@ li {
     transform: translate(0px, 0px);
   }
 }
-@keyframes leftSecond {
+@keyframes left-right-second {
   0% {
     transform: translate(0px, 0px);
   }
@@ -2904,40 +2904,7 @@ li {
     transform: translate(0px, 0px);
   }
 }
-@keyframes leftThird {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(6px, 5px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes rightFirst {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(3px, 15px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes rightSecond {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(5px, 10px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes rightThird {
+@keyframes left-right-third {
   0% {
     transform: translate(0px, 0px);
   }
@@ -2994,7 +2961,7 @@ li {
 }
 .eighthSection .main-animations .left-right .left-animation .left-animation2 .left-first {
   position: absolute;
-  animation-name: leftFirst;
+  animation-name: left-right-first;
   animation-timing-function: ease-in-out;
   animation-duration: 3s;
   animation-delay: 1s;
@@ -3002,7 +2969,7 @@ li {
 }
 .eighthSection .main-animations .left-right .left-animation .left-animation2 .left-second {
   position: absolute;
-  animation-name: leftSecond;
+  animation-name: left-right-second;
   animation-timing-function: ease-in-out;
   animation-duration: 3s;
   animation-delay: 660ms;
@@ -3010,7 +2977,7 @@ li {
 }
 .eighthSection .main-animations .left-right .left-animation .left-animation2 .left-third {
   position: absolute;
-  animation-name: leftThird;
+  animation-name: left-right-third;
   animation-timing-function: ease-in-out;
   animation-duration: 3s;
   animation-delay: 330ms;
@@ -3030,7 +2997,7 @@ li {
 }
 .eighthSection .main-animations .left-right .right-animation .right-animation2 .right-first {
   position: absolute;
-  animation-name: rightFirst;
+  animation-name: left-right-first;
   animation-timing-function: ease-in-out;
   animation-duration: 3s;
   animation-delay: 1s;
@@ -3038,7 +3005,7 @@ li {
 }
 .eighthSection .main-animations .left-right .right-animation .right-animation2 .right-second {
   position: absolute;
-  animation-name: rightSecond;
+  animation-name: left-right-second;
   animation-timing-function: ease-in-out;
   animation-duration: 3s;
   animation-delay: 660ms;
@@ -3046,7 +3013,7 @@ li {
 }
 .eighthSection .main-animations .left-right .right-animation .right-animation2 .right-third {
   position: absolute;
-  animation-name: rightThird;
+  animation-name: left-right-third;
   animation-timing-function: ease-in-out;
   animation-duration: 3s;
   animation-delay: 330ms;
@@ -3108,6 +3075,8 @@ li {
   font-weight: 600;
   background-color: #1fc7d4;
   color: #191326;
+  transition: 0.2s;
+  cursor: pointer;
 }
 .eighthSection .conteiner .button button:hover {
   background-color: #10848e;

@@ -1586,6 +1586,10 @@ li {
   -webkit-box-align: center;
   -webkit-box-pack: center;
   -webkit-font-smoothing: antialiased;
+  transition: 0.2s;
+}
+.firstSection .firstSectionWrapper .contents .firstSectionButtons .button2:hover {
+  opacity: 0.65;
 }
 .firstSection .firstSectionWrapper .animations {
   max-width: 576px;
@@ -1593,7 +1597,7 @@ li {
   position: relative;
 }
 .firstSection .firstSectionWrapper .animations .astronaut-rabbit img {
-  animation: 5s ease-in-out infinite astronaut;
+  animation: 3.5s ease-in-out infinite astronaut;
   max-width: 100%;
   max-height: 100%;
 }
@@ -1604,22 +1608,19 @@ li {
 .firstSection .firstSectionWrapper .animations .stars .starLeft {
   max-width: 100%;
   top: 0;
-  opacity: 0;
-  animation: 3s ease-in-out infinite stars;
+  animation: 2.5s ease-in-out infinite stars;
   position: absolute;
 }
 .firstSection .firstSectionWrapper .animations .stars .starRight {
   max-width: 100%;
   top: 0;
-  opacity: 0;
-  animation: 2s 2s ease-in-out infinite stars;
+  animation: 4s 2s ease-in-out infinite stars;
   position: absolute;
 }
 .firstSection .firstSectionWrapper .animations .stars .starTopRight {
   max-width: 100%;
   top: 0;
-  opacity: 0;
-  animation: 3s 1s ease-in-out infinite stars;
+  animation: 2s 1s ease-in-out infinite stars;
   position: absolute;
 }
 .firstSection svg {
@@ -1702,23 +1703,20 @@ li {
 }
 @keyframes stars {
   0% {
-    opacity: 0;
-  }
-  50% {
     opacity: 1;
   }
+  50% {
+    opacity: 0.1;
+  }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 @keyframes astronaut {
   0% {
     transform: translate(0px, 0px);
   }
-  33% {
-    transform: translate(5px, 5px);
-  }
-  66% {
+  50% {
     transform: translate(-5px, -5px);
   }
   100% {

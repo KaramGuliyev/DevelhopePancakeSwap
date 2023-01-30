@@ -70,6 +70,10 @@
           -webkit-box-align: center;
           -webkit-box-pack: center;
           -webkit-font-smoothing: antialiased;
+          transition: 0.2s;
+          &:hover {
+            opacity: 0.65;
+          }
         }
       }
     }
@@ -80,7 +84,7 @@
       position: relative;
       .astronaut-rabbit {
         img {
-          animation: 5s ease-in-out infinite astronaut;
+          animation: 3.5s ease-in-out infinite astronaut;
           max-width: 100%;
           max-height: 100%;
         }
@@ -91,22 +95,22 @@
         .starLeft {
           max-width: 100%;
           top: 0;
-          opacity: 0;
-          animation: 3s ease-in-out infinite stars;
+          // opacity: 0;
+          animation: 2.5s ease-in-out infinite stars;
           position: absolute;
         }
         .starRight {
           max-width: 100%;
           top: 0;
-          opacity: 0;
-          animation: 2s 2s ease-in-out infinite stars;
+          // opacity: 0;
+          animation: 4s 2s ease-in-out infinite stars;
           position: absolute;
         }
         .starTopRight {
           max-width: 100%;
           top: 0;
-          opacity: 0;
-          animation: 3s 1s ease-in-out infinite stars;
+          // opacity: 0;
+          animation: 2s 1s ease-in-out infinite stars;
           position: absolute;
         }
       }
@@ -128,13 +132,6 @@
           font-size: 48px;
           font-weight: 600;
           line-height: 1.1;
-        }
-      }
-
-      .animations {
-        .astronaut-rabbit {
-          img {
-          }
         }
       }
     }
@@ -204,11 +201,7 @@
       }
 
       .animations {
-        margin: 2rem 0 2rem 0;
-        .astronaut-rabbit {
-          img {
-          }
-        }
+        margin: 2rem 0 2rem 0;     
       }
     }
   }
@@ -216,14 +209,14 @@
 
 @keyframes stars {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
 
   50% {
-    opacity: 1;
+    opacity: 0.1;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -231,12 +224,7 @@
   0% {
     transform: translate(0px, 0px);
   }
-
-  33% {
-    transform: translate(5px, 5px);
-  }
-
-  66% {
+  50% {
     transform: translate(-5px, -5px);
   }
   100% {

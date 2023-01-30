@@ -37,12 +37,24 @@
   }
 }
 
-.sectionThird {
+.sectionThird { 
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 96px 24px;
   background: $colors-background;
+
+  .svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+
+    img {
+      width: 100%;
+    }
+  }
 
   .main {
     display: flex;

@@ -40,6 +40,22 @@
 .fifthSection {
     background: $colors-gradientCardHeader;
     padding: 96px 24px;
+    position: relative;
+    overflow: hidden;
+
+
+    .svg {
+        position: absolute;
+        width: 150%;
+        top: 0;
+        left: 0;
+        display: flex;
+        height: 48px;
+
+        img {
+            width: 100%;
+        }
+    }
 
     .top {
         display: flex;

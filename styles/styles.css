@@ -1868,12 +1868,14 @@ li {
   align-items: center;
   padding: 96px 24px;
   background: #08060b;
+  margin-top: 100px;
 }
 .sectionThird .svg {
   position: absolute;
   top: 0;
   width: 100%;
   display: flex;
+  margin: 30px;
 }
 .sectionThird .svg img {
   width: 100%;
@@ -2046,19 +2048,6 @@ li {
 .fifthSection {
   background: linear-gradient(166.77deg, #3b4155, #3a3045);
   padding: 96px 24px;
-  position: relative;
-  overflow: hidden;
-}
-.fifthSection .svg {
-  position: absolute;
-  width: 150%;
-  top: 0;
-  left: 0;
-  display: flex;
-  height: 48px;
-}
-.fifthSection .svg img {
-  width: 100%;
 }
 .fifthSection .top {
   display: flex;
@@ -3169,4 +3158,4 @@ li {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */

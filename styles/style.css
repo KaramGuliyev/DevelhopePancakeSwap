@@ -1979,6 +1979,9 @@ li {
 }
 
 @media screen and (max-width: 970px) {
+  .sectionThird {
+    padding: 80px 24px;
+  }
   .sectionThird .main .content .title {
     font-size: 32px;
   }
@@ -1993,11 +1996,12 @@ li {
   }
   .sectionThird .main .content {
     margin-top: 20px;
+    margin-right: 0;
   }
   .sectionThird .main .content .title {
     max-width: none;
   }
-  .sectionThird .main .content .text {
+  .sectionThird .main .content .text-content {
     max-width: none;
   }
   .sectionThird .main .main-images {
@@ -2007,6 +2011,11 @@ li {
   .sectionThird .main .main-images .images {
     width: 192px;
     height: 192px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .sectionThird {
+    padding: 64px 24px;
   }
 }
 /* Dark thme colors */
@@ -2055,7 +2064,7 @@ li {
   top: 0;
   left: 0;
   display: flex;
-  height: 48px;
+  max-height: 48px;
 }
 .fifthSection .svg img {
   width: 100%;

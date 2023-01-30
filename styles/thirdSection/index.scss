@@ -164,6 +164,7 @@
 
 @include root.media("laptop") {
   .sectionThird {
+    padding: 80px 24px;
     .main {
       .content {
         .title {
@@ -183,11 +184,12 @@
 
       .content {
         margin-top: 20px;
+        margin-right: 0;
         .title {
           max-width: none;
         }
 
-        .text {
+        .text-content {
           max-width: none;
         }
       }
@@ -202,5 +204,11 @@
         }
       }
     }
+  }
+}
+
+@include root.media('mobile') {
+  .sectionThird {
+    padding: 64px 24px;
   }
 }

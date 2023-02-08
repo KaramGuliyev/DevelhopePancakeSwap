@@ -2052,6 +2052,26 @@ li {
     transform: translate(0px, 0px);
   }
 }
+@keyframes sliderDown {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 80px);
+    opacity: 0;
+  }
+}
+@keyframes sliderUp {
+  0% {
+    transform: translate(0px, 80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
 .fifthSection {
   background: linear-gradient(166.77deg, #3b4155, #3a3045);
   padding: 96px 24px;
@@ -2160,16 +2180,28 @@ li {
   text-decoration: underline;
 }
 .fifthSection .bottom {
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
 }
+.fifthSection .bottom #title52 {
+  visibility: hidden;
+}
 .fifthSection .bottom .title {
-  display: flex;
-  align-items: center;
   font-size: 20px;
   font-weight: 600;
   color: #f4eeff;
   margin: 24px 0;
+  position: relative;
+}
+.fifthSection .bottom .title .first-title {
+  display: flex;
+  align-items: center;
+}
+.fifthSection .bottom .title .second-title {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0px;
 }
 .fifthSection .bottom .title span {
   color: #9a6aff;
@@ -2184,20 +2216,44 @@ li {
   border: none;
   padding-top: 2px;
   fill: #b8add2;
-  transition: 0.2s;
   cursor: pointer;
 }
 .fifthSection .bottom .title .button button:hover {
   fill: #8c84a3;
 }
 .fifthSection .bottom .columns {
+  position: relative;
+}
+.fifthSection .bottom .columns .first-line {
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.fifthSection .bottom .columns .second-line {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  opacity: 0;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.fifthSection .bottom .columns .lines {
   display: flex;
   justify-content: space-between;
+}
+.fifthSection .bottom .columns .last {
+  max-width: none;
+  width: auto;
+  margin-right: 0px;
 }
 .fifthSection .bottom .columns .column {
   border-left: 1px solid #211b2c;
   padding-left: 16px;
   height: 80px;
+  width: 100%;
+  max-width: 250px;
+  margin-right: 10px;
 }
 .fifthSection .bottom .columns .column:first-child {
   border: none;
@@ -2258,29 +2314,34 @@ li {
   .fifthSection {
     padding: 64px 16px;
   }
-  .fifthSection .bottom .columns {
+  .fifthSection .bottom .columns .lines {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "arena squad" "krs 0" "mgp wmx";
   }
-  .fifthSection .bottom .columns .column {
+  .fifthSection .bottom .columns .lines .column {
     border: none;
     padding: 0;
   }
-  .fifthSection .bottom .columns .arena {
+  .fifthSection .bottom .columns .lines .arena, .fifthSection .bottom .columns .lines .stake {
     grid-area: arena;
   }
-  .fifthSection .bottom .columns .squad {
+  .fifthSection .bottom .columns .lines .squad, .fifthSection .bottom .columns .lines .xcad {
     grid-area: squad;
   }
-  .fifthSection .bottom .columns .krs {
+  .fifthSection .bottom .columns .lines .krs, .fifthSection .bottom .columns .lines .zbc {
     grid-area: krs;
   }
-  .fifthSection .bottom .columns .wmx {
+  .fifthSection .bottom .columns .lines .wmx, .fifthSection .bottom .columns .lines .primal {
     grid-area: wmx;
   }
-  .fifthSection .bottom .columns .mgp {
+  .fifthSection .bottom .columns .lines .mgp, .fifthSection .bottom .columns .lines .champ {
     grid-area: mgp;
+  }
+  .fifthSection .bottom .columns .first-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "arena squad" "krs 0" "mgp wmx";
   }
 }
 /* Dark thme colors */

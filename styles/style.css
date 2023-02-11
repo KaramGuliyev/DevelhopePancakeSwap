@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -3244,6 +3245,479 @@ li {
   to {
     opacity: 0;
   }
+}
+/* Dark thme colors */
+.nav .header-left .header-left__links .swap-trade-span {
+  color: #9a6aff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.swap {
+  height: calc(100vh - 57px);
+  min-height: 762px;
+}
+.swap .swap-nav {
+  margin-top: 57px;
+  display: flex;
+  justify-content: center;
+  height: 42px;
+  background: #1e1e25;
+  box-shadow: rgba(133, 133, 133, 0.1019607843) 0px -2px 0px -8px inset;
+}
+.swap .swap-nav .links {
+  display: flex;
+  height: 100%;
+}
+.swap .swap-nav .links .link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 4px 4px 0px 4px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.swap .swap-nav .links .link:hover {
+  background-color: #323245;
+}
+.swap .swap-nav .links .link a {
+  color: #b8add2;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+}
+.swap .swap-nav .links .link a img {
+  margin-left: 4px;
+}
+.swap .swap-nav .links .swap-link {
+  background-color: #1fc7d4;
+  margin-bottom: 3px;
+  margin-right: 20px;
+  height: 42px;
+}
+.swap .swap-nav .links .swap-link .swap-bg {
+  background-color: #1e1e25;
+  height: 38px;
+  padding: 8px 4px 0px 4px;
+}
+.swap .swap-nav .links .swap-link .swap-bg:hover {
+  background-color: #323245;
+}
+.swap .swap-nav .links .swap-link a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #9a6aff;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 1;
+  pointer-events: inherit;
+  height: 100%;
+}
+.swap .main-content {
+  background: linear-gradient(139.73deg, #313d5c, #3d2a54);
+  height: calc(100% - 42px);
+  padding: 32px 32px 0px 32px;
+}
+.swap .main-content .graph-card {
+  display: flex;
+  justify-content: center;
+  height: calc(100% - 108px);
+}
+.swap .main-content .graph-card .graph {
+  width: 50%;
+  padding-top: 8px;
+  background: rgba(39, 38, 44, 0.5019607843);
+  height: 516px;
+  border: 1px solid #383241;
+  border-radius: 16px;
+}
+.swap .main-content .graph-card .card-box {
+  width: 408px;
+  padding: 0px 40px;
+  height: 565px;
+  padding: 0px 40px;
+}
+.swap .main-content .graph-card .card-box .card-bg {
+  background: #383241;
+  color: #f4eeff;
+  padding: 1px 1px 3px;
+  border-radius: 34px;
+  height: 100%;
+  width: 100%;
+}
+.swap .main-content .graph-card .card-box .card {
+  background-color: #27262c;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+}
+.swap .main-content .graph-card .card-box .card .titles {
+  width: 100%;
+  border-bottom: 1px solid #383241;
+  padding: 24px;
+  height: 149px;
+}
+.swap .main-content .graph-card .card-box .card .titles .title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #f4eeff;
+  margin-bottom: 13px;
+}
+.swap .main-content .graph-card .card-box .card .titles .text {
+  color: #b8add2;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-bottom: 13px;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons {
+  display: flex;
+  justify-content: flex-end;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn {
+  width: 32px;
+  height: 32px;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn1 svg {
+  height: 20px;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn5 svg {
+  margin-top: 2px;
+}
+.swap .main-content .graph-card .card-box .card .calc {
+  padding: 16px;
+  height: 412px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content {
+  width: 100%;
+  height: 316px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title {
+  display: flex;
+  justify-content: flex-start;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button {
+  display: flex;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 0px 8px;
+  height: 32px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn .icon {
+  margin-right: 8px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn .icon .rabbit {
+  width: 24px;
+  height: 24px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn .title {
+  color: #f4eeff;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  font-family: Kanit;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn .arrow {
+  padding-top: 2px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .swap-copy {
+  padding-top: 2px;
+  padding-left: 4px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .swap-copy button {
+  height: 100%;
+  background: transparent;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .swap-copy button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .swap-copy button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input {
+  width: 294px;
+  height: 60px;
+  background-color: #372f47;
+  border-radius: 16px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input label {
+  width: 100%;
+  height: 100%;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input label .text-input {
+  width: 100%;
+  height: 36px;
+  padding: 12px 16px 0px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input label .text-input input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  text-align: end;
+  font-weight: 400;
+  flex: 1 1 auto;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Kanit";
+  color: #f4eeff;
+  outline: none;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input label .text-input input::placeholder {
+  color: #aba1c3;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .arrow-down {
+  display: flex;
+  justify-content: center;
+  height: 32px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .arrow-down button {
+  height: 100%;
+  width: 32px;
+  background: #372f47;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .arrow-down button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .arrow-down button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div {
+  height: 28px;
+  display: flex;
+  justify-content: flex-end;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk {
+  display: flex;
+  padding: 0px 8px;
+  background: #1fc7d4;
+  border-radius: 16px;
+  align-items: center;
+  cursor: default;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .text {
+  color: #191326;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .question-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box {
+  height: 40px;
+  padding: 0px 16px;
+  display: flex;
+  align-items: flex-end;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse {
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen {
+  display: flex;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen .text {
+  color: #9a6aff;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen .pen-icon {
+  width: 32px;
+  height: 32px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen .pen-icon button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen .pen-icon button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen .pen-icon button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .percent {
+  color: #1fc7d4;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .card-box .card .calc .connect-button {
+  width: 294px;
+  height: 48px;
+}
+.swap .main-content .graph-card .card-box .card .calc .connect-button button {
+  width: 100%;
+  height: 100%;
+  background-color: #1fc7d4;
+  border-radius: 16px;
+  padding: 0px 24px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #191326;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+}
+.swap .main-content .graph-card .card-box .card .calc .connect-button button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .connect-button button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .content-footer {
+  height: 108px;
+  display: flex;
+  width: 100%;
+}
+.swap .main-content .content-footer .link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 262px;
+}
+.swap .main-content .content-footer .link a {
+  margin-left: 40px;
+  display: flex;
+  color: #1fc7d4;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.swap .main-content .content-footer .link a img {
+  margin-left: 4px;
+}
+.swap .main-content .content-footer .link a:hover {
+  text-decoration: underline;
+}
+.swap .main-content .content-footer .images-flex {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.swap .main-content .content-footer .images-flex .images {
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .content-footer .images-flex .images .help {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  transition: 0.2s;
+}
+.swap .main-content .content-footer .images-flex .images .help:hover {
+  opacity: 0.7;
+}
+.swap .main-content .content-footer .images-flex .images .help:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .content-footer .images-flex .images .help .help-link {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  height: 48px;
+  padding: 0px 24px;
+  background-color: #b8add2;
+}
+.swap .main-content .content-footer .images-flex .images .help .help-link a {
+  color: #27262c;
+}
+.swap .main-content .content-footer .images-flex .images .help .svg {
+  height: 20px;
+}
+.swap .main-content .content-footer .images-flex .images .rabbit {
+  width: 160px;
+  height: 108px;
+}
+.swap .main-content .content-footer .images-flex .images .rabbit img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -344,7 +344,7 @@
     <!-- CAROUSEL START -->
     <div class="carousel">
       <div class="carouselWrapper">
-        <div class="slider firstSlider" id="1" style="display: block">
+        <div class="slider firstSlider" id="1" style="display: flex">
           <div class="contents">
             <h2>CNY Lottery Draw</h2>
             <div class="carouselTitle">Up to $96K in Prizes</div>
@@ -361,7 +361,7 @@
             <img src="./assets/carousel/rabbit.png" class="rabbit" alt="" />
           </div>
         </div>
-        <div class="slider secondSlider" id="2" style="display: none">
+        <div class="slider secondSlider" id="2">
           <div class="contents">
             <h2><img src="./assets/carousel/AptosXPancakeSwap.png" alt="" srcset="" /></h2>
             <div class="carouselTitle">Hello Aptos Project Teams!</div>
@@ -376,12 +376,26 @@
             <img src="./assets/carousel/Aptos.png" class="aptos" alt="" />
           </div>
         </div>
-
+        <div class="slider secondSlider" id="3">
+          <div class="contents">
+            <h2><img src="./assets/carousel/AptosXPancakeSwap.png" alt="" srcset="" /></h2>
+            <div class="carouselTitle">Hello Aptos Project Teams!</div>
+            <a href="#">
+              <button>
+                <div class="buttonDesc">👋 Get in Touch</div>
+                <img src="./assets/carousel/share.svg" alt="" srcset="" />
+              </button>
+            </a>
+          </div>
+          <div class="imageContainer">
+            <img src="./assets/carousel/Aptos.png" class="aptos" alt="" />
+          </div>
+        </div>
       </div>
       <div class="carouselNav">
         <span class="carouselNavButton active" id="1"></span>
-        <span class="carouselNavButton deactive" id="2"></span>
-        <span class="carouselNavButton deactive" id="3"></span>
+        <span class="carouselNavButton" id="2"></span>
+        <span class="carouselNavButton" id="3"></span>
       </div>
     </div>
     <!-- CAROUSEL END -->

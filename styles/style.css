@@ -1356,7 +1356,6 @@ li {
   padding-top: 5.3125rem;
   justify-content: center;
   position: relative;
-  z-index: -1;
 }
 .carousel .carouselWrapper {
   margin-top: 3.3rem;
@@ -1367,12 +1366,12 @@ li {
   flex-direction: column;
 }
 .carousel .carouselWrapper .slider {
+  display: none;
   max-width: 69.5rem;
   height: 12rem;
   border-radius: 2rem;
 }
 .carousel .carouselWrapper .firstSlider {
-  display: flex;
   width: 95%;
   background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
   position: relative;
@@ -1380,7 +1379,6 @@ li {
 }
 .carousel .carouselWrapper .firstSlider .contents {
   margin: 1.5rem;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -1464,7 +1462,6 @@ li {
 }
 .carousel .carouselWrapper .secondSlider .contents {
   margin: 1.5rem;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -1537,8 +1534,8 @@ li {
   width: 2rem;
   height: 0.5rem;
 }
-.carousel .carouselNav .carouselNavButton.deactive {
-  background-color: rgba(255, 255, 255, 0.3568627451);
+.carousel .carouselNav .carouselNavButton {
+  background-color: rgba(255, 255, 255, 0.5450980392);
   width: 3rem;
   width: 2rem;
   height: 0.5rem;
@@ -1591,7 +1588,7 @@ li {
     z-index: 1;
   }
 }
-@media screen and (max-width: 850px) and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .carousel {
     padding: 0;
     margin: 0;

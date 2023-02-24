@@ -8,10 +8,13 @@
   padding-top: root.toRem(85);
   justify-content: center;
   position: relative;
+  z-index: 1;
+  margin-bottom: 10rem !important;
 
   .carouselWrapper {
     margin-top: 3.3rem;
     width: 100%;
+    height: 100%;
     display: flex;
     fill: black;
     align-items: center;
@@ -26,7 +29,7 @@
     .thirdSlider {
       position: absolute;
       opacity: 0;
-      width: 95%;
+      width: 95% !important;
       justify-content: space-between;
       transition: 350ms;
       .contents {
@@ -75,8 +78,8 @@
       }
     }
     .firstSlider {
+      max-width: 1112px;
       z-index: 0;
-      position: relative;
       background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
       .upperRings,
       .lowerRings {
@@ -170,7 +173,7 @@
     z-index: 5;
     display: flex;
     position: absolute;
-    bottom: 10%;
+    bottom: -120%;
     .carouselNavButton {
       &.active {
         background-color: #fff;
@@ -235,7 +238,7 @@
       z-index: 5;
       display: flex;
       position: absolute;
-      bottom: 20%;
+      bottom: -70%;
     }
   }
 }
@@ -243,17 +246,16 @@
   .carousel {
     @include root.clear();
     .carouselNav {
-      display: flex;
       position: absolute;
-      bottom: 10%;
+      bottom: -210%;
+      z-index: 5;
     }
     .carouselWrapper {
       .firstSlider,
       .secondSlider,
       .thirdSlider {
         @include root.clear();
-        width: root.toRem(529);
-        height: root.toRem(176);
+
         .contents {
           h2 {
             background-clip: text;
@@ -286,7 +288,20 @@
           width: root.toRem(130);
           height: root.toRem(189.44);
           bottom: 0;
-          z-index: 1;
+          z-index: -1;
+        }
+      }
+      .thirdSlider {
+        .imageContainer {
+          .perpetual {
+            position: absolute !important;
+            bottom: -4%;
+            right: 0;
+            width: 213px;
+            height: 230px;
+
+            z-index: -1;
+          }
         }
       }
     }

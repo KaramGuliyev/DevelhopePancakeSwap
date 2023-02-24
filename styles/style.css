@@ -1356,10 +1356,13 @@ li {
   padding-top: 5.3125rem;
   justify-content: center;
   position: relative;
+  z-index: 1;
+  margin-bottom: 10rem !important;
 }
 .carousel .carouselWrapper {
   margin-top: 3.3rem;
   width: 100%;
+  height: 100%;
   display: flex;
   fill: black;
   align-items: center;
@@ -1375,7 +1378,7 @@ li {
 .carousel .carouselWrapper .thirdSlider {
   position: absolute;
   opacity: 0;
-  width: 95%;
+  width: 95% !important;
   justify-content: space-between;
   transition: 350ms;
 }
@@ -1431,8 +1434,8 @@ li {
   opacity: 0.65;
 }
 .carousel .carouselWrapper .firstSlider {
+  max-width: 1112px;
   z-index: 0;
-  position: relative;
   background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
 }
 .carousel .carouselWrapper .firstSlider .upperRings,
@@ -1508,7 +1511,7 @@ li {
   z-index: 5;
   display: flex;
   position: absolute;
-  bottom: 10%;
+  bottom: -120%;
 }
 .carousel .carouselNav .carouselNavButton.active {
   background-color: #fff;
@@ -1573,7 +1576,7 @@ li {
     z-index: 5;
     display: flex;
     position: absolute;
-    bottom: 20%;
+    bottom: -70%;
   }
 }
 @media screen and (max-width: 575px) {
@@ -1582,17 +1585,15 @@ li {
     margin: 0;
   }
   .carousel .carouselNav {
-    display: flex;
     position: absolute;
-    bottom: 10%;
+    bottom: -210%;
+    z-index: 5;
   }
   .carousel .carouselWrapper .firstSlider,
   .carousel .carouselWrapper .secondSlider,
   .carousel .carouselWrapper .thirdSlider {
     padding: 0;
     margin: 0;
-    width: 33.0625rem;
-    height: 11rem;
   }
   .carousel .carouselWrapper .firstSlider .contents h2,
   .carousel .carouselWrapper .secondSlider .contents h2,
@@ -1633,7 +1634,15 @@ li {
     width: 8.125rem;
     height: 11.84rem;
     bottom: 0;
-    z-index: 1;
+    z-index: -1;
+  }
+  .carousel .carouselWrapper .thirdSlider .imageContainer .perpetual {
+    position: absolute !important;
+    bottom: -4%;
+    right: 0;
+    width: 213px;
+    height: 230px;
+    z-index: -1;
   }
 }
 .firstSection {

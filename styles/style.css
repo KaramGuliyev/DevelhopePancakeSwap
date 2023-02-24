@@ -39,7 +39,7 @@ li {
   position: fixed;
   width: 100%;
   height: 56px;
-  z-index: 999;
+  z-index: 2;
 }
 .nav.top {
   top: 0;
@@ -667,6 +667,7 @@ li {
 }
 
 .overlay.active {
+  opacity: 1;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -674,8 +675,15 @@ li {
   height: 100%;
   background-color: rgba(244, 238, 255, 0.6);
   z-index: 18;
-  will-change: opacity;
-  animation: 350ms ease 0s 1 normal forwards running dHqLl;
+  -webkit-transition: all 350ms ease-out;
+  -moz-transition: all 350ms ease-out;
+  -ms-transition: all 350ms ease-out;
+  -o-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
+}
+
+#modal::before {
+  transition: 350ms;
 }
 
 #modal {
@@ -689,6 +697,7 @@ li {
   overflow: auto;
   background-color: rgba(244, 238, 255, 0.6);
   z-index: 21;
+  transition: 350ms;
 }
 
 .modal-content {

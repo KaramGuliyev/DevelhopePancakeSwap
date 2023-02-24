@@ -1364,45 +1364,44 @@ li {
   display: flex;
   padding-top: 5.3125rem;
   justify-content: center;
-  z-index: -1;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10rem !important;
 }
 .carousel .carouselWrapper {
+  margin-top: 3.3rem;
   width: 100%;
+  height: 100%;
   display: flex;
   fill: black;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.carousel .carouselWrapper .firstSlider {
-  display: flex;
-  width: 95%;
+.carousel .carouselWrapper .slider {
   max-width: 69.5rem;
   height: 12rem;
   border-radius: 2rem;
-  background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
-  position: relative;
-  justify-content: space-between;
 }
-.carousel .carouselWrapper .firstSlider .contents {
+.carousel .carouselWrapper .firstSlider,
+.carousel .carouselWrapper .secondSlider,
+.carousel .carouselWrapper .thirdSlider {
+  position: absolute;
+  opacity: 0;
+  width: 95% !important;
+  justify-content: space-between;
+  transition: 350ms;
+}
+.carousel .carouselWrapper .firstSlider .contents,
+.carousel .carouselWrapper .secondSlider .contents,
+.carousel .carouselWrapper .thirdSlider .contents {
   margin: 1.5rem;
-  padding: 2.5rem 0;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-.carousel .carouselWrapper .firstSlider .contents h2 {
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
-  position: relative;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-.carousel .carouselWrapper .firstSlider .contents .carouselTitle {
+.carousel .carouselWrapper .firstSlider .contents .carouselTitle,
+.carousel .carouselWrapper .secondSlider .contents .carouselTitle,
+.carousel .carouselWrapper .thirdSlider .contents .carouselTitle {
   font-size: 2.5rem;
   color: rgb(255, 255, 255);
   text-shadow: rgba(0, 0, 0, 0.25) 0px 2px 2px;
@@ -1413,7 +1412,10 @@ li {
   color: rgb(255, 255, 255);
   margin-bottom: 1.3125rem;
 }
-.carousel .carouselWrapper .firstSlider .contents a button {
+.carousel .carouselWrapper .firstSlider .contents a button,
+.carousel .carouselWrapper .secondSlider .contents a button,
+.carousel .carouselWrapper .thirdSlider .contents a button {
+  z-index: inherit;
   align-items: center;
   border-width: 0;
   border-radius: 1rem;
@@ -1430,11 +1432,20 @@ li {
   color: #191326;
   letter-spacing: 0.03rem;
 }
-.carousel .carouselWrapper .firstSlider .contents a button .buttonDesc {
+.carousel .carouselWrapper .firstSlider .contents a button .buttonDesc,
+.carousel .carouselWrapper .secondSlider .contents a button .buttonDesc,
+.carousel .carouselWrapper .thirdSlider .contents a button .buttonDesc {
   margin-right: 0.25rem;
 }
-.carousel .carouselWrapper .firstSlider .contents a button:hover {
+.carousel .carouselWrapper .firstSlider .contents a button:hover,
+.carousel .carouselWrapper .secondSlider .contents a button:hover,
+.carousel .carouselWrapper .thirdSlider .contents a button:hover {
   opacity: 0.65;
+}
+.carousel .carouselWrapper .firstSlider {
+  max-width: 1112px;
+  z-index: 0;
+  background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
 }
 .carousel .carouselWrapper .firstSlider .upperRings,
 .carousel .carouselWrapper .firstSlider .lowerRings {
@@ -1459,49 +1470,143 @@ li {
   bottom: 0;
   right: 18%;
 }
+.carousel .carouselWrapper .secondSlider {
+  z-index: 0;
+  background-image: linear-gradient(rgb(0, 191, 165) 0%, rgb(0, 90, 90) 100%);
+}
+.carousel .carouselWrapper .secondSlider .contents h2 img {
+  z-index: 4;
+  width: 211px;
+  height: 18px;
+}
+.carousel .carouselWrapper .secondSlider .imageContainer .aptos {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  z-index: -1;
+}
+.carousel .carouselWrapper .thirdSlider {
+  z-index: 0;
+  background-image: -webkit-linear-gradient(top, rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+}
+.carousel .carouselWrapper .thirdSlider .contents .carouselTitle {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke-width: 6px;
+  background-image: -webkit-linear-gradient(top, rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+}
+.carousel .carouselWrapper .thirdSlider .imageContainer .perpetual {
+  position: absolute !important;
+  bottom: -4%;
+  right: 0;
+  width: 213px;
+  z-index: 1;
+}
+.carousel .firstSlider .contents h2,
+.carousel .thirdSlider .contents h2 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+.carousel .carouselNav {
+  z-index: 5;
+  display: flex;
+  position: absolute;
+  bottom: -120%;
+}
+.carousel .carouselNav .carouselNavButton.active {
+  background-color: #fff;
+  width: 3rem;
+  width: 2rem;
+  height: 0.5rem;
+}
+.carousel .carouselNav .carouselNavButton {
+  background-color: rgba(255, 255, 255, 0.5450980392);
+  width: 3rem;
+  width: 2rem;
+  height: 0.5rem;
+}
+.carousel .carouselNav .carouselNavButton:nth-child(1) {
+  border-radius: 1rem 0 0 1rem;
+}
+.carousel .carouselNav .carouselNavButton:nth-child(3) {
+  border-radius: 0 1rem 1rem 0;
+}
 
 @media screen and (max-width: 850px) {
   .carousel {
     padding: 0;
     margin: 0;
+    margin-top: -2rem;
     padding: 2.5rem 0 3rem 0;
+  }
+  .carousel .carouselNav {
+    display: flex;
+    bottom: 30%;
+    z-index: 5;
   }
   .carousel .carouselWrapper {
     padding: 2rem 1.5rem 0 1.5rem;
   }
-  .carousel .carouselWrapper .firstSlider {
-    margin: -2.25rem 0 1.875rem 0;
+  .carousel .carouselWrapper .firstSlider,
+  .carousel .carouselWrapper .secondSlider {
     height: 11.8125rem;
   }
-  .carousel .carouselWrapper .firstSlider .contents h2 {
+  .carousel .carouselWrapper .firstSlider .contents h2,
+  .carousel .carouselWrapper .secondSlider .contents h2 {
     font-size: 1.5rem;
   }
-  .carousel .carouselWrapper .firstSlider .contents .carouselTitle {
+  .carousel .carouselWrapper .firstSlider .contents .carouselTitle,
+  .carousel .carouselWrapper .secondSlider .contents .carouselTitle {
     font-size: 2.1875rem;
   }
   .carousel .carouselWrapper .firstSlider .upperRings,
-  .carousel .carouselWrapper .firstSlider .lowerRings {
+  .carousel .carouselWrapper .firstSlider .lowerRings,
+  .carousel .carouselWrapper .secondSlider .upperRings,
+  .carousel .carouselWrapper .secondSlider .lowerRings {
     display: none;
   }
-  .carousel .carouselWrapper .firstSlider .rabbit {
+  .carousel .carouselWrapper .firstSlider .rabbit,
+  .carousel .carouselWrapper .secondSlider .rabbit {
     width: 8.125rem;
     height: 11.8125rem;
     bottom: 0;
     z-index: 1;
   }
+  .carousel .carouselNav {
+    z-index: 5;
+    display: flex;
+    position: absolute;
+    bottom: -70%;
+  }
 }
-@media screen and (max-width: 850px) and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .carousel {
     padding: 0;
     margin: 0;
   }
-  .carousel .carouselWrapper .firstSlider {
+  .carousel .carouselNav {
+    position: absolute;
+    bottom: -210%;
+    z-index: 5;
+  }
+  .carousel .carouselWrapper .firstSlider,
+  .carousel .carouselWrapper .secondSlider,
+  .carousel .carouselWrapper .thirdSlider {
     padding: 0;
     margin: 0;
-    width: 33.0625rem;
-    height: 11rem;
   }
-  .carousel .carouselWrapper .firstSlider .contents h2 {
+  .carousel .carouselWrapper .firstSlider .contents h2,
+  .carousel .carouselWrapper .secondSlider .contents h2,
+  .carousel .carouselWrapper .thirdSlider .contents h2 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-font-smoothing: antialiased;
@@ -1509,18 +1614,44 @@ li {
     -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
     -webkit-text-stroke-width: 0.0625rem;
   }
-  .carousel .carouselWrapper .firstSlider .contents .carouselTitle {
+  .carousel .carouselWrapper .firstSlider .contents .carouselTitle,
+  .carousel .carouselWrapper .secondSlider .contents .carouselTitle,
+  .carousel .carouselWrapper .thirdSlider .contents .carouselTitle {
     font-size: 1.4375rem;
   }
+  .carousel .carouselWrapper .firstSlider .imageContainer .perpetual,
+  .carousel .carouselWrapper .secondSlider .imageContainer .perpetual,
+  .carousel .carouselWrapper .thirdSlider .imageContainer .perpetual {
+    position: absolute;
+    bottom: -4%;
+    right: 0;
+    width: 213px;
+    height: 212px;
+    z-index: 1;
+  }
   .carousel .carouselWrapper .firstSlider .upperRings,
-  .carousel .carouselWrapper .firstSlider .lowerRings {
+  .carousel .carouselWrapper .firstSlider .lowerRings,
+  .carousel .carouselWrapper .secondSlider .upperRings,
+  .carousel .carouselWrapper .secondSlider .lowerRings,
+  .carousel .carouselWrapper .thirdSlider .upperRings,
+  .carousel .carouselWrapper .thirdSlider .lowerRings {
     display: none;
   }
-  .carousel .carouselWrapper .firstSlider .rabbit {
+  .carousel .carouselWrapper .firstSlider .rabbit,
+  .carousel .carouselWrapper .secondSlider .rabbit,
+  .carousel .carouselWrapper .thirdSlider .rabbit {
     width: 8.125rem;
     height: 11.84rem;
     bottom: 0;
-    z-index: 1;
+    z-index: -1;
+  }
+  .carousel .carouselWrapper .thirdSlider .imageContainer .perpetual {
+    position: absolute !important;
+    bottom: -4%;
+    right: 0;
+    width: 213px;
+    height: 230px;
+    z-index: -1;
   }
 }
 .firstSection {

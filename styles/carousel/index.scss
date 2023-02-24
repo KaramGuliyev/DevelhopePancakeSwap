@@ -16,36 +16,24 @@
     fill: black;
     align-items: center;
     flex-direction: column;
-
     .slider {
-      display: none;
-
       max-width: root.toRem(1112);
       height: root.toRem(192);
       border-radius: root.toRem(32);
     }
-    .firstSlider {
+    .firstSlider,
+    .secondSlider,
+    .thirdSlider {
+      position: absolute;
+
       width: 95%;
-      background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
-      position: relative;
       justify-content: space-between;
       .contents {
         margin: root.toRem(24);
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        h2 {
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-font-smoothing: antialiased;
-          -webkit-text-fill-color: transparent;
-          background-image: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
-          position: relative;
-          font-size: root.toRem(24);
-          font-weight: 600;
-          margin-bottom: root.toRem(8);
-          line-height: 1;
-        }
+
         .carouselTitle {
           font-size: root.toRem(40);
           color: rgb(255, 255, 255);
@@ -59,6 +47,7 @@
         }
         a {
           button {
+            z-index: inherit;
             align-items: center;
             border-width: 0;
             border-radius: root.toRem(16);
@@ -83,7 +72,11 @@
           }
         }
       }
-
+    }
+    .firstSlider {
+      z-index: 1;
+      position: relative;
+      background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
       .upperRings,
       .lowerRings {
         width: root.toRem(294);
@@ -108,69 +101,16 @@
         right: 18%;
       }
     }
+
     .secondSlider {
-      position: relative;
-      flex-direction: row;
-      width: 95%;
-      justify-content: space-between;
+      z-index: 1;
       background-image: linear-gradient(rgb(0, 191, 165) 0%, rgb(0, 90, 90) 100%);
-      overflow: visible;
       .contents {
-        margin: root.toRem(24);
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
         h2 {
           img {
             z-index: 4;
             width: 211px;
             height: 18px;
-          }
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-font-smoothing: antialiased;
-          -webkit-text-fill-color: transparent;
-          background-image: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
-          position: relative;
-          font-size: root.toRem(24);
-          font-weight: 600;
-          margin-bottom: root.toRem(8);
-          line-height: 1;
-        }
-        .carouselTitle {
-          font-size: root.toRem(40);
-          color: rgb(255, 255, 255);
-          text-shadow: rgba(0, 0, 0, 0.25) 0px 2px 2px;
-          font-family: Kanit;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 110%;
-          color: rgb(255, 255, 255);
-          margin-bottom: root.toRem(21);
-        }
-        a {
-          button {
-            align-items: center;
-            border-width: 0;
-            border-radius: root.toRem(16);
-            box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
-            cursor: pointer;
-            display: inline-flex;
-            font-family: inherit;
-            font-size: root.toRem(16);
-            font-weight: 600;
-            transition-duration: 0.2s, 0.2s;
-            height: root.toRem(48);
-            padding: 0 root.toRem(24);
-            background-color: $colors-primary;
-            color: $colors-invertedContrast;
-            letter-spacing: root.toRem(0.48);
-            .buttonDesc {
-              margin-right: root.toRem(4);
-            }
-            &:hover {
-              opacity: 0.65;
-            }
           }
         }
       }
@@ -179,12 +119,53 @@
           position: absolute;
           bottom: 0%;
           width: 100%;
+          z-index: -1;
+        }
+      }
+    }
+    .thirdSlider {
+      z-index: 5;
+      background-image: -webkit-linear-gradient(top, rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+      .contents {
+        .carouselTitle {
+          -webkit-background-clip: text;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+          -webkit-text-stroke-width: 6px;
+          background-image: -webkit-linear-gradient(top, rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+        }
+      }
+      .imageContainer {
+        .perpetual {
+          position: absolute !important;
+          bottom: -4%;
+          right: 0;
+          width: 213px;
           z-index: 1;
         }
       }
     }
   }
+
+  .firstSlider,
+  .thirdSlider {
+    .contents {
+      h2 {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
+        font-size: root.toRem(24);
+        font-weight: 600;
+        margin-bottom: root.toRem(8);
+        line-height: 1;
+      }
+    }
+  }
+
   .carouselNav {
+    z-index: 5;
     display: flex;
     position: absolute;
     bottom: 10%;
@@ -214,6 +195,7 @@
 @include root.media('tablet') {
   .carousel {
     @include root.clear();
+    margin-top: -2rem;
     padding: root.toRem(40) 0 root.toRem(48) 0;
     .carouselNav {
       display: flex;
@@ -225,7 +207,6 @@
       padding: root.toRem(32) root.toRem(24) 0 root.toRem(24);
       .firstSlider,
       .secondSlider {
-        margin: root.toRem(-36) 0 root.toRem(30) 0;
         height: root.toRem(189);
         .contents {
           h2 {
@@ -260,7 +241,8 @@
     }
     .carouselWrapper {
       .firstSlider,
-      .secondSlider {
+      .secondSlider,
+      .thirdSlider {
         @include root.clear();
         width: root.toRem(529);
         height: root.toRem(176);
@@ -275,6 +257,16 @@
           }
           .carouselTitle {
             font-size: root.toRem(23);
+          }
+        }
+        .imageContainer {
+          .perpetual {
+            position: absolute;
+            bottom: -4%;
+            right: 0;
+            width: 213px;
+            height: 212px;
+            z-index: 1;
           }
         }
 

@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .nav {
   position: fixed;
@@ -8,7 +8,7 @@
   position: fixed;
   width: 100%;
   height: 56px;
-  z-index: 999;
+  z-index: 2;
   &.top {
     top: 0;
   }
@@ -636,6 +636,7 @@
 }
 .overlay {
   &.active {
+    opacity: 1;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -643,11 +644,16 @@
     height: 100%;
     background-color: $colors-text99;
     z-index: 18;
-    will-change: opacity;
-    animation: 350ms ease 0s 1 normal forwards running dHqLl;
+    -webkit-transition: all 350ms ease-out;
+    -moz-transition: all 350ms ease-out;
+    -ms-transition: all 350ms ease-out;
+    -o-transition: all 350ms ease-out;
+    transition: all 350ms ease-out;
   }
 }
-
+#modal::before {
+  transition: 350ms;
+}
 #modal {
   display: none;
   position: fixed;
@@ -659,6 +665,7 @@
   overflow: auto;
   background-color: $colors-text99;
   z-index: 21;
+  transition: 350ms;
 }
 
 .modal-content {

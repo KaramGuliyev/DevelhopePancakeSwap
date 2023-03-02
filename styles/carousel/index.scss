@@ -7,41 +7,37 @@
   display: flex;
   padding-top: root.toRem(85);
   justify-content: center;
-  z-index: -1;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10rem !important;
 
   .carouselWrapper {
+    margin-top: 3.3rem;
     width: 100%;
+    height: 100%;
     display: flex;
     fill: black;
-    justify-content: center;
-    .firstSlider {
-      display: flex;
-      width: 95%;
+    align-items: center;
+    flex-direction: column;
+    .slider {
       max-width: root.toRem(1112);
       height: root.toRem(192);
       border-radius: root.toRem(32);
-      background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
-      position: relative;
+    }
+    .firstSlider,
+    .secondSlider,
+    .thirdSlider {
+      position: absolute;
+      opacity: 0;
+      width: 95% !important;
       justify-content: space-between;
+      transition: 350ms;
       .contents {
         margin: root.toRem(24);
-        padding: root.toRem(40) 0;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        h2 {
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-font-smoothing: antialiased;
-          -webkit-text-fill-color: transparent;
-          background-image: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
-          position: relative;
-          font-size: root.toRem(24);
-          font-weight: 600;
-          margin-bottom: root.toRem(8);
-          line-height: 1;
-        }
+
         .carouselTitle {
           font-size: root.toRem(40);
           color: rgb(255, 255, 255);
@@ -55,6 +51,7 @@
         }
         a {
           button {
+            z-index: inherit;
             align-items: center;
             border-width: 0;
             border-radius: root.toRem(16);
@@ -79,7 +76,11 @@
           }
         }
       }
-
+    }
+    .firstSlider {
+      max-width: 1112px;
+      z-index: 0;
+      background-image: linear-gradient(rgb(237, 109, 66) 0%, rgb(141, 31, 11) 100%);
       .upperRings,
       .lowerRings {
         width: root.toRem(294);
@@ -104,17 +105,113 @@
         right: 18%;
       }
     }
+
+    .secondSlider {
+      z-index: 0;
+      background-image: linear-gradient(rgb(0, 191, 165) 0%, rgb(0, 90, 90) 100%);
+      .contents {
+        h2 {
+          img {
+            z-index: 4;
+            width: 211px;
+            height: 18px;
+          }
+        }
+      }
+      .imageContainer {
+        .aptos {
+          position: absolute;
+          bottom: 0%;
+          width: 100%;
+          z-index: -1;
+        }
+      }
+    }
+    .thirdSlider {
+      z-index: 0;
+      background-image: -webkit-linear-gradient(top, rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+      .contents {
+        .carouselTitle {
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+          -webkit-text-stroke-width: 6px;
+          background-image: -webkit-linear-gradient(top, rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+        }
+      }
+      .imageContainer {
+        .perpetual {
+          position: absolute !important;
+          bottom: -4%;
+          right: 0;
+          width: 213px;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .firstSlider,
+  .thirdSlider {
+    .contents {
+      h2 {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(rgb(255, 216, 0) 0%, rgb(235, 140, 0) 100%);
+        font-size: root.toRem(24);
+        font-weight: 600;
+        margin-bottom: root.toRem(8);
+        line-height: 1;
+      }
+    }
+  }
+
+  .carouselNav {
+    z-index: 5;
+    display: flex;
+    position: absolute;
+    bottom: -120%;
+    .carouselNavButton {
+      &.active {
+        background-color: #fff;
+        width: 3rem;
+        width: 2rem;
+        height: 0.5rem;
+      }
+      & {
+        background-color: #ffffff8b;
+        width: 3rem;
+        width: 2rem;
+        height: 0.5rem;
+      }
+    }
+    .carouselNavButton:nth-child(1) {
+      border-radius: 1rem 0 0 1rem;
+    }
+    .carouselNavButton:nth-child(3) {
+      border-radius: 0 1rem 1rem 0;
+    }
   }
 }
 
 @include root.media('tablet') {
   .carousel {
     @include root.clear();
+    margin-top: -2rem;
     padding: root.toRem(40) 0 root.toRem(48) 0;
+    .carouselNav {
+      display: flex;
+      bottom: 30%;
+
+      z-index: 5;
+    }
     .carouselWrapper {
       padding: root.toRem(32) root.toRem(24) 0 root.toRem(24);
-      .firstSlider {
-        margin: root.toRem(-36) 0 root.toRem(30) 0;
+      .firstSlider,
+      .secondSlider {
         height: root.toRem(189);
         .contents {
           h2 {
@@ -137,39 +234,73 @@
         }
       }
     }
+    .carouselNav {
+      z-index: 5;
+      display: flex;
+      position: absolute;
+      bottom: -70%;
+    }
   }
+}
+@include root.media('mobile') {
+  .carousel {
+    @include root.clear();
+    .carouselNav {
+      position: absolute;
+      bottom: -210%;
+      z-index: 5;
+    }
+    .carouselWrapper {
+      .firstSlider,
+      .secondSlider,
+      .thirdSlider {
+        @include root.clear();
 
-  @include root.media('mobile') {
-    .carousel {
-      @include root.clear();
-      .carouselWrapper {
-        .firstSlider {
-          @include root.clear();
-          width: root.toRem(529);
-          height: root.toRem(176);
-          .contents {
-            h2 {
-              background-clip: text;
-              -webkit-background-clip: text;
-              -webkit-font-smoothing: antialiased;
-              -webkit-text-fill-color: rgba(0, 0, 0, 0);
-              -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
-              -webkit-text-stroke-width: root.toRem(1);
-            }
-            .carouselTitle {
-              font-size: root.toRem(23);
-            }
+        .contents {
+          h2 {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-fill-color: rgba(0, 0, 0, 0);
+            -webkit-text-stroke-color: rgba(0, 0, 0, 0.5);
+            -webkit-text-stroke-width: root.toRem(1);
           }
-
-          .upperRings,
-          .lowerRings {
-            display: none;
+          .carouselTitle {
+            font-size: root.toRem(23);
           }
-          .rabbit {
-            width: root.toRem(130);
-            height: root.toRem(189.44);
-            bottom: 0;
+        }
+        .imageContainer {
+          .perpetual {
+            position: absolute;
+            bottom: -4%;
+            right: 0;
+            width: 213px;
+            height: 212px;
             z-index: 1;
+          }
+        }
+
+        .upperRings,
+        .lowerRings {
+          display: none;
+        }
+        .rabbit {
+          width: root.toRem(130);
+          height: root.toRem(189.44);
+          bottom: 0;
+          z-index: -1;
+        }
+      }
+      .thirdSlider {
+        .imageContainer {
+          .perpetual {
+            position: absolute !important;
+            bottom: -4%;
+            right: 0;
+            width: 213px;
+            height: 230px;
+
+            z-index: -1;
           }
         }
       }

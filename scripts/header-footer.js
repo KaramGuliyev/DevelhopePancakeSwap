@@ -5,6 +5,32 @@ let scrollUp = "scroll-up";
 let scrollDown = "scroll-down";
 let body = document.body;
 
+var modal = document.getElementById("modal");
+
+var btn = document.getElementById("modal-button");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function () {
+  modal.style.display = "block";
+  body.style.overflow = "hidden";
+};
+
+span.onclick = function () {
+  modal.style.display = "none";
+  body.style.overflow = "unset";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    body.style.overflow = "unset";
+  }
+};
+
+/*Option modal end*/
+
+
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
@@ -53,27 +79,3 @@ document.querySelector(".overlay").addEventListener("click", (el) => {
 /* Mobile Nav menu  end*/
 
 /*Option modal start*/
-var modal = document.getElementById("modal");
-
-var btn = document.getElementById("modal-button");
-
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function () {
-  modal.style.display = "block";
-  body.style.overflow = "hidden";
-};
-
-span.onclick = function () {
-  modal.style.display = "none";
-  body.style.overflow = "unset";
-};
-
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    body.style.overflow = "unset";
-  }
-};
-
-/*Option modal end*/

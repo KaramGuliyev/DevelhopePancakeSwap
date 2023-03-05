@@ -8,7 +8,7 @@
     <title>Exchange | PancakeSwap-clone</title>
     <link rel="shortcut icon" href="./assets/favicon.ico" />
   </head>
-  <body>
+  <body class="swap-body">
     <!--Header navigation menu start-->
     <div class="nav top">
       <nav>
@@ -364,7 +364,59 @@
       <div class="main-content">
         <div class="graph-card">
           <div class="graph">
-
+            <div class="graph-top">
+              <div class="coins">  
+                <div class="icons" id="swap-graph-icons">
+                  <img src="assets/swap9.svg" alt="">
+                  <img src="assets/swap-icon-rabbit.png" alt="">
+                </div>
+                <div class="text">
+                  <p id="swap-coins-name-p">BNB/CAKE</p>
+                </div>
+                <div class="swap-button">
+                  <button id="swap-coins-name-btn"><img src="assets/swap-button.svg" alt=""></button>
+                </div>
+              </div>
+              <div class="size-changer">
+                <button><img src="/assets/swap-size-button.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="graph-info">
+              <div class="graph-content">
+                <div class="content-top">
+                  <div class="exchange-value">
+                    <p id="swap-coin-value">77.09</p>
+                  </div>
+                  <div class="exchange-coins">
+                    <p id="swap-coins-name-p2">BNB/CAKE</p>
+                  </div>
+                  <div class="exchange-percent">
+                    <p id="swap-coins-percent">+0.441 (0.58%)</p>
+                  </div>
+                </div>
+                <div class="content-bottom">
+                  <p><span id="swap-chart-data">Mar 4</span>, <span id="swap-chart-year">2023</span>, <span id="swap-chart-time">09:25 PM</span> (UTC)</p>
+                </div>
+              </div>
+              <div class="graph-date">
+                <div class="dates">
+                    <button id="swap-graph-day">24H</button>
+                    <button id="swap-graph-week">1W</button>
+                    <button id="swap-graph-month">1M</button>
+                    <button id="swap-graph-year">1Y</button>
+                </div>
+              </div>
+            </div>
+            <div id="container">
+              <canvas id="firstChart" height="288px" width="660px"></canvas>
+              <canvas id="secondChart" height="288px" width="660px"></canvas>
+              <canvas id="thirdChart" height="288px" width="660px"></canvas>
+              <canvas id="fourthChart" height="288px" width="660px"></canvas>
+              <canvas id="fifthChart" height="288px" width="660px"></canvas>
+              <canvas id="sixthChart" height="288px" width="660px"></canvas>
+              <canvas id="seventhChart" height="288px" width="660px"></canvas>
+              <canvas id="eighthChart" height="288px" width="660px"></canvas>
+            </div>
           </div>
           <div class="card-box">
             <div class="card-bg">
@@ -619,6 +671,8 @@
       </button>
     </div>
     <!--Footer finish-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./scripts/header-footer.js"></script>
+    <script src="./scripts/swap.js"></script>
   </body>
 </html>

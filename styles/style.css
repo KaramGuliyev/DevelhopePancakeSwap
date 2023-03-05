@@ -1328,6 +1328,7 @@ li {
 /* Dark thme colors */
 /* Width */
 ::-webkit-scrollbar {
+  overflow: hidden;
   width: 0.5rem;
   height: 0.8rem;
 }
@@ -3332,10 +3333,218 @@ li {
   border: 1px solid #383241;
   border-radius: 16px;
 }
+.swap .main-content .graph-card .graph .graph-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  padding: 0px 24px;
+}
+.swap .main-content .graph-card .graph .graph-top .coins {
+  display: flex;
+}
+.swap .main-content .graph-card .graph .graph-top .coins img {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+.swap .main-content .graph-card .graph .graph-top .coins .icons {
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .graph .graph-top .coins .text {
+  display: flex;
+  align-items: center;
+  color: #f4eeff;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: "Kanit", sans-serif;
+}
+.swap .main-content .graph-card .graph .graph-top .coins .swap-button {
+  height: 48px;
+  width: 48px;
+}
+.swap .main-content .graph-card .graph .graph-top .coins .swap-button button {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .graph .graph-top .coins .swap-button button img {
+  width: 20px;
+  height: 21px;
+  margin: 2px 0px 0px 6px;
+}
+.swap .main-content .graph-card .graph .graph-top .coins .swap-button button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .graph .graph-top .coins .swap-button button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .graph .graph-top .size-changer {
+  width: 48px;
+  height: 48px;
+}
+.swap .main-content .graph-card .graph .graph-top .size-changer button {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .graph .graph-top .size-changer button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .graph .graph-top .size-changer button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .graph .graph-top .size-changer button img {
+  margin-top: 2px;
+}
+.swap .main-content .graph-card .graph .graph-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 24px;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-content {
+  padding-top: 12px;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-content .content-top {
+  display: flex;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-content .content-top .exchange-value {
+  color: #f4eeff;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-right: 8px;
+  font-size: 40px;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-content .content-top .exchange-coins {
+  color: #b8add2;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.1;
+  padding-top: 18px;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-content .content-top .exchange-percent {
+  color: #31d0aa;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-left: 4px;
+  font-size: 20px;
+  padding-top: 14px;
+  margin-left: 4px;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-content .content-bottom {
+  color: #9a6aff;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-date {
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-date .dates {
+  display: flex;
+  width: auto;
+  height: 34px;
+  background-color: #353547;
+  border-radius: 16px;
+  border: 1px solid #524b63;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-date .dates button {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 16px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1fc7d4;
+  letter-spacing: 0.03em;
+  padding: 0px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 2px;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-date .dates button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-date .dates button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .graph .graph-info .graph-date .dates #swap-graph-day {
+  background-color: #1fc7d4;
+  color: #191326;
+  margin: 0;
+}
+.swap .main-content .graph-card .graph #container {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  padding: 16px;
+}
+.swap .main-content .graph-card .graph #container #firstChart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  visibility: visible;
+}
+.swap .main-content .graph-card .graph #container #secondChart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph #container #thirdChart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph #container #fourthChart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph #container #fifthChart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph #container #sixthChart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph #container #seventhChart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph #container #eighthChart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  visibility: hidden;
+}
 .swap .main-content .graph-card .card-box {
   width: 408px;
   padding: 0px 40px;
-  height: 565px;
+  height: 589px;
   padding: 0px 40px;
 }
 .swap .main-content .graph-card .card-box .card-bg {
@@ -3403,14 +3612,14 @@ li {
 }
 .swap .main-content .graph-card .card-box .card .calc {
   padding: 16px;
-  height: 412px;
+  height: 436px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .swap .main-content .graph-card .card-box .card .calc .calc-content {
   width: 100%;
-  height: 316px;
+  height: 352px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -3479,7 +3688,7 @@ li {
 }
 .swap .main-content .graph-card .card-box .card .calc .calc-content .input {
   width: 294px;
-  height: 60px;
+  height: 78px;
   background-color: #372f47;
   border-radius: 16px;
 }

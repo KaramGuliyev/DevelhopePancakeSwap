@@ -1052,13 +1052,13 @@
     }
 }
 
-@include root.media('laptop-lg') {
-    .swap {
-        .main-content {
-            .graph-card {
-                .card-box {
-                }
-            }
-        }
-    }
-}
+// @include root.media('laptop-lg') {
+//     .swap {
+//         .main-content {
+//             .graph-card {
+//                 .card-box {
+//                 }
+//             }
+//         }
+//     }
+// }

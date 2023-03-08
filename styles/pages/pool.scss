@@ -233,6 +233,254 @@
         }
       }
     }
+    .poolsContainer {
+      max-width: 1152px;
+      padding: 1px 1px 3px 1px;
+      background-color: $colors-backgroundAlt;
+      height: 538px;
+      border-radius: 24px;
+      .border {
+        border: 1px solid white;
+      }
+      .row {
+        height: 88px;
+        display: flex;
+        border-bottom: 2px solid $colors-poolsTableBorder;
+        .border {
+          border: 1px solid whhite;
+        }
+        .column1 {
+          .imgContainer {
+            width: 40px;
+            height: 40px;
+            margin-right: 8px;
+            position: relative;
+            .coinImg {
+              width: 37px;
+              height: 37px;
+            }
+            .cycle {
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+            }
+          }
+          .desc {
+            display: flex;
+            flex-direction: column;
+            .header {
+              line-height: 1;
+              color: $colors-text;
+              font-weight: 600;
+              font-size: 16px;
+            }
+            .headerDesc {
+              line-height: 1;
+              font-size: 12px;
+              color: $colors-textSubtle;
+            }
+          }
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: 150px;
+          display: flex;
+          color: black;
+          padding: 24px 8px 24px 32px;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          flex-direction: row;
+        }
+        .column3 {
+          display: flex;
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: 120px;
+          color: black;
+          padding: 24px 8px;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          .desc {
+            margin-top: -3px;
+            display: flex;
+            flex-direction: column;
+            .header {
+              line-height: 1;
+              color: $colors-textSubtle;
+              font-weight: 400;
+              font-size: 12px;
+            }
+            .headerDesc {
+              line-height: 1;
+              font-size: 12px;
+              color: $colors-textSubtle;
+              .subMainDesc {
+                margin: 4px 0;
+                color: $colors-textDisabled;
+                font-size: 16px;
+                font-weight: 400;
+              }
+              .subDesc {
+                color: $colors-textDisabled;
+                font-size: 12px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        .column4 {
+          padding: 24px 8px;
+          color: black;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          flex-grow: 2;
+          flex-shrink: 0;
+          flex-basis: 100px;
+          .desc {
+            margin-top: -3px;
+            display: flex;
+            flex-direction: column;
+            .header {
+              margin: 2px 0 -2px 0;
+              line-height: 1;
+              color: $colors-textSubtle;
+              font-weight: 400;
+              font-size: 12px;
+            }
+            .headerDesc {
+              display: flex;
+              line-height: 1;
+              font-size: 12px;
+              color: $colors-textSubtle;
+              transition: 350ms;
+              &:hover {
+                opacity: 0.65;
+              }
+              .subMainDesc {
+                margin: 4px 0;
+                color: $colors-text;
+                font-size: 16px;
+                font-weight: 400;
+              }
+              .descImg {
+                margin-left: 4px;
+              }
+            }
+          }
+        }
+        .column5 {
+          color: black;
+          padding: 24px 8px;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: 120px;
+          .desc {
+            margin-top: -3px;
+            display: flex;
+            flex-direction: column;
+            .header {
+              margin: 2px 0 -2px 0;
+              line-height: 1;
+              color: $colors-textSubtle;
+              font-weight: 400;
+              font-size: 12px;
+            }
+            .headerDesc {
+              display: flex;
+              line-height: 1;
+              font-size: 12px;
+              color: $colors-textSubtle;
+              transition: 350ms;
+              &:hover {
+                opacity: 0.65;
+              }
+              .subMainDesc {
+                margin: 4px 0;
+                color: $colors-text;
+                font-size: 16px;
+                font-weight: 400;
+              }
+              .descImg {
+                margin-left: 4px;
+              }
+            }
+          }
+        }
+        .column6 {
+          display: flex;
+          flex-grow: 2;
+          flex-shrink: 0;
+          flex-basis: 100px;
+          color: black;
+          padding: 24px 8px;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          .desc {
+            margin-top: -3px;
+            display: flex;
+            flex-direction: column;
+            .header {
+              margin: 2px 0 -2px 0;
+              line-height: 1;
+              color: $colors-textSubtle;
+              font-weight: 400;
+              font-size: 12px;
+            }
+            .headerDesc {
+              display: flex;
+              line-height: 1;
+              font-size: 12px;
+              color: $colors-textSubtle;
+              transition: 350ms;
+              &:hover {
+                opacity: 0.65;
+              }
+              .subMainDesc {
+                margin: 4px 0;
+                color: $colors-text;
+                font-size: 16px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+        .column7 {
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 120px;
+          padding: 24px 32px 24px 8px;
+
+          .desc {
+            width: 100%;
+            height: 100%;
+            flex-direction: row;
+            -webkit-box-pack: end;
+            justify-content: flex-end;
+            -webkit-box-align: center;
+            align-items: center;
+            vertical-align: baseline;
+            display: flex;
+            line-height: 24px;
+            font-weight: 600;
+            line-height: 1.5;
+            font-size: 16px;
+            color: $colors-primary;
+            .headerDesc {
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
     .poolsFooter {
       max-height: 184.5px;
       max-width: 192px;

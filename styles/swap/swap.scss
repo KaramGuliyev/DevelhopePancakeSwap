@@ -1,9 +1,9 @@
 @use '../atomic/root/root.scss';
 @import '../variables.scss';
 
-// .swap-body {
-//     width: 100vw;
-// }
+.swap-body {
+    width: calc(100vw - 0.5rem);
+}
 
 .nav {
     .header-left {

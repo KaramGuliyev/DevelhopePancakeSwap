@@ -29,6 +29,7 @@ window.addEventListener('scroll', () => {
 /* Sticky header end */
 
 /*Option modal start*/
+
 var modal = document.getElementById('modal')
 
 var btn = document.getElementById('modal-button')

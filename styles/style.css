@@ -10,6 +10,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -1342,6 +1343,7 @@ li {
 /* Dark thme colors */
 /* Width */
 ::-webkit-scrollbar {
+  overflow: hidden;
   width: 0.5rem;
   height: 0.8rem;
 }
@@ -3391,6 +3393,121 @@ li {
     opacity: 0;
   }
 }
+
+/* Dark thme colors */
+.nav .header-left .header-left__links .swap-trade-span {
+  color: #9a6aff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.swap {
+  height: calc(100vh - 57px);
+  min-height: 785px;
+}
+.swap .swap-nav {
+  margin-top: 57px;
+  display: flex;
+  justify-content: center;
+  height: 42px;
+  background: #1e1e25;
+  box-shadow: rgba(133, 133, 133, 0.1019607843) 0px -2px 0px -8px inset;
+}
+.swap .swap-nav .links {
+  display: flex;
+  height: 100%;
+}
+.swap .swap-nav .links .link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 4px 4px 0px 4px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.swap .swap-nav .links .link:hover {
+  background-color: #323245;
+}
+.swap .swap-nav .links .link a {
+  color: #b8add2;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+}
+.swap .swap-nav .links .link a img {
+  margin-left: 4px;
+}
+.swap .swap-nav .links .swap-link {
+  background-color: #1fc7d4;
+  margin-bottom: 3px;
+  margin-right: 20px;
+  height: 42px;
+}
+.swap .swap-nav .links .swap-link .swap-bg {
+  background-color: #1e1e25;
+  height: 38px;
+  padding: 8px 4px 0px 4px;
+}
+.swap .swap-nav .links .swap-link .swap-bg:hover {
+  background-color: #323245;
+}
+.swap .swap-nav .links .swap-link a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #9a6aff;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 1;
+  pointer-events: inherit;
+  height: 100%;
+}
+.swap .main-content {
+  background: linear-gradient(139.73deg, #313d5c, #3d2a54);
+  height: calc(100% - 42px);
+  padding: 32px 32px 0px 32px;
+}
+.swap .main-content .graph-card {
+  display: flex;
+  justify-content: center;
+  height: calc(100% - 108px);
+}
+.swap .main-content .graph-card .graph-bg {
+  position: relative;
+  width: 50%;
+  padding-top: 8px;
+  background: rgba(39, 38, 44, 0.5019607843);
+  height: 516px;
+  border: 1px solid #383241;
+  border-radius: 16px;
+}
+.swap .main-content .graph-card .graph-bg .graph {
+  width: 100%;
+  height: 100%;
+}
+.swap .main-content .graph-card .graph-bg .graph-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  padding: 0px 24px;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .coins {
+  display: flex;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .coins img {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .coins .icons {
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .coins .text {
+  display: flex;
+  align-items: center;
+
 .ifo-body {
   margin-top: 57px;
   position: relative;
@@ -3533,10 +3650,98 @@ li {
   }
 }
 .ifo-body-top__banner .ifo-banner-container .ifo-banner-content .content-main p {
+
   color: #f4eeff;
   font-weight: 600;
   line-height: 1.5;
   font-size: 16px;
+
+  font-family: "Kanit", sans-serif;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .coins .swap-button {
+  height: 48px;
+  width: 48px;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .coins .swap-button button {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .coins .swap-button button img {
+  width: 20px;
+  height: 21px;
+  margin: 2px 0px 0px 6px;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .coins .swap-button button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .coins .swap-button button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .size-changer {
+  width: 48px;
+  height: 48px;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .size-changer button {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .size-changer button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .size-changer button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .graph-bg .graph-top .size-changer button img {
+  margin-top: 2px;
+}
+.swap .main-content .graph-card .graph-bg .graph-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px 24px;
+}
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content {
+  padding-top: 12px;
+}
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content .content-top {
+  display: flex;
+}
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content .content-top .exchange-value {
+  color: #f4eeff;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-right: 8px;
+  font-size: 40px;
+}
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content .content-top .exchange-coins {
+  color: #b8add2;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.1;
+  padding-top: 18px;
+}
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content .content-top .exchange-percent {
+  color: #31d0aa;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-left: 4px;
+  font-size: 20px;
+  padding-top: 14px;
+  margin-left: 4px;
+}
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content .content-bottom {
+  color: #9a6aff;
+
 }
 @media screen and (min-width: 852px) {
   .ifo-body-top__banner .ifo-banner-container .ifo-banner-content .content-main p {
@@ -3713,10 +3918,534 @@ li {
 }
 .ifo-body-mid .section-1-left .left-container .card-top-inner .card-top-left p {
   color: #b8add2;
+
   font-weight: 400;
   line-height: 1.5;
   font-size: 14px;
 }
+
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date {
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date .dates {
+  display: flex;
+  width: auto;
+  height: 34px;
+  background-color: #353547;
+  border-radius: 16px;
+  border: 1px solid #524b63;
+}
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date .dates button {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 16px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1fc7d4;
+  letter-spacing: 0.03em;
+  padding: 0px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 2px;
+}
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date .dates button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date .dates button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date .dates #swap-graph-day {
+  background-color: #1fc7d4;
+  color: #191326;
+  margin: 0;
+}
+.swap .main-content .graph-card .graph-bg #container {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  padding: 16px;
+}
+.swap .main-content .graph-card .graph-bg #container #firstChart {
+  position: absolute;
+  visibility: visible;
+}
+.swap .main-content .graph-card .graph-bg #container #secondChart {
+  position: absolute;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph-bg #container #thirdChart {
+  position: absolute;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph-bg #container #fourthChart {
+  position: absolute;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph-bg #container #fifthChart {
+  position: absolute;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph-bg #container #sixthChart {
+  position: absolute;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph-bg #container #seventhChart {
+  position: absolute;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .graph-bg #container #eighthChart {
+  position: absolute;
+  visibility: hidden;
+}
+.swap .main-content .graph-card .card-box {
+  width: 328px;
+  margin: 0px 40px;
+  height: 589px;
+}
+.swap .main-content .graph-card .card-box .card-bg {
+  background: #383241;
+  color: #f4eeff;
+  padding: 1px 1px 3px;
+  border-radius: 34px;
+  height: 100%;
+  width: 100%;
+}
+.swap .main-content .graph-card .card-box .card {
+  background-color: #27262c;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+}
+.swap .main-content .graph-card .card-box .card .titles {
+  width: 100%;
+  border-bottom: 1px solid #383241;
+  padding: 24px;
+  height: 149px;
+}
+.swap .main-content .graph-card .card-box .card .titles .title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #f4eeff;
+  margin-bottom: 13px;
+}
+.swap .main-content .graph-card .card-box .card .titles .text {
+  color: #b8add2;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-bottom: 13px;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons {
+  display: flex;
+  justify-content: flex-end;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn {
+  width: 32px;
+  height: 32px;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn1 svg {
+  height: 20px;
+}
+.swap .main-content .graph-card .card-box .card .titles .icons .btn5 svg {
+  margin-top: 2px;
+}
+.swap .main-content .graph-card .card-box .card .calc {
+  padding: 16px;
+  height: 436px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content {
+  width: 100%;
+  height: 352px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .title-input1 {
+  order: 1;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .title-input2 {
+  order: 3;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title {
+  display: flex;
+  justify-content: flex-start;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button {
+  display: flex;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 0px 8px;
+  height: 32px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn .icon {
+  margin-right: 8px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn .icon .rabbit {
+  width: 24px;
+  height: 24px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn .title {
+  color: #f4eeff;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  font-family: Kanit;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .btn .arrow {
+  padding-top: 2px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .swap-copy {
+  padding-top: 2px;
+  padding-left: 4px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .swap-copy button {
+  height: 100%;
+  background: transparent;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .swap-copy button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title .title-button .swap-copy button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input {
+  width: 294px;
+  height: 78px;
+  background-color: #372f47;
+  border-radius: 16px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input label {
+  width: 100%;
+  height: 100%;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input label .text-input {
+  width: 100%;
+  height: 36px;
+  padding: 12px 16px 0px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input label .text-input input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  text-align: end;
+  font-weight: 400;
+  flex: 1 1 auto;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Kanit";
+  color: #f4eeff;
+  outline: none;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input label .text-input input::placeholder {
+  color: #aba1c3;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input .input-bottom {
+  display: flex;
+  justify-content: flex-end;
+  width: 278px;
+  height: 18px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input .input-bottom p {
+  color: #b8add2;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 12px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .arrow-down {
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  order: 2;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .arrow-down button {
+  height: 100%;
+  width: 32px;
+  background: #372f47;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .arrow-down button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .arrow-down button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div {
+  height: 28px;
+  display: flex;
+  justify-content: flex-end;
+  order: 4;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk {
+  position: relative;
+  display: flex;
+  padding: 0px 8px;
+  background: #1fc7d4;
+  border-radius: 16px;
+  align-items: center;
+  cursor: default;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  line-height: 130%;
+  font-size: 16px;
+  color: #3c025e;
+  font-weight: 400;
+  line-height: 1.5;
+  transform: translate(-115px, 146px);
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info .low-risk-info-div {
+  width: 320px;
+  height: 6px;
+  background-color: transparent;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info .low-risk-info-text {
+  background-color: white;
+  border-radius: 16px;
+  width: 320px;
+  height: 258px;
+  padding: 16px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info .low-risk-info-text p:nth-child(2) {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info .low-risk-info-text p a {
+  color: #1fc7d4;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+  cursor: pointer;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info .low-risk-info-text p a:hover {
+  text-decoration: underline;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk:hover .low-risk-info {
+  display: block;
+  opacity: 1;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .text {
+  color: #191326;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .question-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box {
+  min-height: 40px;
+  padding: 0px 16px;
+  order: 5;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price {
+  width: 262px;
+  height: 24px;
+  display: none;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .text {
+  color: #9a6aff;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values {
+  display: flex;
+  color: #f4eeff;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  align-items: center;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values .arrow {
+  display: flex;
+  align-items: center;
+  margin: 0px 4px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values .btn {
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values .btn button {
+  width: 22px;
+  height: 22px;
+  background-color: black;
+  border: none;
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values .btn button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values .btn button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse {
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen {
+  display: flex;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen .text {
+  color: #9a6aff;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen .pen-icon {
+  width: 32px;
+  height: 32px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen .pen-icon button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen .pen-icon button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .text-pen .pen-icon button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse .percent {
+  color: #1fc7d4;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .card-box .card .calc .connect-button {
+  width: 294px;
+  height: 48px;
+}
+.swap .main-content .graph-card .card-box .card .calc .connect-button button {
+  width: 100%;
+  height: 100%;
+  background-color: #1fc7d4;
+  border-radius: 16px;
+  padding: 0px 24px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #191326;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+}
+.swap .main-content .graph-card .card-box .card .calc .connect-button button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .connect-button button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .price-info {
+  display: none;
+  margin-top: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  height: 116px;
+  border-radius: 20px;
+  background-color: #191326;
+}
+.swap .main-content .graph-card .card-box .card .price-info .line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+}
+.swap .main-content .graph-card .card-box .card .price-info .line .left-side {
+
 @media screen and (max-width: 1080px) {
   .ifo-body-mid .section-1-left .left-container .card-top-inner .card-top-left p {
     color: #b8add2;
@@ -4263,10 +4992,147 @@ li {
   word-break: break-all;
 }
 .ifo-body-mid .section-1-right-content-mid-inner .card-rest-1 .card-desc span:last-child {
+
   color: #b8add2;
   font-weight: 400;
   line-height: 1.5;
   font-size: 14px;
+
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .card-box .card .price-info .line .left-side svg {
+  margin-left: 4px;
+}
+.swap .main-content .graph-card .card-box .card .price-info .line .right-side {
+  color: #f4eeff;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.swap .main-content .graph-card .card-box .card .price-info .second-line .right-side {
+  color: #31d0aa;
+}
+.swap .main-content .graph-card .card-box .card .price-info .fourth-line .right-side {
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .card-box .card .price-info .fourth-line .right-side svg {
+  margin-left: 4px;
+}
+.swap .main-content .content-footer {
+  height: 108px;
+  display: flex;
+  width: 100%;
+}
+.swap .main-content .content-footer .link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 262px;
+}
+.swap .main-content .content-footer .link a {
+  margin-left: 40px;
+  display: flex;
+  color: #1fc7d4;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.swap .main-content .content-footer .link a img {
+  margin-left: 4px;
+}
+.swap .main-content .content-footer .link a:hover {
+  text-decoration: underline;
+}
+.swap .main-content .content-footer .images-flex {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.swap .main-content .content-footer .images-flex .images {
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .content-footer .images-flex .images .help {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  transition: 0.2s;
+}
+.swap .main-content .content-footer .images-flex .images .help:hover {
+  opacity: 0.7;
+}
+.swap .main-content .content-footer .images-flex .images .help:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
+}
+.swap .main-content .content-footer .images-flex .images .help .help-link {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  height: 48px;
+  padding: 0px 24px;
+  background-color: #b8add2;
+}
+.swap .main-content .content-footer .images-flex .images .help .help-link a {
+  color: #27262c;
+}
+.swap .main-content .content-footer .images-flex .images .help .svg {
+  height: 20px;
+}
+.swap .main-content .content-footer .images-flex .images .rabbit {
+  width: 160px;
+  height: 108px;
+}
+.swap .main-content .content-footer .images-flex .images .rabbit img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 970px) {
+  .swap .main-content .graph-card .graph-bg {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(244, 238, 255, 0.6);
+    border-radius: 0;
+  }
+  .swap .main-content .graph-card .graph-bg .graph {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    min-height: 80%;
+    padding-top: 8px;
+    background: #27262c;
+    height: 516px;
+    border: 1px solid #383241;
+    border-radius: 16px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .swap .main-content .graph-card .graph-bg .graph #container {
+    height: calc(100% - 167px);
+    padding: 5px;
+  }
+  .swap .main-content .graph-card .graph-bg .graph .graph-top .size-changer button img {
+    content: url("/assets/swapChartCloseBtn.svg");
+  }
+}
+
 }
 .ifo-body-mid .section-1-right-content-mid-inner .card-rest-2 {
   margin-top: 24px;
@@ -5800,5 +6666,6 @@ li {
   width: 192px;
   height: 184.5px;
 }
+
 
 /*# sourceMappingURL=style.css.map */

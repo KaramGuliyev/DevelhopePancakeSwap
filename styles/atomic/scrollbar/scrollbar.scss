@@ -3,6 +3,7 @@
 
 /* Width */
 ::-webkit-scrollbar {
+    overflow: hidden;
     width: .5rem;
     height: .8rem;
 }

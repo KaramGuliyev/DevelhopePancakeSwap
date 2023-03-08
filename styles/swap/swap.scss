@@ -1,0 +1,1064 @@
+@use '../atomic/root/root.scss';
+@import '../variables.scss';
+
+// .swap-body {
+//     width: 100vw;
+// }
+
+.nav {
+    .header-left {
+        .header-left__links {
+            .swap-trade-span {
+                color: $colors-secondary;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.swap {
+    height: calc(100vh - 57px);
+    min-height: 785px;
+    .swap-nav {
+        margin-top: 57px;
+        display: flex;
+        justify-content: center;
+        height: 42px;
+        background: #1e1e25;
+        box-shadow: #8585851a 0px -2px 0px -8px inset;
+
+        .links {
+            display: flex;
+            height: 100%;
+
+            .link {
+                height: 100%;
+                display: flex;
+                align-items: center;                
+                padding: 4px 4px 0px 4px;
+                cursor: pointer;
+                margin-right: 20px;
+                
+                &:hover {
+                    background-color: #323245;
+                }
+
+                a {
+                color: $colors-textSubtle;
+                font-size: 16px;
+                font-weight: 400;
+                display: flex;
+
+                img {
+                    margin-left: 4px;
+                }
+                }
+            }
+
+            .swap-link {
+                background-color: $colors-primary;
+                margin-bottom: 3px;
+                margin-right: 20px;
+                height: 42px;
+
+                .swap-bg {
+                    background-color: #1e1e25;
+                    height: 38px;
+                    padding: 8px 4px 0px 4px;
+
+                    &:hover {
+                        background-color: #323245;
+                    }
+                }
+
+                a {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    color: $colors-secondary;
+                    font-size: 16px;
+                    font-weight: 600;
+                    opacity: 1;
+                    pointer-events: inherit;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .main-content {
+        background: $colors-gradientBubblegum;
+        height: calc(100% - 42px);
+        padding: 32px 32px 0px 32px;
+
+        .graph-card {
+            display: flex;
+            justify-content: center;
+            height: calc(100% - 108px);
+            
+            .graph-bg {
+                position: relative;
+                width: 50%;
+                padding-top: 8px;
+                background: #27262c80;
+                height: 516px;
+                border: 1px solid $colors-cardBorder;
+                border-radius: 16px;
+
+                .graph {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .graph-top {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 48px;
+                    padding: 0px 24px;
+
+                    .coins {
+                        display: flex;
+                        
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 4px;
+                        }
+
+                        .icons {
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .text {
+                            display: flex;
+                            align-items: center;
+                            color: $colors-text;
+                            font-weight: 600;
+                            line-height: 1.5;
+                            font-size: 16px;
+                            font-family: "Kanit", sans-serif;
+                        }
+
+                        .swap-button {
+                            height: 48px;
+                            width: 48px;
+
+                            button {
+                                width: 100%;
+                                height: 100%;
+                                background: transparent;
+                                border: none;
+                                cursor: pointer;
+                                transition: 0.2s;
+
+                                img {
+                                    width: 20px;
+                                    height: 21px;
+                                    margin: 2px 0px 0px 6px;
+                                }
+
+                                &:hover {
+                                    opacity: 0.7;
+                                }
+
+                                &:active {
+                                    transform: translate(0px, 1px);
+                                    transition: inherit;
+                                }
+                            }
+                        }
+                    }
+
+                    .size-changer {
+                        width: 48px;
+                        height: 48px;
+
+                        button {
+                            width: 100%;
+                            height: 100%;
+                            background: transparent;
+                            border: none;
+                            cursor: pointer;
+                            transition: 0.2s;
+
+                            &:hover {
+                                opacity: 0.7;
+                            }
+
+                            &:active {
+                                transform: translate(0px, 1px);
+                                transition: inherit;
+                            }
+
+                            img {
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+                }
+
+                .graph-info {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding: 0px 24px;
+
+                    .graph-content {
+                        padding-top: 12px;
+
+                        .content-top {
+                            display: flex;
+
+                            .exchange-value {
+                                color: $colors-text;
+                                line-height: 1.1;
+                                font-weight: 600;
+                                margin-right: 8px;
+                                font-size: 40px;
+                            }
+
+                            .exchange-coins {
+                                color: $colors-textSubtle;
+                                font-weight: 600;
+                                font-size: 20px;
+                                line-height: 1.1;
+                                padding-top: 18px;
+                            }
+
+                            .exchange-percent {
+                                color: $colors-success;
+                                font-weight: 600;
+                                line-height: 1.5;
+                                margin-left: 4px;
+                                font-size: 20px;
+                                padding-top: 14px;
+                                margin-left: 4px;
+                            }
+                        }
+
+                        .content-bottom {
+                            color: $colors-secondary;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .graph-date {
+                        display: flex;
+                        align-items: center;
+
+                        .dates {
+                            display: flex;
+                            width: auto;
+                            height: 34px;
+                            background-color: $colors-tertiary;
+                            border-radius: 16px;
+                            border: 1px solid $colors-disabled;
+
+                            button {
+                                height: 100%;
+                                width: 100%;
+                                background-color: transparent;
+                                border: none;
+                                border-radius: 16px;
+                                font-family: inherit;
+                                font-size: 16px;
+                                font-weight: 600;
+                                color: $colors-primary;
+                                letter-spacing: 0.03em;
+                                padding: 0px 16px;
+                                cursor: pointer;
+                                transition: 0.2s;
+                                margin-left: 2px;
+
+
+                                &:hover {
+                                    opacity: 0.7;
+                                }
+
+                                &:active {
+                                    transform: translate(0px, 1px);
+                                    transition: inherit;
+                                }
+                            }
+
+                            #swap-graph-day {
+                                background-color: $colors-primary;
+                                color: $colors-invertedContrast;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+
+                #container {
+                    position: relative;
+                    width: 100%;
+                    height: 340px;
+                    padding: 16px;
+
+                    #firstChart {
+                        position: absolute; 
+                        visibility: visible; 
+                    }
+
+                    #secondChart {
+                        position: absolute;
+                        visibility: hidden; 
+                    }
+
+                    #thirdChart {
+                        position: absolute;
+                        visibility: hidden; 
+                    }
+
+                    #fourthChart {
+                        position: absolute;
+                        visibility: hidden; 
+                    }
+
+                    #fifthChart {
+                        position: absolute;
+                        visibility: hidden; 
+                    }
+
+                    #sixthChart {
+                        position: absolute;
+                        visibility: hidden; 
+                    }
+
+                    #seventhChart {
+                        position: absolute;
+                        visibility: hidden; 
+                    }
+
+                    #eighthChart {
+                        position: absolute;
+                        visibility: hidden; 
+                    }
+                }
+            }
+
+            .card-box {
+                width: 328px;
+                margin: 0px 40px;
+                height: 589px;
+
+                .card-bg {
+                    background: $colors-cardBorder;
+                    color: $colors-text;
+                    padding: 1px 1px 3px;
+                    border-radius: 34px;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .card {
+                    background-color: $colors-backgroundAlt;
+                    border-radius: 24px;
+                    width: 100%;
+                    height: 100%;
+
+                    .titles {
+                        width: 100%;
+                        border-bottom: 1px solid $colors-cardBorder;
+                        padding: 24px;
+                        height: 149px;
+
+                        .title {
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 1.1;
+                            color: $colors-text;
+                            margin-bottom: 13px;
+                        }
+
+                        .text {
+                            color: $colors-textSubtle;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            font-size: 14px;
+                            margin-bottom: 13px;
+                        }
+
+                        .icons {
+                            display: flex;
+                            justify-content: flex-end;
+
+                            .btn {
+                                width: 32px;
+                                height: 32px;
+
+                                button {
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: transparent;
+                                    border: none;
+                                    transition: 0.2s;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        opacity: 0.7;
+                                    }
+
+                                    &:active {
+                                        transform: translate(0px, 1px);
+                                        transition: inherit;
+                                    }
+                                }
+                            }
+
+                            .btn1 {
+                                svg {
+                                    height: 20px;
+                                }
+                            }
+
+                            .btn5 {
+                                svg {
+                                    margin-top: 2px;
+                                }
+                            }
+                        }
+                    }
+
+                    .calc {
+                        padding: 16px;
+                        height: 436px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .calc-content {
+                            width: 100%;
+                            height: 352px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            .title-input1 {
+                                order: 1;
+                            }
+
+                            .title-input2 {
+                                order: 3;
+                            }
+
+                            .calc-title {
+                                display: flex;
+                                justify-content: flex-start;
+
+                                .title-button {
+                                    display: flex;
+                                    
+                                    .btn {
+                                        display: flex;
+                                        align-items: center;
+                                        background-color: transparent;
+                                        border: none;
+                                        padding: 0px 8px;
+                                        height: 32px;
+                                        cursor: pointer;
+                                        transition: 0.2s;
+                                        
+                                        &:hover {
+                                            opacity: 0.7;
+                                        }
+
+                                        &:active {
+                                            transform: translate(0px, 1px);
+                                            transition: inherit;
+                                        }
+
+                                        .icon {
+                                            margin-right: 8px;
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+
+                                            .rabbit {
+                                                width: 24px;
+                                                height: 24px;
+                                            }
+                                        }
+
+                                        .title {
+                                            color: $colors-text;
+                                            font-weight: 600;
+                                            font-size: 16px;
+                                            letter-spacing: 0.03em;
+                                            font-family: Kanit;                                        
+                                        }
+
+                                        .arrow {
+                                            padding-top: 2px;
+                                        }
+                                    }
+
+                                    .swap-copy {
+                                        padding-top: 2px;
+                                        padding-left: 4px;
+
+                                        button {
+                                            height: 100%;
+                                            background: transparent;
+                                            border: none;
+                                            transition: 0.2s;
+                                            cursor: pointer;
+
+                                            &:hover {
+                                                opacity: 0.7;
+                                            }
+
+                                            &:active {
+                                                transform: translate(0px, 1px);
+                                                transition: inherit;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .input {
+                                width: 294px;
+                                height: 78px;
+                                background-color: #372f47;
+                                border-radius: 16px;
+
+                                label {
+                                    width: 100%;
+                                    height: 100%;
+
+                                    .text-input {
+                                        width: 100%;
+                                        height: 36px;
+                                        padding: 12px 16px 0px; 
+
+                                        input {
+                                            width: 100%;
+                                            height: 100%;
+                                            background-color: transparent;
+                                            border: none;
+                                            text-align: end;
+                                            font-weight: 400;
+                                            flex: 1 1 auto;
+                                            font-size: 16px;
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            font-family: "Kanit";
+                                            color: $colors-text;
+                                            outline: none;
+
+                                            &::placeholder {
+                                                color: #aba1c3;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .input-bottom {
+                                    // visibility: hidden;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    width: 278px;
+                                    height: 18px;
+
+                                    p {
+                                        color: $colors-textSubtle;
+                                        font-weight: 400;
+                                        line-height: 1.5;
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+
+                            .arrow-down {
+                                display: flex;
+                                justify-content: center;
+                                height: 32px;
+                                order: 2;
+
+                                button {
+                                    height: 100%;
+                                    width: 32px;
+                                    background: #372f47;
+                                    border: none;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 16px;
+                                    cursor: pointer;
+                                    transition: 0.2s;
+
+                                    &:hover {
+                                        opacity: 0.7;
+                                    }
+
+                                    &:active {
+                                        transform: translate(0px, 1px);
+                                        transition: inherit;
+                                    }
+                                }
+                            }
+
+                            .low-risk-div {
+                                height: 28px;
+                                display: flex;
+                                justify-content: flex-end;
+                                order: 4;
+
+                                .low-risk {
+                                    position: relative;
+                                    display: flex;
+                                    padding: 0px 8px;
+                                    background: $colors-primary;
+                                    border-radius: 16px;
+                                    align-items: center;
+                                    cursor: default;
+                                    transition: 0.2s;
+
+                                    .low-risk-info {
+                                        opacity: 0;
+                                        display: none;
+                                        position: absolute;
+                                        line-height: 130%;
+                                        font-size: 16px;
+                                        color: #3c025e;
+                                        font-weight: 400;
+                                        line-height: 1.5;
+                                        transform: translate(-115px, 146px);
+                                        transition: 0.2s;
+
+                                        .low-risk-info-div {
+                                            width: 320px;
+                                            height: 6px;
+                                            background-color: transparent;
+                                        }
+    
+                                        .low-risk-info-text {
+                                            background-color: white;
+                                            border-radius: 16px;
+                                            width: 320px;
+                                            height: 258px;
+                                            padding: 16px;
+
+                                            p {
+                                                &:nth-child(2) {
+                                                    margin-top: 8px;
+                                                    margin-bottom: 8px;
+                                                }
+                                                
+                                                a {
+                                                    color: $colors-primary;
+                                                    font-weight: 600;
+                                                    line-height: 1.5;
+                                                    font-size: 16px;
+                                                    cursor: pointer;
+
+                                                    &:hover {
+                                                        text-decoration: underline;
+                                                    }
+                                                }
+                                            }
+                                        } 
+                                    }
+    
+                                    &:hover {
+                                        .low-risk-info {
+                                            display: block;
+                                            opacity: 1;
+                                        }
+                                    }
+
+                                    .text {
+                                        color: $colors-invertedContrast;
+                                        font-weight: 600;
+                                        line-height: 1.5;
+                                        font-size: 14px;
+                                    }
+
+                                    .question-icon {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-left: 4px;
+                                    }
+                                }
+                            }
+
+                            .toleranse-box {
+                                min-height: 40px;
+                                padding: 0px 16px;
+                                order: 5;
+
+                                .price {
+                                    // visibility: hidden;
+                                    width: 262px;
+                                    height: 24px;
+                                    display: none;
+                                    justify-content: space-between;
+                                    margin-bottom: 8px;
+
+                                    .text {
+                                        color: $colors-secondary;
+                                        font-weight: 600;
+                                        line-height: 1.5;
+                                        font-size: 12px;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        padding-top: 2px;
+                                    }
+
+                                    .icon-values {
+                                        display: flex;
+                                        color: $colors-text;
+                                        font-weight: 400;
+                                        line-height: 1.5;
+                                        font-size: 16px;
+                                        align-items: center;
+
+                                        .arrow {
+                                            display: flex;
+                                            align-items: center;
+                                            margin: 0px 4px;
+                                        }
+                                        
+                                        .btn {
+                                            margin-left: 6px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+
+                                            button {
+                                                width: 22px;
+                                                height: 22px;
+                                                background-color: black;
+                                                border: none;
+                                                border-radius: 11px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                transition: 0.2s;
+                                                cursor: pointer;
+
+                                                &:hover {
+                                                    opacity: 0.7;
+                                                }
+
+                                                &:active {
+                                                    transform: translate(0px, 1px);
+                                                    transition: inherit;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .toleranse {
+                                    height: 32px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 100%;
+
+                                    .text-pen {
+                                        display: flex;
+
+                                        .text {
+                                            color: $colors-secondary;
+                                            font-weight: 600;
+                                            line-height: 1.5;
+                                            font-size: 12px;
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            padding-top: 2px;
+                                        }
+
+                                        .pen-icon {
+                                            width: 32px;
+                                            height: 32px;                                            
+                                            
+                                            button {
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                background-color: transparent;
+                                                border: none;
+                                                cursor: pointer;
+                                                transition: 0.2s;
+
+                                                &:hover {
+                                                    opacity: 0.7;
+                                                }
+
+                                                &:active {
+                                                    transform: translate(0px, 1px);
+                                                    transition: inherit;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .percent {
+                                        color: $colors-primary;
+                                        font-weight: 600;
+                                        line-height: 1.5;
+                                        font-size: 16px;
+                                        display: flex;
+                                        align-items: center;
+                                    }
+                                }
+                            }
+                        }
+
+                        .connect-button {
+                            width: 294px;
+                            height: 48px;
+                            
+                            button {
+                                width: 100%;
+                                height: 100%;
+                                background-color: $colors-primary;
+                                border-radius: 16px;
+                                padding: 0px 24px;
+                                border: none;
+                                font-size: 16px;
+                                font-weight: 600;
+                                letter-spacing: 0.03em;
+                                color: $colors-invertedContrast;
+                                font-family: inherit;
+                                cursor: pointer;
+                                transition: 0.2s;
+                                box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+
+                                &:hover {
+                                    opacity: 0.7;
+                                }
+
+                                &:active {
+                                    transform: translate(0px, 1px);
+                                    transition: inherit;
+                                }
+                            }
+                        }
+                    }
+
+                    .price-info {
+                        display: none;
+                        margin-top: 16px;
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                        width: 100%;
+                        height: 116px;
+                        border-radius: 20px;
+                        background-color: $colors-invertedContrast;
+
+                        .line {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0px 16px;
+
+                            .left-side {
+                                color: $colors-textSubtle;
+                                font-weight: 400;
+                                line-height: 1.5;
+                                font-size: 14px;
+                                display: flex;
+                                align-items: center;
+
+                                svg {
+                                    margin-left: 4px;
+                                }
+                            }
+
+                            .right-side {
+                                color: $colors-text;
+                                font-weight: 400;
+                                line-height: 1.5;
+                                font-size: 14px;
+                            }
+                        }
+
+                        .second-line {
+                            .right-side {
+                                color: $colors-success;
+                            }
+                        }
+
+                        .fourth-line {
+                            .right-side {
+                                display: flex;
+                                align-items: center;
+
+                                svg {
+                                    margin-left: 4px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .content-footer {
+            height: 108px;
+            display: flex;
+            width: 100%;
+
+            .link {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                width: 262px;
+
+                a {
+                    margin-left: 40px;
+                    display: flex;
+                    color: $colors-primary;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    font-weight: 600;
+                    white-space: nowrap;
+
+                    img {
+                        margin-left: 4px;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .images-flex {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+
+                .images {
+                    display: flex;
+                    align-items: center;
+
+                    .help {
+                        display: flex;
+                        align-items: center;
+                        height: 48px;
+                        transition: 0.2s;
+
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                        
+                        &:active {
+                            transform: translate(0px, 1px);
+                            transition: inherit;
+                        }
+
+                        .help-link {
+                            display: flex;
+                            align-items: center;
+                            border-radius: 16px;
+                            box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+                            cursor: pointer;
+                            font-family: inherit;
+                            font-size: 16px;
+                            font-weight: 600;
+                            justify-content: center;
+                            letter-spacing: 0.03em;
+                            line-height: 1;
+                            height: 48px;
+                            padding: 0px 24px;
+                            background-color: $colors-textSubtle;
+
+                            a {
+                                color: $colors-backgroundAlt;
+                            }
+                        }
+
+                        .svg {
+                            height: 20px;
+                        }
+                    }
+
+                    .rabbit {
+                        width: 160px;
+                        height: 108px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include root.media('laptop') {
+    .swap {
+        .main-content {
+            .graph-card {
+                .graph-bg {
+                    overflow: auto;
+                    position: fixed;
+                    top: 0;
+                    z-index: 1000;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: #f4eeff99;
+                    border-radius: 0;
+
+                    .graph {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 80%;
+                        min-height: 80%;
+                        padding-top: 8px;
+                        background: #27262c;
+                        height: 516px;
+                        border: 1px solid $colors-cardBorder;
+                        border-radius: 16px;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+
+                        #container {
+                            height: calc(100% - 167px);
+                            padding: 5px;
+                        }
+
+                        .graph-top {
+                            .size-changer {
+                                button {
+                                    img {
+                                        content: url("/assets/swapChartCloseBtn.svg");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include root.media('laptop-lg') {
+    .swap {
+        .main-content {
+            .graph-card {
+                .card-box {
+                }
+            }
+        }
+    }
+}

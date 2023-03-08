@@ -22,18 +22,19 @@ li {
   opacity: 0.65 !important;
 }
 
-@import "./variables.scss";
-@import "./header";
-@import "./footer";
-@import "./atomic/scrollbar/scrollbar.scss";
-@import "./carousel";
-@import "./firstSection";
-@import "./secondSection/secondSection.scss";
-@import "./thirdSection";
-@import "./fifthSection/fifthSection.scss";
-@import "./sixthSection/sixthSection.scss";
-@import "./seventhSection/seventhSection.scss";
-@import "./eighthSection/eighthSection.scss";
-@import "./scrollToTop";
-@import "./swap/swap.scss";
-@import "./pages/pool.scss";
+@import './variables.scss';
+@import './header';
+@import './footer';
+@import './atomic/scrollbar/scrollbar.scss';
+@import './carousel';
+@import './firstSection';
+@import './secondSection/secondSection.scss';
+@import './thirdSection';
+@import './fifthSection/fifthSection.scss';
+@import './sixthSection/sixthSection.scss';
+@import './seventhSection/seventhSection.scss';
+@import './eighthSection/eighthSection.scss';
+@import './scrollToTop';
+@import './swap/swap.scss';
+@import './pages/pool.scss';
+@import './ifo-page';

@@ -1,0 +1,88 @@
+@import '../variables.scss';
+
+.checkboxButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  & input[type='checkbox'] {
+    visibility: hidden;
+    display: none;
+    margin-left: 10px;
+  }
+
+  & .toggle {
+    margin-left: 10px;
+    position: relative;
+    display: block;
+    width: 36px;
+    height: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+  }
+  & .toggle:before {
+    margin: 2px 3px;
+    content: '';
+    position: relative;
+    margin: 0 auto;
+    top: 0px;
+    left: 0px;
+    width: 36px;
+    height: 20px;
+    display: block;
+    background: $colors-input;
+    border-radius: 24px;
+    transition: background 0.2s ease;
+  }
+  & .toggle span {
+    display: none;
+    position: absolute;
+    top: 1.78888888888px;
+    left: 1.45px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: $colors-backgroundAlt;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+  }
+  & .toggle span:before {
+    content: '';
+    position: absolute;
+    display: block;
+    margin: -18px;
+    width: 56px;
+    height: 56px;
+    background: rgba(79, 46, 220, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  & #checkboxButton:checked + .toggle:before {
+    background: #947ada;
+  }
+  & #checkboxButton:checked + .toggle span {
+    background: #4f2edc;
+    transform: translateX(16px);
+    box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+  }
+  & #checkboxButton:checked + .toggle span:before {
+    transform: scale(1);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  & .stake {
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    font-family: Kanit, sans-serif;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-weight: 400;
+    margin-left: 8px;
+  }
+}

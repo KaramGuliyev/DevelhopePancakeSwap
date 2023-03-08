@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>PancakeSwap-clone</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+  </head>
+  <body>
+    <!-- NAV START  -->
+    <div class="nav top">
+      <nav>
+        <div class="header-left">
+          <div class="header-left__logo">
+            <a href="/">
+              <img class="logo-desktop" src="./assets/logo.svg" alt="" />
+              <img class="logo-mobile" src="./assets/logo-mobile.svg" alt="" />
+            </a>
+          </div>
+          <div class="header-left__links">
+            <div class="link-1">
+              <div class="link-head"><a href="#">Trade</a></div>
+              <div class="link-content">
+                <div><a href="#">Swap</a></div>
+                <div><a href="#">Limit</a></div>
+                <div><a href="#">Liquidity</a></div>
+                <div>
+                  <a href="#"
+                    >Perpetual
+                    <div class="enter-icon">
+                      <img src="./assets/enter.svg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a href="#"
+                    >Bridge
+                    <div class="enter-icon">
+                      <img src="./assets/enter.svg" alt="" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="link-2">
+              <div class="link-head"><a href="#">Earn</a></div>
+              <div class="link-content">
+                <div><a href="#">Farms</a></div>
+                <div><a href="#">Pools</a></div>
+              </div>
+            </div>
+            <div class="link-3">
+              <div class="link-head"><a href="#">Win</a></div>
+              <div class="link-content">
+                <div><a href="#">Trading Competition</a></div>
+                <div><a href="#">Prediction (BETA)</a></div>
+                <div><a href="#">Lottery</a></div>
+                <div><a href="#">Pottery (BETA)</a></div>
+              </div>
+            </div>
+            <div class="link-4">
+              <div class="link-head"><a href="#">NFT</a></div>
+              <div class="link-content">
+                <div><a href="#">Overview</a></div>
+                <div><a href="#">Collections</a></div>
+                <div><a href="#">Activity</a></div>
+              </div>
+            </div>
+            <div class="link-5">
+              <div class="link-head">
+                <a href="#">
+                  <img src="./assets/3dot.svg" alt="" />
+                </a>
+              </div>
+              <div class="link-content">
+                <div><a href="#">Info</a></div>
+                <div><a href="#">IFO</a></div>
+                <div><a href="#">Voting</a></div>
+                <div><hr /></div>
+                <div><a href="#">Leaderboard</a></div>
+                <div><hr /></div>
+                <div>
+                  <a href="#"
+                    >Blog
+                    <div class="enter-icon">
+                      <img src="./assets/enter.svg" alt="" />
+                    </div>
+                  </a>
+                </div>
+                <div>
+                  <a href="#"
+                    >Docs
+                    <div class="enter-icon">
+                      <img src="./assets/enter.svg" alt="" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="currency-price">
+            <a href="#">
+              <img src="./assets/bunny-logo.svg" alt="" />
+              <div class="text-currency">$3.367</div>
+            </a>
+          </div>
+          <div class="lang-select-container">
+            <div class="lang-select">
+              <button class="lang-select-btn">
+                <img src="./assets/navGlobe.svg" alt="" />
+              </button>
+              <div class="lang-select-content">
+                <button class="lang-item">English</button>
+                <button class="lang-item">Türkçe</button>
+                <button class="lang-item">German</button>
+                <button class="lang-item">Italian</button>
+                <button class="lang-item">Italian</button>
+                <button class="lang-item">Italian</button>
+                <button class="lang-item">Bahasa Indonesia</button>
+              </div>
+            </div>
+          </div>
+          <div class="settings">
+            <button id="modal-button" class="settings-btn">
+              <img src="./assets/navGear.svg" alt="" />
+            </button>
+          </div>
+          <div class="network-select">
+            <div class="network-select-link">
+              <div class="link-img">
+                <img src="./assets/56.png" alt="" />
+              </div>
+              <div class="link-text">
+                <div class="link-text-desktop">BNB Smart Chain</div>
+                <div class="link-text-mobile">BNB</div>
+              </div>
+              <img src="./assets/caret-down.svg" alt="" />
+            </div>
+            <div class="network-select-content">
+              <div class="network-select-text">
+                <div class="text-Subtle">Select a Network</div>
+              </div>
+              <hr />
+              <button class="active">
+                <img src="./assets/56.png" alt="" />
+                <div class="btn-text">BNB Smart Chain</div>
+              </button>
+              <button>
+                <img src="./assets/1.png" alt="" />
+                <div class="btn-text">Etherium</div>
+              </button>
+              <button>
+                <img src="./assets/apt.png" alt="" />
+                <div class="btn-text">Aptos</div>
+              </button>
+            </div>
+          </div>
+          <button class="connect-wallet-btn">
+            <div class="connect-wallet-btn-desktop">Connect Wallet</div>
+            <div class="connect-wallet-btn-mobile">Connect</div>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <!-- NAV END  -->
+
+    <!-- MOBILE NAV START  -->
+    <div class="mobile-nav">
+      <div class="mobile-nav-link">
+        <span
+          ><a href="#">
+            <div class="container">
+              <img class="mobile-nav-link-img" src="./assets/trade.svg" alt="" />
+              <span class="mobile-nav-link-text">Trade</span>
+            </div>
+          </a></span
+        >
+      </div>
+      <div class="mobile-nav-btn">
+        <span
+          ><div class="container">
+            <button id="btn-1" type="button">
+              <div class="container">
+                <img class="mobile-nav-link-img" src="./assets/earn.svg" alt="" />
+                <span class="mobile-nav-link-text">Earn</span>
+              </div>
+            </button>
+          </div></span
+        >
+        <div class="mobile-nav-menu">
+          <a href="#">Farms</a>
+          <a href="#">Pools</a>
+        </div>
+      </div>
+      <div class="mobile-nav-btn">
+        <span
+          ><button id="btn-2">
+            <div class="container">
+              <img class="mobile-nav-link-img" src="./assets/win.svg" alt="" />
+              <span class="mobile-nav-link-text">Win</span>
+            </div>
+          </button></span
+        >
+        <div class="mobile-nav-menu">
+          <a href="#">Trading Competition</a>
+          <a href="#">Prediction (BETA)</a>
+          <a href="#">Lottery</a>
+          <a href="#">Pottery (BETA)</a>
+        </div>
+      </div>
+      <div class="mobile-nav-btn">
+        <span
+          ><button href="#">
+            <div class="container">
+              <img class="mobile-nav-link-img" src="./assets/nft.svg" alt="" />
+              <span class="mobile-nav-link-text">NFT</span>
+            </div>
+          </button></span
+        >
+        <div class="mobile-nav-menu">
+          <a href="#">Overview</a>
+          <a href="#">Collections</a>
+          <a href="#">Activity</a>
+        </div>
+      </div>
+      <div class="mobile-nav-btn">
+        <span
+          ><button><img src="./assets/3dot.svg" alt="" /></button
+        ></span>
+        <div class="mobile-nav-menu">
+          <a href="#">IFO</a>
+          <a href="#">Voting</a>
+          <hr />
+          <a href="#">Leaderboard</a>
+          <hr />
+          <a href="#">
+            <div>Blog <img src="./assets/enter.svg" alt="" /></div>
+          </a>
+          <a href="#">
+            <div>Docs <img src="./assets/enter.svg" alt="" /></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- MOBILE NAV END  -->
+
+    <!-- MODAL START  -->
+    <div id="modal">
+      <div class="modal-content">
+        <div class="modal-content-header">
+          <span>Settings</span>
+          <button class="close"><img src="./assets/times.svg" alt="" /></button>
+        </div>
+        <div class="modal-content-middle">
+          <ul>
+            <li>GLOBAL</li>
+            <li>
+              <span>Dark mode</span>
+              <div class="theme-select">
+                <div class="theme-select-outer appear">
+                  <div class="theme-select-inner">
+                    <input type="checkbox" />
+                    <div class="selected-theme">
+                      <div>
+                        <div>
+                          <img src="./assets/dark-theme.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="theme-selection-options">
+                      <img src="./assets/light-theme.svg" alt="" />
+                      <img src="./assets/dark-theme.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>Subgraph Health Indicator</span>
+              <div class="theme-select on-off-btn">
+                <div class="theme-select-outer appear">
+                  <div class="theme-select-inner">
+                    <input class="on-off-btn" type="checkbox" />
+                    <div class="selected-theme">
+                      <div>
+                        <div></div>
+                      </div>
+                    </div>
+                    <div class="theme-selection-options"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>Show username</span>
+              <div class="theme-select">
+                <div class="theme-select-outer appear">
+                  <div class="theme-select-inner">
+                    <input type="checkbox" />
+                    <div class="selected-theme">
+                      <div>
+                        <div></div>
+                      </div>
+                    </div>
+                    <div class="theme-selection-options"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>Token Risk Scanning</span>
+              <div class="theme-select">
+                <div class="theme-select-outer appear">
+                  <div class="theme-select-inner">
+                    <input type="checkbox" />
+                    <div class="selected-theme">
+                      <div>
+                        <div></div>
+                      </div>
+                    </div>
+                    <div class="theme-selection-options"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>Default Transaction Speed (GWEI)</span>
+              <div class="li-btns">
+                <button>RPC Default</button> <button>Standard (5)</button>
+                <button>Fast (6)</button>
+                <button>Instant (7)</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL END  -->
+
+    <!-- POOLS PAGE START -->
+    <div class="poolsPageWrapper">
+      <div class="poolsNav">
+        <div class="buttonWrapper">
+          <div class="farms"><a href="#">Farms</a></div>
+          <div class="pools"><a href="#">Pools</a></div>
+        </div>
+      </div>
+      <div class="poolsHeader">
+        <div class="headerContents">
+          <h1 class="headerTitle">Syrup Pools</h1>
+          <h2 class="headerDesc">Just stake some tokens to earn.</h2>
+          <h2 class="headerDesc">High APR, low risk.</h2>
+        </div>
+      </div>
+      <div class="poolsWrapper">
+        <div class="poolsContainerNav">
+          <div class="poolsContainerLeftWrapper">
+            <div class="viewList">
+              <svg
+                class="hover cardView"
+                viewBox="0 0 24 24"
+                fill="#666171"
+                width="20px"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-4ba21b47-0 jhQVZS"
+              >
+                <path
+                  d="M4.5 12H7.5C8.05 12 8.5 11.55 8.5 11V7C8.5 6.45 8.05 6 7.5 6H4.5C3.95 6 3.5 6.45 3.5 7V11C3.5 11.55 3.95 12 4.5 12ZM4.5 19H7.5C8.05 19 8.5 18.55 8.5 18V14C8.5 13.45 8.05 13 7.5 13H4.5C3.95 13 3.5 13.45 3.5 14V18C3.5 18.55 3.95 19 4.5 19ZM10.5 19H13.5C14.05 19 14.5 18.55 14.5 18V14C14.5 13.45 14.05 13 13.5 13H10.5C9.95 13 9.5 13.45 9.5 14V18C9.5 18.55 9.95 19 10.5 19ZM16.5 19H19.5C20.05 19 20.5 18.55 20.5 18V14C20.5 13.45 20.05 13 19.5 13H16.5C15.95 13 15.5 13.45 15.5 14V18C15.5 18.55 15.95 19 16.5 19ZM10.5 12H13.5C14.05 12 14.5 11.55 14.5 11V7C14.5 6.45 14.05 6 13.5 6H10.5C9.95 6 9.5 6.45 9.5 7V11C9.5 11.55 9.95 12 10.5 12ZM15.5 7V11C15.5 11.55 15.95 12 16.5 12H19.5C20.05 12 20.5 11.55 20.5 11V7C20.5 6.45 20.05 6 19.5 6H16.5C15.95 6 15.5 6.45 15.5 7Z"
+                ></path>
+              </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="#666171"
+                width="20px"
+                xmlns="http://www.w3.org/2000/svg"
+                class="hover tableView active"
+                style="margin-left: 12px !important"
+              >
+                <path
+                  d="M4.5 14H6.5C7.05 14 7.5 13.55 7.5 13V11C7.5 10.45 7.05 10 6.5 10H4.5C3.95 10 3.5 10.45 3.5 11V13C3.5 13.55 3.95 14 4.5 14ZM4.5 19H6.5C7.05 19 7.5 18.55 7.5 18V16C7.5 15.45 7.05 15 6.5 15H4.5C3.95 15 3.5 15.45 3.5 16V18C3.5 18.55 3.95 19 4.5 19ZM4.5 9H6.5C7.05 9 7.5 8.55 7.5 8V6C7.5 5.45 7.05 5 6.5 5H4.5C3.95 5 3.5 5.45 3.5 6V8C3.5 8.55 3.95 9 4.5 9ZM9.5 14H19.5C20.05 14 20.5 13.55 20.5 13V11C20.5 10.45 20.05 10 19.5 10H9.5C8.95 10 8.5 10.45 8.5 11V13C8.5 13.55 8.95 14 9.5 14ZM9.5 19H19.5C20.05 19 20.5 18.55 20.5 18V16C20.5 15.45 20.05 15 19.5 15H9.5C8.95 15 8.5 15.45 8.5 16V18C8.5 18.55 8.95 19 9.5 19ZM8.5 6V8C8.5 8.55 8.95 9 9.5 9H19.5C20.05 9 20.5 8.55 20.5 8V6C20.5 5.45 20.05 5 19.5 5H9.5C8.95 5 8.5 5.45 8.5 6Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="checkboxButton">
+              <input type="checkbox" id="checkboxButton" />
+              <label for="checkboxButton" class="toggle"><span></span></label>
+              <div class="stake">Staked only</div>
+            </div>
+            <div class="liveOrFinished">
+              <div class="liveOrFinishedWrapper">
+                <a href="" class="live">Live</a>
+                <a href="" class="finished">Finished</a>
+              </div>
+            </div>
+          </div>
+          <div class="poolsContainerRightWrapper">
+            <div class="dropdown">
+              <div class="dropdownTitle">SORT BY</div>
+              <div class="dropdownField">
+                <div class="activeDropdown">Hot</div>
+                <img src="./assets/Pools/dropdown.svg" class="dropdownSymbol" alt="" />
+              </div>
+              <div style="display: none"></div>
+            </div>
+            <div class="search">
+              <div class="searchTitle">SEARCH</div>
+              <div class="searchField">
+                <input type="text" class="searchField" placeholder="Search Pools" name="" id="" />
+                <img src="./assets/Pools/search.svg" class="searchSymbol" width="20px" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="poolsContainer"></div>
+        <div class="poolsFooter"><img src="./assets/Pools/3d-syrup-bunnies.png" alt="" /></div>
+      </div>
+    </div>
+    <!-- POOLS PAGE END -->
+
+    <!-- OVERLAY START  -->
+    <div class="overlay"></div>
+    <!-- OVERLAY END  -->
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-logo-mobile">
+          <img src="./assets//pancake-swap-footer.svg" alt="" />
+        </div>
+        <div class="footer-top">
+          <ul class="footer-top-links">
+            <li>About</li>
+            <li><a href="#" class="active">Contact</a></li>
+            <li><a href="#">Brand</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Litepaper</a></li>
+          </ul>
+          <ul class="footer-top-links">
+            <li>Help</li>
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Troubleshooting</a></li>
+            <li><a href="#">Guides</a></li>
+          </ul>
+          <ul class="footer-top-links">
+            <li>Developers</li>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Bug Bounty</a></li>
+            <li><a href="#">Auidts</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+          <div class="footer-top-logo-desktop">
+            <img src="./assets//pancake-swap-footer.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="footer-middle">
+          <a href="#" class="footer-middle-link"><img src="./assets/twitter.svg" alt="Twitter" /></a>
+          <a href="#" class="footer-middle-link"><img src="./assets/telegram.svg" alt="Telegram" /></a>
+          <a href="#" class="footer-middle-link"><img src="./assets/reddit.svg" alt="Reddit" /></a>
+          <a href="#" class="footer-middle-link"><img src="./assets/instagram.svg" alt="Instagram" /></a>
+          <a href="#" class="footer-middle-link"><img src="./assets/github.svg" alt="Github" /></a>
+          <a href="#" class="footer-middle-link"><img src="./assets/discord.svg" alt="Discord" /></a>
+          <a href="#" class="footer-middle-link"><img src="./assets/medium.svg" alt="Medium" /></a>
+          <a href="#" class="footer-middle-link"><img src="./assets/youtube.svg" alt="Youtube" /></a>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-bottom-left">
+            <div class="theme-select">
+              <div class="theme-select-outer appear">
+                <div class="theme-select-inner">
+                  <input type="checkbox" />
+                  <div class="selected-theme">
+                    <div>
+                      <div>
+                        <img src="./assets/dark-theme.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="theme-selection-options">
+                    <img src="./assets/light-theme.svg" alt="" />
+                    <img src="./assets/dark-theme.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lang-select">
+              <button class="lang-select-btn">
+                <img src="./assets/navGlobe.svg" alt="" />
+                <div>EN</div>
+              </button>
+              <div class="lang-select-content">
+                <button class="lang-item">English</button>
+                <button class="lang-item">Türkçe</button>
+                <button class="lang-item">German</button>
+                <button class="lang-item">Italian</button>
+                <button class="lang-item">Italian</button>
+                <button class="lang-item">Italian</button>
+                <button class="lang-item">Bahasa Indonesia</button>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom-right">
+            <div class="currency-price">
+              <a href="#">
+                <img src="./assets/bunny-logo.svg" alt="" />
+                <div class="text-currency">$3.367</div>
+              </a>
+            </div>
+            <a href="#" class="buy-btn">Buy CAKE <img src="./assets/right-arrow.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <!-- SCROLL TO TOP BUTTON START -->
+    <div class="scrollToTop" id="scrollToTop">
+      <button class="scrollButton">
+        <img src="./assets/scrollToTop/upArrow.svg" alt="" class="scrollButtonImg" />
+      </button>
+    </div>
+    <!-- SCROLL TO TOP BUTTON END -->
+
+    <!-- SCRIPT LIST START -->
+    <script src="./scripts/header-footer.js"></script>
+    <script src="./scripts/scrollToTop.js"></script>
+    <script src="./scripts/fifthSection.js"></script>
+    <script src="./scripts/swiperNav.js"></script>
+    <!-- SCRIPT LIST END  -->
+  </body>
+</html>

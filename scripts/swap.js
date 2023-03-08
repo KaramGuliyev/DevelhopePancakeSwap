@@ -1408,7 +1408,7 @@ function toLargeChard() {
     console.log(swapChartBg.clientHeight)
     cardBox.style.marginTop = '24px'
     contentFooter.style.display = 'none'
-    sizeChangerImg.src = '/assets/swapChartSizeChanger.svg'
+    sizeChangerImg.src = './assets/swapChartSizeChanger.svg'
     chartHeight = chartContainer.clientHeight - 32    
 
     gradient3 = document.getElementById('firstChart').getContext("2d").createLinearGradient(0, 0, 0, chartHeight);
@@ -1440,7 +1440,7 @@ function toSmallChart() {
     mainContent.style.padding = '32px 32px 0px 32px'
     cardBox.style.marginTop = '0px'
     contentFooter.style.display = 'flex'
-    sizeChangerImg.src = '/assets/swap-size-button.svg'
+    sizeChangerImg.src = './assets/swap-size-button.svg'
     chartContainer.style.height = '340px'
 
     let dataArr = [data1, data2, data3, data4, data5, data6, data7, data8]

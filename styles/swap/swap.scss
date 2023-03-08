@@ -19,7 +19,7 @@
 
 .swap {
     height: calc(100vh - 57px);
-    min-height: 762px;
+    min-height: 785px;
     .swap-nav {
         margin-top: 57px;
         display: flex;
@@ -97,13 +97,19 @@
             justify-content: center;
             height: calc(100% - 108px);
             
-            .graph {
+            .graph-bg {
+                position: relative;
                 width: 50%;
                 padding-top: 8px;
                 background: #27262c80;
                 height: 516px;
                 border: 1px solid $colors-cardBorder;
                 border-radius: 16px;
+
+                .graph {
+                    width: 100%;
+                    height: 100%;
+                }
 
                 .graph-top {
                     display: flex;
@@ -196,6 +202,7 @@
 
                 .graph-info {
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: space-between;
                     padding: 0px 24px;
 
@@ -295,68 +302,51 @@
                     padding: 16px;
 
                     #firstChart {
-                        position: absolute;
-                        top: 16px;
-                        right: 16px;        
+                        position: absolute; 
                         visibility: visible; 
                     }
 
                     #secondChart {
                         position: absolute;
-                        top: 16px;
-                        right: 16px;
                         visibility: hidden; 
                     }
 
                     #thirdChart {
                         position: absolute;
-                        top: 16px;
-                        right: 16px;
                         visibility: hidden; 
                     }
 
                     #fourthChart {
                         position: absolute;
-                        top: 16px;
-                        right: 16px;
                         visibility: hidden; 
                     }
 
                     #fifthChart {
                         position: absolute;
-                        top: 16px;
-                        right: 16px;
                         visibility: hidden; 
                     }
 
                     #sixthChart {
                         position: absolute;
-                        top: 16px;
-                        right: 16px;
                         visibility: hidden; 
                     }
 
                     #seventhChart {
                         position: absolute;
-                        top: 16px;
-                        right: 16px;
                         visibility: hidden; 
                     }
 
                     #eighthChart {
                         position: absolute;
-                        top: 16px;
-                        right: 16px;
                         visibility: hidden; 
                     }
                 }
             }
 
             .card-box {
-                width: 408px;
-                padding: 0px 40px;
+                width: 328px;
+                margin: 0px 40px;
                 height: 589px;
-                padding: 0px 40px;
 
                 .card-bg {
                     background: $colors-cardBorder;
@@ -449,6 +439,14 @@
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
+
+                            .title-input1 {
+                                order: 1;
+                            }
+
+                            .title-input2 {
+                                order: 3;
+                            }
 
                             .calc-title {
                                 display: flex;
@@ -562,12 +560,28 @@
                                         }
                                     }
                                 }
+
+                                .input-bottom {
+                                    // visibility: hidden;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    width: 278px;
+                                    height: 18px;
+
+                                    p {
+                                        color: $colors-textSubtle;
+                                        font-weight: 400;
+                                        line-height: 1.5;
+                                        font-size: 12px;
+                                    }
+                                }
                             }
 
                             .arrow-down {
                                 display: flex;
                                 justify-content: center;
                                 height: 32px;
+                                order: 2;
 
                                 button {
                                     height: 100%;
@@ -596,14 +610,70 @@
                                 height: 28px;
                                 display: flex;
                                 justify-content: flex-end;
+                                order: 4;
 
                                 .low-risk {
+                                    position: relative;
                                     display: flex;
                                     padding: 0px 8px;
                                     background: $colors-primary;
                                     border-radius: 16px;
                                     align-items: center;
                                     cursor: default;
+                                    transition: 0.2s;
+
+                                    .low-risk-info {
+                                        opacity: 0;
+                                        display: none;
+                                        position: absolute;
+                                        line-height: 130%;
+                                        font-size: 16px;
+                                        color: #3c025e;
+                                        font-weight: 400;
+                                        line-height: 1.5;
+                                        transform: translate(-115px, 146px);
+                                        transition: 0.2s;
+
+                                        .low-risk-info-div {
+                                            width: 320px;
+                                            height: 6px;
+                                            background-color: transparent;
+                                        }
+    
+                                        .low-risk-info-text {
+                                            background-color: white;
+                                            border-radius: 16px;
+                                            width: 320px;
+                                            height: 258px;
+                                            padding: 16px;
+
+                                            p {
+                                                &:nth-child(2) {
+                                                    margin-top: 8px;
+                                                    margin-bottom: 8px;
+                                                }
+                                                
+                                                a {
+                                                    color: $colors-primary;
+                                                    font-weight: 600;
+                                                    line-height: 1.5;
+                                                    font-size: 16px;
+                                                    cursor: pointer;
+
+                                                    &:hover {
+                                                        text-decoration: underline;
+                                                    }
+                                                }
+                                            }
+                                        } 
+                                    }
+    
+                                    &:hover {
+                                        .low-risk-info {
+                                            display: block;
+                                            opacity: 1;
+                                        }
+                                    }
 
                                     .text {
                                         color: $colors-invertedContrast;
@@ -621,10 +691,73 @@
                             }
 
                             .toleranse-box {
-                                height: 40px;
+                                min-height: 40px;
                                 padding: 0px 16px;
-                                display: flex;
-                                align-items: flex-end;
+                                order: 5;
+
+                                .price {
+                                    // visibility: hidden;
+                                    width: 262px;
+                                    height: 24px;
+                                    display: none;
+                                    justify-content: space-between;
+                                    margin-bottom: 8px;
+
+                                    .text {
+                                        color: $colors-secondary;
+                                        font-weight: 600;
+                                        line-height: 1.5;
+                                        font-size: 12px;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        padding-top: 2px;
+                                    }
+
+                                    .icon-values {
+                                        display: flex;
+                                        color: $colors-text;
+                                        font-weight: 400;
+                                        line-height: 1.5;
+                                        font-size: 16px;
+                                        align-items: center;
+
+                                        .arrow {
+                                            display: flex;
+                                            align-items: center;
+                                            margin: 0px 4px;
+                                        }
+                                        
+                                        .btn {
+                                            margin-left: 6px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+
+                                            button {
+                                                width: 22px;
+                                                height: 22px;
+                                                background-color: black;
+                                                border: none;
+                                                border-radius: 11px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                transition: 0.2s;
+                                                cursor: pointer;
+
+                                                &:hover {
+                                                    opacity: 0.7;
+                                                }
+
+                                                &:active {
+                                                    transform: translate(0px, 1px);
+                                                    transition: inherit;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
 
                                 .toleranse {
                                     height: 32px;
@@ -712,6 +845,61 @@
                                 &:active {
                                     transform: translate(0px, 1px);
                                     transition: inherit;
+                                }
+                            }
+                        }
+                    }
+
+                    .price-info {
+                        display: none;
+                        margin-top: 16px;
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                        width: 100%;
+                        height: 116px;
+                        border-radius: 20px;
+                        background-color: $colors-invertedContrast;
+
+                        .line {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0px 16px;
+
+                            .left-side {
+                                color: $colors-textSubtle;
+                                font-weight: 400;
+                                line-height: 1.5;
+                                font-size: 14px;
+                                display: flex;
+                                align-items: center;
+
+                                svg {
+                                    margin-left: 4px;
+                                }
+                            }
+
+                            .right-side {
+                                color: $colors-text;
+                                font-weight: 400;
+                                line-height: 1.5;
+                                font-size: 14px;
+                            }
+                        }
+
+                        .second-line {
+                            .right-side {
+                                color: $colors-success;
+                            }
+                        }
+
+                        .fourth-line {
+                            .right-side {
+                                display: flex;
+                                align-items: center;
+
+                                svg {
+                                    margin-left: 4px;
                                 }
                             }
                         }
@@ -809,6 +997,66 @@
                             height: 100%;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@include root.media('laptop') {
+    .swap {
+        .main-content {
+            .graph-card {
+                .graph-bg {
+                    overflow: auto;
+                    position: fixed;
+                    top: 0;
+                    z-index: 1000;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: #f4eeff99;
+                    border-radius: 0;
+
+                    .graph {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 80%;
+                        min-height: 80%;
+                        padding-top: 8px;
+                        background: #27262c;
+                        height: 516px;
+                        border: 1px solid $colors-cardBorder;
+                        border-radius: 16px;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+
+                        #container {
+                            height: calc(100% - 167px);
+                            padding: 5px;
+                        }
+
+                        .graph-top {
+                            .size-changer {
+                                button {
+                                    img {
+                                        content: url("/assets/swapChartCloseBtn.svg");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include root.media('laptop-lg') {
+    .swap {
+        .main-content {
+            .graph-card {
+                .card-box {
                 }
             }
         }

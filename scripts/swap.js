@@ -19,19 +19,65 @@ let chart5 = document.getElementById('fifthChart')
 let chart6 = document.getElementById('sixthChart')
 let chart7 = document.getElementById('seventhChart')
 let chart8 = document.getElementById('eighthChart')
+let swapChartDiv = document.getElementById('swap-graph-chart-div')
+let swapChartBg = document.getElementById('graph-bg')
+let graphVisibilityBtn = document.getElementById('graph-visibility-btn')
+let cardBtn1Img = document.getElementById('card-btn1-img')
+let firstInput = document.getElementById('first-input')
+let secondInput = document.getElementById('second-input')
+let firstInput_p = document.getElementById('first-input-p')
+let secondInput_p = document.getElementById('second-input-p')
+let inputSwitchBtn = document.getElementById('input-switch-btn')
+let titleInput1 = document.getElementById('title-input1')
+let titleInput2 = document.getElementById('title-input2')
+let arrowDown = document.getElementById('arrow-down')
+let lowRiskDiv = document.getElementById('low-risk-div')
+let swapSettingsBtn = document.getElementById('swap-settings-btn')
+let chartContainer = document.getElementById('container')
+let sizeChangerImg = document.getElementById('size-changer-img')
+let swapSection = document.getElementById('swap-section')
+let contentFooter = document.getElementById('content-footer')
+
+cardBtn1Img.src = './assets/swap11.svg'
+
+
+contentFooter.style.display = 'flex'
+
+var modal = document.getElementById("modal");
+
+var span = document.getElementsByClassName("close")[0];
+
+swapSettingsBtn.addEventListener('click', () => {
+    modal.style.display = "block";
+    body.style.overflow = "hidden";
+})
+
+span.onclick = function () {
+  modal.style.display = "none";
+  body.style.overflow = "unset";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    body.style.overflow = "unset";
+  }
+};
 
 
 //    Chart
 
+let chartHeight = chartContainer.clientHeight - 32
 
+let a = 300
 
-gradient1 = document.getElementById('firstChart').getContext("2d").createLinearGradient(0, 25, 0, 300);
+gradient1 = document.getElementById('firstChart').getContext("2d").createLinearGradient(0, 0, 0, chartHeight);
 gradient1.addColorStop(0, '#32e9b4');
-gradient1.addColorStop(0.9, '#393440');
+gradient1.addColorStop(1, '#393440');
 
-gradient2 = document.getElementById('fourthChart').getContext("2d").createLinearGradient(0, 25, 0, 300);
+gradient2 = document.getElementById('fourthChart').getContext("2d").createLinearGradient(0, 0, 0, chartHeight);
 gradient2.addColorStop(0, '#e9479d');
-gradient2.addColorStop(0.9, '#393440');
+gradient2.addColorStop(1, '#393440');
 
 
 const horizontalArbitraryLine = {
@@ -235,6 +281,9 @@ const hoverValue = {
 } 
 
 const options = {
+
+    maintainAspectRatio: false,
+
     plugins: {
         legend: {
             display: false
@@ -296,6 +345,8 @@ const options = {
 }
 
 const options2 = {
+
+    maintainAspectRatio: false,
     plugins: {
         legend: {
             display: false
@@ -356,6 +407,7 @@ const options2 = {
 }
 
 const options3 = {
+    maintainAspectRatio: false,
     plugins: {
         legend: {
             display: false
@@ -416,6 +468,7 @@ const options3 = {
 }
 
 const options4 = {
+    maintainAspectRatio: false,
     plugins: {
         legend: {
             display: false
@@ -476,6 +529,7 @@ const options4 = {
 }
 
 const options5 = {
+    maintainAspectRatio: false,
     plugins: {
         legend: {
             display: false
@@ -537,6 +591,7 @@ const options5 = {
 }
 
 const options6 = {
+    maintainAspectRatio: false,
     plugins: {
         legend: {
             display: false
@@ -598,6 +653,7 @@ const options6 = {
 }
 
 const options7 = {
+    maintainAspectRatio: false,
     plugins: {
         legend: {
             display: false
@@ -659,6 +715,7 @@ const options7 = {
 }
 
 const options8 = {
+    maintainAspectRatio: false,
     plugins: {
         legend: {
             display: false
@@ -733,6 +790,10 @@ const data1 = {
         pointBackgroundColor: '#32e9b4',
         pointHoverRadius: 3,
     }],
+}
+
+if (swapSection.clientWidth < 1150) {
+    data1.labels = ['9:00 PM', '', '', '', '', '', '3:00 AM', '', '', '', '', '', '9:00 AM', '', '', '', '', '','3:00 PM' , '', '', '', '', '', '9:00 PM']
 }
 
 const config1 = {
@@ -854,6 +915,10 @@ const data5 = {
         pointBackgroundColor: '#e9479d',
         pointHoverRadius: 3,
     }],
+}
+
+if (swapSection.clientWidth < 1150) {
+    data5.labels = ['9:00 PM', '', '', '', '', '', '3:00 AM', '', '', '', '', '', '9:00 AM', '', '', '', '', '','3:00 PM' , '', '', '', '', '', '9:00 PM']
 }
 
 const config5 = {
@@ -1140,6 +1205,343 @@ iconsSwapBtn.addEventListener("click", () => {
             chartPercent.innerText = '+0.441 (0.58%)'
             chartPercent.style.color = '#32e9b4'
             chartValue.innerText = '77.09'
+        }
+    }
+})
+
+
+function dataTransition(a) {
+    dayBtn.style.transition = a
+    weekBtn.style.transition = a
+    monthBtn.style.transition = a
+    yearBtn.style.transition = a
+}
+
+
+graphVisibilityBtn.addEventListener('click', () => {
+    if (swapChartBg.style.visibility == 'hidden') {
+        dataTransition('0.2s')
+        deleteBackground(dayBtn)
+        deleteBackground(weekBtn)
+        deleteBackground(monthBtn)
+        deleteBackground(yearBtn)
+        addBackground(dayBtn)
+        chartHidden()
+        coinsName.innerText = "BNB/CAKE"
+        coinsName2.innerText = "BNB/CAKE"
+        chart1.style.visibility = "visible"
+        chartPercent.innerText = '+0.441 (0.58%)'
+        chartPercent.style.color = '#32e9b4'
+        cardBtn1Img.src = './assets/swap11.svg'
+        swapChartBg.style.visibility = 'visible'
+        if (data1.datasets[0].backgroundColor == gradient1){
+            swapChartBg.style.width = '50%'
+        }
+        else {
+            swapChartBg.style.width = '100%'
+        }
+        chartValue.innerText = '77.09'
+        swapChartBg.classList.remove('chart-off')
+        swapChartBg.classList.add('chart-on')
+    }
+    else if (swapChartBg.style.visibility = 'visible') {
+        swapChartBg.classList.remove('chart-on')
+        swapChartBg.classList.add('chart-off')
+        swapChartBg.style.width = 0
+        dataTransition('0s')
+        cardBtn1Img.src = './assets/swap12.svg'
+        swapChartBg.style.visibility = 'hidden'
+        chartHidden()
+    }
+})
+
+let cardBox = document.getElementById('card-box')
+let graphCard = document.getElementById('graph-card')
+let calcBox = document.getElementById('calc-box')
+let calcContent = document.getElementById('calc-content')
+let price = document.getElementById('price')
+let priceInfo = document.getElementById('price-info')
+let sizeChangerBtn = document.getElementById('size-changer')
+let mainContent = document.getElementById('main-content')
+
+function whenInputNotEmpty() {
+    if (contentFooter.style.display != 'none') {
+        graphCard.style.height = '760px'
+        swapSection.style.height = 'auto'
+    }
+    else {
+        swapSection.style.minHeight = '811px'
+    }
+    cardBox.style.height = '745px'
+    calcBox.style.height = '460px'
+    calcContent.style.height = '376px'
+    price.style.display = 'flex'
+    priceInfo.style.display = 'block'
+}
+
+function whenInputEmpty() {
+    if (contentFooter.style.display != 'none') {
+        graphCard.style.height = 'calc(100% - 108px)'
+        swapSection.style.height = 'calc(100vh - 57px)'
+    }
+    cardBox.style.height = '589px'
+    calcBox.style.height = '436px'
+    calcContent.style.height = '352px'
+    price.style.display = 'none'
+    priceInfo.style.display = 'none'
+}
+
+firstInput.addEventListener('input', (el) => {
+    val1 = el.target.value * 77.09
+
+    if(el.target.value < 14) {
+        secondInput.value = val1.toFixed(3)
+    }
+    else if (el.target.value < 150){
+        secondInput.value = val1.toFixed(2)
+    }
+    else {
+        secondInput.value = val1.toFixed(1)
+    }
+
+    val2 = el.target.value * 284.71
+    firstInput_p.innerText = `~${val2.toFixed(2)} USD`
+    val3 = secondInput.value * 3.685
+    secondInput_p.innerText = `~${val3.toFixed(2)} USD`
+
+    if (firstInput.value == 0) {
+        firstInput_p.innerText = ''
+        secondInput_p.innerText = ''
+        firstInput.value = ''
+        secondInput.value = ''
+        whenInputEmpty()
+    }
+    else {
+        whenInputNotEmpty()
+    }
+})
+
+secondInput.addEventListener('input', (el) => {
+    val1 = el.target.value * 0.0131594
+
+    if(el.target.value < 10) {
+        firstInput.value = val1.toFixed(7)
+    }
+    else if (el.target.value < 100){
+        firstInput.value = val1.toFixed(6)
+    }
+    else if (el.target.value < 1000){
+        firstInput.value = val1.toFixed(5)
+    }
+    else if (el.target.value < 10000){
+        firstInput.value = val1.toFixed(4)
+    }
+    else if (el.target.value < 100000){
+        firstInput.value = val1.toFixed(3)
+    }
+    else {
+        firstInput.value = val1.toFixed(2)
+    }
+
+    val2 = firstInput.value * 284.71
+    firstInput_p.innerText = `~${val2.toFixed(2)} USD`
+    val3 = el.target.value * 3.685
+    secondInput_p.innerText = `~${val3.toFixed(2)} USD`
+
+    if (secondInput.value == 0) {
+        firstInput_p.innerText = ''
+        secondInput_p.innerText = ''
+        firstInput.value = ''
+        secondInput.value = ''
+        whenInputEmpty()
+    }
+    else {
+        whenInputNotEmpty()
+    }
+})
+
+let priceInfoBnbCake = document.getElementById('price-info-bnb-cake')
+
+inputSwitchBtn.addEventListener("click", () => {
+    if (titleInput1.style.order == '4') {
+        titleInput2.style.order = 3
+        lowRiskDiv.style.order = 4
+        arrowDown.style.order = 2
+        titleInput1.style.order = 1
+        priceInfoBnbCake.innerText = 'BNB - CAKE'
+    }
+    else {       
+        titleInput2.style.order = 1
+        lowRiskDiv.style.order = 2
+        arrowDown.style.order = 3
+        titleInput1.style.order = 4
+        priceInfoBnbCake.innerText = 'CAKE - BNB'
+    }
+})
+
+let priceOfCoinsBtn = document.getElementById('price-of-coins-btn')
+let priceFirstCoin = document.getElementById('price-first-coin')
+let priceSecondCoin = document.getElementById('price-second-coin')
+
+priceOfCoinsBtn.addEventListener('click', () => {
+    if(priceFirstCoin.innerText == '1 CAKE') {
+        priceFirstCoin.innerText = '1 BNB'
+        priceSecondCoin.innerText = '77.0942 CAKE'
+    }
+    else {
+        priceFirstCoin.innerText = '1 CAKE'
+        priceSecondCoin.innerText = '0.0131594 BNB'
+    }
+})
+
+
+function toLargeChard() {
+    graphCard.style.height = '100%'
+    graphCard.style.width = '100%'
+    swapChartBg.style.height = '100%'
+    swapChartBg.style.width = '100%'
+    swapChartBg.style.borderRadius = '0px'
+    mainContent.style.padding = '0px'
+    if (swapSection.clientWidth > 962) {
+        chartContainer.style.height = 'calc(100% - 133px)'
+    }
+    console.log(swapChartBg.clientHeight)
+    cardBox.style.marginTop = '24px'
+    contentFooter.style.display = 'none'
+    sizeChangerImg.src = '/assets/swapChartSizeChanger.svg'
+    chartHeight = chartContainer.clientHeight - 32    
+
+    gradient3 = document.getElementById('firstChart').getContext("2d").createLinearGradient(0, 0, 0, chartHeight);
+    gradient3.addColorStop(0, '#32e9b4');
+    gradient3.addColorStop(1, '#393440');
+
+    gradient4 = document.getElementById('firstChart').getContext("2d").createLinearGradient(0, 0, 0, chartHeight);
+    gradient4.addColorStop(0, '#e9479d');
+    gradient4.addColorStop(1, '#393440');
+
+    let dataArr = [data1, data2, data3, data4, data5, data6, data7, data8]
+
+    for(let i = 0; i < 4; i++) {
+        dataArr[i].datasets[0].backgroundColor = gradient3
+    }
+    for(let i = 4; i < 8; i++) {
+        dataArr[i].datasets[0].backgroundColor = gradient4
+    }
+}
+
+function toSmallChart() {
+    graphCard.style.height = 'calc(100% - 108px)'
+    graphCard.style.width = 'auto'
+    if (swapSection.clientWidth > 962) {
+        swapChartBg.style.width = '50%'
+        swapChartBg.style.height = '516px'
+    }
+    swapChartBg.style.borderRadius = '16px'
+    mainContent.style.padding = '32px 32px 0px 32px'
+    cardBox.style.marginTop = '0px'
+    contentFooter.style.display = 'flex'
+    sizeChangerImg.src = '/assets/swap-size-button.svg'
+    chartContainer.style.height = '340px'
+
+    let dataArr = [data1, data2, data3, data4, data5, data6, data7, data8]
+
+    for(let i = 0; i < 4; i++) {
+        dataArr[i].datasets[0].backgroundColor = gradient1
+    }
+    for(let i = 4; i < 8; i++) {
+        dataArr[i].datasets[0].backgroundColor = gradient2
+    }
+}
+
+// console.log(swapSection.clientWidth > 970)
+
+sizeChangerBtn.addEventListener('click', () => {
+    if (contentFooter.style.display != 'none') {
+        if (swapSection.clientWidth > 962) {
+            toLargeChard()
+        }
+    }
+    else {
+        if (swapSection.clientWidth > 962) {
+            toSmallChart()
+        }
+    }
+})
+
+
+const media = matchMedia('(max-width: 1200px');
+
+const media2 = matchMedia('(max-width: 970px');
+
+media.addEventListener('change', ({matches}) => {
+    if (matches) {
+        data1.labels = ['9:00 PM', '', '', '', '', '', '3:00 AM', '', '', '', '', '', '9:00 AM', '', '', '', '', '','3:00 PM' , '', '', '', '', '', '9:00 PM']
+        data5.labels = ['9:00 PM', '', '', '', '', '', '3:00 AM', '', '', '', '', '', '9:00 AM', '', '', '', '', '','3:00 PM' , '', '', '', '', '', '9:00 PM']
+    }
+    else {
+        data1.labels = ['9:00 PM', '', '', '12:00 AM', '', '', '3:00 AM', '', '', '6:00 AM', '', '', '9:00 AM', '', '', '12:00 PM', '', '','3:00 PM' , '', '', '6:00 PM', '', '', '9:00 PM']   
+        data5.labels = ['9:00 PM', '', '', '12:00 AM', '', '', '3:00 AM', '', '', '6:00 AM', '', '', '9:00 AM', '', '', '12:00 PM', '', '','3:00 PM' , '', '', '6:00 PM', '', '', '9:00 PM']   
+    }
+})
+
+
+media2.addEventListener('change', ({matches}) => {
+    if (matches) {
+        chartContainer.style.height = 'calc(100% - 167px)'
+        swapChartBg.style.width = '100%'
+        swapChartBg.style.height = '100vh'
+
+        chartHeight = chartContainer.clientHeight - 32    
+        let dataArr = [data1, data2, data3, data4, data5, data6, data7, data8]
+
+        gradient3 = document.getElementById('firstChart').getContext("2d").createLinearGradient(0, 0, 0, chartHeight);
+        gradient3.addColorStop(0, '#32e9b4');
+        gradient3.addColorStop(1, '#393440');
+
+        gradient4 = document.getElementById('firstChart').getContext("2d").createLinearGradient(0, 0, 0, chartHeight);
+        gradient4.addColorStop(0, '#e9479d');
+        gradient4.addColorStop(1, '#393440');
+
+        for(let i = 0; i < 4; i++) {
+            dataArr[i].datasets[0].backgroundColor = gradient3
+        }
+        for(let i = 4; i < 8; i++) {
+            dataArr[i].datasets[0].backgroundColor = gradient4
+        }
+    }
+    else {
+        chartHeight = chartContainer.clientHeight - 32    
+        let dataArr = [data1, data2, data3, data4, data5, data6, data7, data8]
+        gradient3 = document.getElementById('firstChart').getContext("2d").createLinearGradient(0, 0, 0, chartHeight);
+        gradient3.addColorStop(0, '#32e9b4');
+        gradient3.addColorStop(1, '#393440');
+
+        gradient4 = document.getElementById('firstChart').getContext("2d").createLinearGradient(0, 0, 0, chartHeight);
+        gradient4.addColorStop(0, '#e9479d');
+        gradient4.addColorStop(1, '#393440');
+
+        for(let i = 0; i < 4; i++) {
+            dataArr[i].datasets[0].backgroundColor = gradient1
+        }
+        for(let i = 4; i < 8; i++) {
+            dataArr[i].datasets[0].backgroundColor = gradient2
+        }
+
+        if (contentFooter.style.display == 'flex'){
+            chartContainer.style.height = '340px'
+
+            if (swapChartBg.classList.contains('chart-on')) {
+                swapChartBg.style.width = '50%'
+            }
+            else {
+                swapChartBg.style.width = '0px'
+            }
+
+            swapChartBg.style.height = '516px'
+        }
+        else {
+            swapChartBg.style.width = '100%'
+            swapChartBg.style.height = '100%'
         }
     }
 })

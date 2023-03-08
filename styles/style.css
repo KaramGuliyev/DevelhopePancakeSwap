@@ -3256,7 +3256,7 @@ li {
 
 .swap {
   height: calc(100vh - 57px);
-  min-height: 762px;
+  min-height: 785px;
 }
 .swap .swap-nav {
   margin-top: 57px;
@@ -3325,7 +3325,8 @@ li {
   justify-content: center;
   height: calc(100% - 108px);
 }
-.swap .main-content .graph-card .graph {
+.swap .main-content .graph-card .graph-bg {
+  position: relative;
   width: 50%;
   padding-top: 8px;
   background: rgba(39, 38, 44, 0.5019607843);
@@ -3333,26 +3334,30 @@ li {
   border: 1px solid #383241;
   border-radius: 16px;
 }
-.swap .main-content .graph-card .graph .graph-top {
+.swap .main-content .graph-card .graph-bg .graph {
+  width: 100%;
+  height: 100%;
+}
+.swap .main-content .graph-card .graph-bg .graph-top {
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 48px;
   padding: 0px 24px;
 }
-.swap .main-content .graph-card .graph .graph-top .coins {
+.swap .main-content .graph-card .graph-bg .graph-top .coins {
   display: flex;
 }
-.swap .main-content .graph-card .graph .graph-top .coins img {
+.swap .main-content .graph-card .graph-bg .graph-top .coins img {
   width: 24px;
   height: 24px;
   margin-right: 4px;
 }
-.swap .main-content .graph-card .graph .graph-top .coins .icons {
+.swap .main-content .graph-card .graph-bg .graph-top .coins .icons {
   display: flex;
   align-items: center;
 }
-.swap .main-content .graph-card .graph .graph-top .coins .text {
+.swap .main-content .graph-card .graph-bg .graph-top .coins .text {
   display: flex;
   align-items: center;
   color: #f4eeff;
@@ -3361,11 +3366,11 @@ li {
   font-size: 16px;
   font-family: "Kanit", sans-serif;
 }
-.swap .main-content .graph-card .graph .graph-top .coins .swap-button {
+.swap .main-content .graph-card .graph-bg .graph-top .coins .swap-button {
   height: 48px;
   width: 48px;
 }
-.swap .main-content .graph-card .graph .graph-top .coins .swap-button button {
+.swap .main-content .graph-card .graph-bg .graph-top .coins .swap-button button {
   width: 100%;
   height: 100%;
   background: transparent;
@@ -3373,23 +3378,23 @@ li {
   cursor: pointer;
   transition: 0.2s;
 }
-.swap .main-content .graph-card .graph .graph-top .coins .swap-button button img {
+.swap .main-content .graph-card .graph-bg .graph-top .coins .swap-button button img {
   width: 20px;
   height: 21px;
   margin: 2px 0px 0px 6px;
 }
-.swap .main-content .graph-card .graph .graph-top .coins .swap-button button:hover {
+.swap .main-content .graph-card .graph-bg .graph-top .coins .swap-button button:hover {
   opacity: 0.7;
 }
-.swap .main-content .graph-card .graph .graph-top .coins .swap-button button:active {
+.swap .main-content .graph-card .graph-bg .graph-top .coins .swap-button button:active {
   transform: translate(0px, 1px);
   transition: inherit;
 }
-.swap .main-content .graph-card .graph .graph-top .size-changer {
+.swap .main-content .graph-card .graph-bg .graph-top .size-changer {
   width: 48px;
   height: 48px;
 }
-.swap .main-content .graph-card .graph .graph-top .size-changer button {
+.swap .main-content .graph-card .graph-bg .graph-top .size-changer button {
   width: 100%;
   height: 100%;
   background: transparent;
@@ -3397,42 +3402,43 @@ li {
   cursor: pointer;
   transition: 0.2s;
 }
-.swap .main-content .graph-card .graph .graph-top .size-changer button:hover {
+.swap .main-content .graph-card .graph-bg .graph-top .size-changer button:hover {
   opacity: 0.7;
 }
-.swap .main-content .graph-card .graph .graph-top .size-changer button:active {
+.swap .main-content .graph-card .graph-bg .graph-top .size-changer button:active {
   transform: translate(0px, 1px);
   transition: inherit;
 }
-.swap .main-content .graph-card .graph .graph-top .size-changer button img {
+.swap .main-content .graph-card .graph-bg .graph-top .size-changer button img {
   margin-top: 2px;
 }
-.swap .main-content .graph-card .graph .graph-info {
+.swap .main-content .graph-card .graph-bg .graph-info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0px 24px;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-content {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content {
   padding-top: 12px;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-content .content-top {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content .content-top {
   display: flex;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-content .content-top .exchange-value {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content .content-top .exchange-value {
   color: #f4eeff;
   line-height: 1.1;
   font-weight: 600;
   margin-right: 8px;
   font-size: 40px;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-content .content-top .exchange-coins {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content .content-top .exchange-coins {
   color: #b8add2;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.1;
   padding-top: 18px;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-content .content-top .exchange-percent {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content .content-top .exchange-percent {
   color: #31d0aa;
   font-weight: 600;
   line-height: 1.5;
@@ -3441,17 +3447,17 @@ li {
   padding-top: 14px;
   margin-left: 4px;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-content .content-bottom {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-content .content-bottom {
   color: #9a6aff;
   font-weight: 400;
   line-height: 1.5;
   font-size: 14px;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-date {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date {
   display: flex;
   align-items: center;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-date .dates {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date .dates {
   display: flex;
   width: auto;
   height: 34px;
@@ -3459,7 +3465,7 @@ li {
   border-radius: 16px;
   border: 1px solid #524b63;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-date .dates button {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date .dates button {
   height: 100%;
   width: 100%;
   background-color: transparent;
@@ -3475,77 +3481,60 @@ li {
   transition: 0.2s;
   margin-left: 2px;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-date .dates button:hover {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date .dates button:hover {
   opacity: 0.7;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-date .dates button:active {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date .dates button:active {
   transform: translate(0px, 1px);
   transition: inherit;
 }
-.swap .main-content .graph-card .graph .graph-info .graph-date .dates #swap-graph-day {
+.swap .main-content .graph-card .graph-bg .graph-info .graph-date .dates #swap-graph-day {
   background-color: #1fc7d4;
   color: #191326;
   margin: 0;
 }
-.swap .main-content .graph-card .graph #container {
+.swap .main-content .graph-card .graph-bg #container {
   position: relative;
   width: 100%;
   height: 340px;
   padding: 16px;
 }
-.swap .main-content .graph-card .graph #container #firstChart {
+.swap .main-content .graph-card .graph-bg #container #firstChart {
   position: absolute;
-  top: 16px;
-  right: 16px;
   visibility: visible;
 }
-.swap .main-content .graph-card .graph #container #secondChart {
+.swap .main-content .graph-card .graph-bg #container #secondChart {
   position: absolute;
-  top: 16px;
-  right: 16px;
   visibility: hidden;
 }
-.swap .main-content .graph-card .graph #container #thirdChart {
+.swap .main-content .graph-card .graph-bg #container #thirdChart {
   position: absolute;
-  top: 16px;
-  right: 16px;
   visibility: hidden;
 }
-.swap .main-content .graph-card .graph #container #fourthChart {
+.swap .main-content .graph-card .graph-bg #container #fourthChart {
   position: absolute;
-  top: 16px;
-  right: 16px;
   visibility: hidden;
 }
-.swap .main-content .graph-card .graph #container #fifthChart {
+.swap .main-content .graph-card .graph-bg #container #fifthChart {
   position: absolute;
-  top: 16px;
-  right: 16px;
   visibility: hidden;
 }
-.swap .main-content .graph-card .graph #container #sixthChart {
+.swap .main-content .graph-card .graph-bg #container #sixthChart {
   position: absolute;
-  top: 16px;
-  right: 16px;
   visibility: hidden;
 }
-.swap .main-content .graph-card .graph #container #seventhChart {
+.swap .main-content .graph-card .graph-bg #container #seventhChart {
   position: absolute;
-  top: 16px;
-  right: 16px;
   visibility: hidden;
 }
-.swap .main-content .graph-card .graph #container #eighthChart {
+.swap .main-content .graph-card .graph-bg #container #eighthChart {
   position: absolute;
-  top: 16px;
-  right: 16px;
   visibility: hidden;
 }
 .swap .main-content .graph-card .card-box {
-  width: 408px;
-  padding: 0px 40px;
+  width: 328px;
+  margin: 0px 40px;
   height: 589px;
-  padding: 0px 40px;
 }
 .swap .main-content .graph-card .card-box .card-bg {
   background: #383241;
@@ -3623,6 +3612,12 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .title-input1 {
+  order: 1;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .title-input2 {
+  order: 3;
 }
 .swap .main-content .graph-card .card-box .card .calc .calc-content .calc-title {
   display: flex;
@@ -3720,10 +3715,23 @@ li {
 .swap .main-content .graph-card .card-box .card .calc .calc-content .input label .text-input input::placeholder {
   color: #aba1c3;
 }
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input .input-bottom {
+  display: flex;
+  justify-content: flex-end;
+  width: 278px;
+  height: 18px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .input .input-bottom p {
+  color: #b8add2;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 12px;
+}
 .swap .main-content .graph-card .card-box .card .calc .calc-content .arrow-down {
   display: flex;
   justify-content: center;
   height: 32px;
+  order: 2;
 }
 .swap .main-content .graph-card .card-box .card .calc .calc-content .arrow-down button {
   height: 100%;
@@ -3748,14 +3756,59 @@ li {
   height: 28px;
   display: flex;
   justify-content: flex-end;
+  order: 4;
 }
 .swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk {
+  position: relative;
   display: flex;
   padding: 0px 8px;
   background: #1fc7d4;
   border-radius: 16px;
   align-items: center;
   cursor: default;
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  line-height: 130%;
+  font-size: 16px;
+  color: #3c025e;
+  font-weight: 400;
+  line-height: 1.5;
+  transform: translate(-115px, 146px);
+  transition: 0.2s;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info .low-risk-info-div {
+  width: 320px;
+  height: 6px;
+  background-color: transparent;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info .low-risk-info-text {
+  background-color: white;
+  border-radius: 16px;
+  width: 320px;
+  height: 258px;
+  padding: 16px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info .low-risk-info-text p:nth-child(2) {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info .low-risk-info-text p a {
+  color: #1fc7d4;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+  cursor: pointer;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .low-risk-info .low-risk-info-text p a:hover {
+  text-decoration: underline;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk:hover .low-risk-info {
+  display: block;
+  opacity: 1;
 }
 .swap .main-content .graph-card .card-box .card .calc .calc-content .low-risk-div .low-risk .text {
   color: #191326;
@@ -3769,10 +3822,64 @@ li {
   margin-left: 4px;
 }
 .swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box {
-  height: 40px;
+  min-height: 40px;
   padding: 0px 16px;
+  order: 5;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price {
+  width: 262px;
+  height: 24px;
+  display: none;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .text {
+  color: #9a6aff;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 12px;
+  height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  padding-top: 2px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values {
+  display: flex;
+  color: #f4eeff;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  align-items: center;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values .arrow {
+  display: flex;
+  align-items: center;
+  margin: 0px 4px;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values .btn {
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values .btn button {
+  width: 22px;
+  height: 22px;
+  background-color: black;
+  border: none;
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values .btn button:hover {
+  opacity: 0.7;
+}
+.swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .price .icon-values .btn button:active {
+  transform: translate(0px, 1px);
+  transition: inherit;
 }
 .swap .main-content .graph-card .card-box .card .calc .calc-content .toleranse-box .toleranse {
   height: 32px;
@@ -3849,6 +3956,49 @@ li {
 .swap .main-content .graph-card .card-box .card .calc .connect-button button:active {
   transform: translate(0px, 1px);
   transition: inherit;
+}
+.swap .main-content .graph-card .card-box .card .price-info {
+  display: none;
+  margin-top: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  height: 116px;
+  border-radius: 20px;
+  background-color: #191326;
+}
+.swap .main-content .graph-card .card-box .card .price-info .line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+}
+.swap .main-content .graph-card .card-box .card .price-info .line .left-side {
+  color: #b8add2;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .card-box .card .price-info .line .left-side svg {
+  margin-left: 4px;
+}
+.swap .main-content .graph-card .card-box .card .price-info .line .right-side {
+  color: #f4eeff;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.swap .main-content .graph-card .card-box .card .price-info .second-line .right-side {
+  color: #31d0aa;
+}
+.swap .main-content .graph-card .card-box .card .price-info .fourth-line .right-side {
+  display: flex;
+  align-items: center;
+}
+.swap .main-content .graph-card .card-box .card .price-info .fourth-line .right-side svg {
+  margin-left: 4px;
 }
 .swap .main-content .content-footer {
   height: 108px;
@@ -3927,6 +4077,40 @@ li {
 .swap .main-content .content-footer .images-flex .images .rabbit img {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 970px) {
+  .swap .main-content .graph-card .graph-bg {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(244, 238, 255, 0.6);
+    border-radius: 0;
+  }
+  .swap .main-content .graph-card .graph-bg .graph {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    min-height: 80%;
+    padding-top: 8px;
+    background: #27262c;
+    height: 516px;
+    border: 1px solid #383241;
+    border-radius: 16px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .swap .main-content .graph-card .graph-bg .graph #container {
+    height: calc(100% - 167px);
+    padding: 5px;
+  }
+  .swap .main-content .graph-card .graph-bg .graph .graph-top .size-changer button img {
+    content: url("/assets/swapChartCloseBtn.svg");
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
